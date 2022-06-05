@@ -113,7 +113,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1d3750fa72721a04468f4dec431e2b2b"><td class="memItemLeft" align="right" valign="top">flint::ModuleTypes&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorPostgreSQLWriter.html#a1d3750fa72721a04468f4dec431e2b2b">moduleType</a> () override</td></tr>
 <tr class="separator:a1d3750fa72721a04468f4dec431e2b2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4bd4c5b7e100e182f021e00774b0de9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorPostgreSQLWriter.html#a4bd4c5b7e100e182f021e00774b0de9a">doSystemInit</a> () override</td></tr>
-<tr class="memdesc:a4bd4c5b7e100e182f021e00774b0de9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initiate System.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorPostgreSQLWriter.html#a4bd4c5b7e100e182f021e00774b0de9a">More...</a><br /></td></tr>
+<tr class="memdesc:a4bd4c5b7e100e182f021e00774b0de9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform on start of simulation.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorPostgreSQLWriter.html#a4bd4c5b7e100e182f021e00774b0de9a">More...</a><br /></td></tr>
 <tr class="separator:a4bd4c5b7e100e182f021e00774b0de9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d1f2a650cfc246633ef5a6896867469"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorPostgreSQLWriter.html#a1d1f2a650cfc246633ef5a6896867469">doSystemShutdown</a> () override</td></tr>
 <tr class="memdesc:a1d1f2a650cfc246633ef5a6896867469"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform on end of simulation.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorPostgreSQLWriter.html#a1d1f2a650cfc246633ef5a6896867469">More...</a><br /></td></tr>
@@ -468,8 +468,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Initiate System. </p>
-<p>Creates schema if it does not already exist and deletes schema if it already exists.</p>
+<p>Perform on start of simulation. </p>
+<p>If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorPostgreSQLWriter.html#a65b5a0bc7389fa8923f2448d44d0d1de">CBMAggregatorPostgreSQLWriter._isPrimaryAggregator</a> is true, drop schema if it <br  />
+already exists. Create schema if it does not exist</p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#a50722f9d43d0c7c7ec924a5189864b53">CBMModuleBase</a>.</p>
@@ -672,7 +673,18 @@ and AgeArea if they do not already exist, and loads data into these tables on Po
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>void @raise AssertionViolationException&amp;: Handles any program error @raise StatementException&amp;: If the statement is invalid @raise ODBCException&amp;: Handles database error @raise invalidAccessException&amp;: @raise BindingException&amp;: @raise exception:Handles error </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">AssertionViolationException&amp;</td><td>Handles any program error </td></tr>
+    <tr><td class="paramname">StatementException&amp;</td><td>If the statement is invalid </td></tr>
+    <tr><td class="paramname">ODBCException&amp;</td><td>Handles database error </td></tr>
+    <tr><td class="paramname">invalidAccessException&amp;</td><td></td></tr>
+    <tr><td class="paramname">BindingException&amp;</td><td></td></tr>
+    <tr><td class="paramname">exception:Handles</td><td>error </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
