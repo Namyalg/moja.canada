@@ -637,11 +637,10 @@ Create <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLibPQXXWr
 </div><div class="memdoc">
 
 <p>doSystemShutDown </p>
-<p>If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLibPQXXWriter.html#a65b5a0bc7389fa8923f2448d44d0d1de">CBMAggregatorLibPQXXWriter._isPrimaryAggregator</a> is true, create unlogged tables for completed jobs, pool dimension if they don't already exist. <br  />
-Create tables for date dimension, classifier set dimension,land class dimension, <br  />
-module info dimension, location dimension, disturbance type dimension,&#160;<br  />
-disturbance dimension,pools,fluxes,error dimension, age class dimension <br  />
-location error dimension, and age area and loads data into these tables on PostgreSql.</p>
+<p>If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLibPQXXWriter.html#a65b5a0bc7389fa8923f2448d44d0d1de">CBMAggregatorLibPQXXWriter._isPrimaryAggregator</a> is true, creates unlogged tables for the DateDimension, LandClassDimension, <br  />
+PoolDimension, ClassifierSetDimension, ModuleInfoDimension, LocationDimension, DisturbanceTypeDimension,&#160;<br  />
+DisturbanceDimension, Pools, Fluxes, ErrorDimension, AgeClassDimension, LocationErrorDimension, <br  />
+and AgeArea if they do not already exist, and loads data into these tables on PostgreSQL</p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#a854ef56de579c20fffdb78ba470fc6aa">CBMModuleBase</a>.</p>

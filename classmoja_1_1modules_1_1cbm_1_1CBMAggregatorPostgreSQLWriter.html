@@ -116,7 +116,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a4bd4c5b7e100e182f021e00774b0de9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initiate System.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorPostgreSQLWriter.html#a4bd4c5b7e100e182f021e00774b0de9a">More...</a><br /></td></tr>
 <tr class="separator:a4bd4c5b7e100e182f021e00774b0de9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d1f2a650cfc246633ef5a6896867469"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorPostgreSQLWriter.html#a1d1f2a650cfc246633ef5a6896867469">doSystemShutdown</a> () override</td></tr>
-<tr class="memdesc:a1d1f2a650cfc246633ef5a6896867469"><td class="mdescLeft">&#160;</td><td class="mdescRight">doSystemShutDown  <a href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorPostgreSQLWriter.html#a1d1f2a650cfc246633ef5a6896867469">More...</a><br /></td></tr>
+<tr class="memdesc:a1d1f2a650cfc246633ef5a6896867469"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform on end of simulation.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorPostgreSQLWriter.html#a1d1f2a650cfc246633ef5a6896867469">More...</a><br /></td></tr>
 <tr class="separator:a1d1f2a650cfc246633ef5a6896867469"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classmoja_1_1modules_1_1cbm_1_1CBMModuleBase"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmoja_1_1modules_1_1cbm_1_1CBMModuleBase')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html">CBMModuleBase</a></td></tr>
 <tr class="memitem:aa1c377233491839026249eaac4a31bdc inherit pub_methods_classmoja_1_1modules_1_1cbm_1_1CBMModuleBase"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#aa1c377233491839026249eaac4a31bdc">~CBMModuleBase</a> ()=default</td></tr>
@@ -220,7 +220,7 @@ Private Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
 Static Private Member Functions</h2></td></tr>
 <tr class="memitem:aaac657f417559bb935b04d0f77c23904"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorPostgreSQLWriter.html#aaac657f417559bb935b04d0f77c23904">tryExecute</a> (Poco::Data::Session &amp;session, std::function&lt; void(Poco::Data::Session &amp;)&gt; fn)</td></tr>
-<tr class="memdesc:aaac657f417559bb935b04d0f77c23904"><td class="mdescLeft">&#160;</td><td class="mdescRight">tryExecute Function  <a href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorPostgreSQLWriter.html#aaac657f417559bb935b04d0f77c23904">More...</a><br /></td></tr>
+<tr class="memdesc:aaac657f417559bb935b04d0f77c23904"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes the session.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorPostgreSQLWriter.html#aaac657f417559bb935b04d0f77c23904">More...</a><br /></td></tr>
 <tr class="separator:aaac657f417559bb935b04d0f77c23904"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -499,8 +499,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>doSystemShutDown </p>
-<p>If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorPostgreSQLWriter.html#a65b5a0bc7389fa8923f2448d44d0d1de">CBMAggregatorPostgreSQLWriter._isPrimaryAggregator</a>, creates unlogged tables for the date dimension, land class dimension, pool dimension, classifier set dimension, module info dimension, location dimension, disturbance type dimension,&#160; disturbance dimension,pools,fluxes,error dimension, age class dimension location error dimension, and age area if they do not already exist, and loads data into these tables on PostgreSQL.</p>
+<p>Perform on end of simulation. </p>
+<p>If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorPostgreSQLWriter.html#a65b5a0bc7389fa8923f2448d44d0d1de">CBMAggregatorPostgreSQLWriter._isPrimaryAggregator</a>, creates unlogged tables for the DateDimension, LandClassDimension, <br  />
+PoolDimension, ClassifierSetDimension, ModuleInfoDimension, LocationDimension, DisturbanceTypeDimension,&#160;<br  />
+DisturbanceDimension, Pools, Fluxes, ErrorDimension, AgeClassDimension, LocationErrorDimension, <br  />
+and AgeArea if they do not already exist, and loads data into these tables on PostgreSQL.</p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#a854ef56de579c20fffdb78ba470fc6aa">CBMModuleBase</a>.</p>
@@ -554,7 +557,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Load data. </p>
-<p>Loads persistable collecton data into the table using sql command</p>
+<p>Load persistable collecton data into the table using SQL</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">session</td><td>Session&amp; </td></tr>
@@ -661,8 +664,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>tryExecute Function </p>
-<p>Exceutes the session.</p>
+<p>Executes the session. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">session</td><td>Session&amp; </td></tr>
