@@ -90,13 +90,13 @@ Collaboration diagram for CBMLandUnitDataTransform:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a88257f7f8d089f847da165a031893501"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandUnitDataTransform.html#a88257f7f8d089f847da165a031893501">configure</a> (DynamicObject config, const flint::ILandUnitController &amp;landUnitController, datarepository::DataRepository &amp;dataRepository) override</td></tr>
-<tr class="memdesc:a88257f7f8d089f847da165a031893501"><td class="mdescLeft">&#160;</td><td class="mdescRight">configuration function.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMLandUnitDataTransform.html#a88257f7f8d089f847da165a031893501">More...</a><br /></td></tr>
+<tr class="memdesc:a88257f7f8d089f847da165a031893501"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration Function.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMLandUnitDataTransform.html#a88257f7f8d089f847da165a031893501">More...</a><br /></td></tr>
 <tr class="separator:a88257f7f8d089f847da165a031893501"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:addabc6652d4da9568f35b9e26bb1c52a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandUnitDataTransform.html#addabc6652d4da9568f35b9e26bb1c52a">controllerChanged</a> (const flint::ILandUnitController &amp;controller) override</td></tr>
-<tr class="memdesc:addabc6652d4da9568f35b9e26bb1c52a"><td class="mdescLeft">&#160;</td><td class="mdescRight">controllerChanged  <a href="classmoja_1_1modules_1_1cbm_1_1CBMLandUnitDataTransform.html#addabc6652d4da9568f35b9e26bb1c52a">More...</a><br /></td></tr>
+<tr class="memdesc:addabc6652d4da9568f35b9e26bb1c52a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandUnitDataTransform.html#ad38e075b6dba93ad9912b3f5559dae8f">CBMLandUnitDataTransform._varName</a> from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandUnitDataTransform.html#a1802f79cda96f755f9798fbb4dcc4766">CBMLandUnitDataTransform._landUnitController</a>.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMLandUnitDataTransform.html#addabc6652d4da9568f35b9e26bb1c52a">More...</a><br /></td></tr>
 <tr class="separator:addabc6652d4da9568f35b9e26bb1c52a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc7847461d4937f4e9afdc49c5f0a7bf"><td class="memItemLeft" align="right" valign="top">const DynamicVar &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandUnitDataTransform.html#acc7847461d4937f4e9afdc49c5f0a7bf">value</a> () const override</td></tr>
-<tr class="memdesc:acc7847461d4937f4e9afdc49c5f0a7bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">value.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMLandUnitDataTransform.html#acc7847461d4937f4e9afdc49c5f0a7bf">More...</a><br /></td></tr>
+<tr class="memdesc:acc7847461d4937f4e9afdc49c5f0a7bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMLandUnitDataTransform.html#acc7847461d4937f4e9afdc49c5f0a7bf">More...</a><br /></td></tr>
 <tr class="separator:acc7847461d4937f4e9afdc49c5f0a7bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -157,8 +157,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>configuration function. </p>
-<p>This function gets the variable name from the land unit controller and the provider name from the data repository.</p>
+<p>Configuration Function. </p>
+<p>Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandUnitDataTransform.html#a1802f79cda96f755f9798fbb4dcc4766">CBMLandUnitDataTransform._landUnitController</a> as &amp;landUnitController and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandUnitDataTransform.html#aa3301ed714708a9fc790a6c693f40088">CBMLandUnitDataTransform._dataRepository</a> as &amp;dataRepository. Initialise string variable provider as config["provider"]. Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandUnitDataTransform.html#ad1ad78da43b731f596cc32c167febace">CBMLandUnitDataTransform._provider</a> as <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandUnitDataTransform.html#aa3301ed714708a9fc790a6c693f40088">CBMLandUnitDataTransform._dataRepository</a>-&gt;getProvider(providerName) (IProviderRelationalInterface). Initialise string varName as config["variable"]. Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandUnitDataTransform.html#ad38e075b6dba93ad9912b3f5559dae8f">CBMLandUnitDataTransform._varName</a> as varName. Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandUnitDataTransform.html#ac52449b894df3c2f4b7e2a25fa7eb485">CBMLandUnitDataTransform._varToUse</a> as <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandUnitDataTransform.html#ad38e075b6dba93ad9912b3f5559dae8f">CBMLandUnitDataTransform._varName</a> in _CBMLandUnitDataTransform.landUitController.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">config</td><td>DynamicObject </td></tr>
@@ -195,8 +195,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>controllerChanged </p>
-<p>This function gets the variable name from the land unit controller.</p>
+<p>Get <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandUnitDataTransform.html#ad38e075b6dba93ad9912b3f5559dae8f">CBMLandUnitDataTransform._varName</a> from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandUnitDataTransform.html#a1802f79cda96f755f9798fbb4dcc4766">CBMLandUnitDataTransform._landUnitController</a>. </p>
+<p>Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandUnitDataTransform.html#a1802f79cda96f755f9798fbb4dcc4766">CBMLandUnitDataTransform._landUnitController</a> as &amp;controller. Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandUnitDataTransform.html#ac52449b894df3c2f4b7e2a25fa7eb485">CBMLandUnitDataTransform._varToUse</a> as <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandUnitDataTransform.html#ad38e075b6dba93ad9912b3f5559dae8f">CBMLandUnitDataTransform._varName</a> in _CBMLandUnitDataTransform.landUitController.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">controller</td><td>ILandUnitController </td></tr>
@@ -230,8 +230,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>value. </p>
-<p>Detailed description here.</p>
+<p>Value. </p>
+<p>Initialise constant variable table as <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandUnitDataTransform.html#ac52449b894df3c2f4b7e2a25fa7eb485">CBMLandUnitDataTransform._varToUse</a> value. For each constant variable row in table, Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandUnitDataTransform.html#a2fce4d91a7e2114fa85bb084b4213da3">CBMLandUnitDataTransform._resultsObject</a>["spatial_unit_id"] as row["spatial_unit_id"], <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandUnitDataTransform.html#a2fce4d91a7e2114fa85bb084b4213da3">CBMLandUnitDataTransform._resultsObject</a>["landUnitArea"] as row["landUnitArea"], <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandUnitDataTransform.html#a2fce4d91a7e2114fa85bb084b4213da3">CBMLandUnitDataTransform._resultsObject</a>["age"] as row["age"], <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandUnitDataTransform.html#a2fce4d91a7e2114fa85bb084b4213da3">CBMLandUnitDataTransform._resultsObject</a>["growth_curve_id"] as row["growth_curve_id"] <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandUnitDataTransform.html#a2fce4d91a7e2114fa85bb084b4213da3">CBMLandUnitDataTransform._resultsObject</a>["admin_boundary"] as row["admin_boundary"], <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandUnitDataTransform.html#a2fce4d91a7e2114fa85bb084b4213da3">CBMLandUnitDataTransform._resultsObject</a>["eco_boundary"] as row["eco_boundary"] and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandUnitDataTransform.html#a2fce4d91a7e2114fa85bb084b4213da3">CBMLandUnitDataTransform._resultsObject</a>["climate_time_series_id"] as row["climate_time_series_id"].</p>
+<p>Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandUnitDataTransform.html#a4b0c8c8d1062b05e03d3aba794c7e62f">CBMLandUnitDataTransform._results</a> as <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandUnitDataTransform.html#a2fce4d91a7e2114fa85bb084b4213da3">CBMLandUnitDataTransform._resultsObject</a> return <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandUnitDataTransform.html#a4b0c8c8d1062b05e03d3aba794c7e62f">CBMLandUnitDataTransform._results</a></p>
 <dl class="section return"><dt>Returns</dt><dd>DynamicVar&amp; </dd></dl>
 
 </div>
