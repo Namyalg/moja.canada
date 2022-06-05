@@ -107,7 +107,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a8e61a518a587bf5dd73571c112b23e46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration function.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMFlatAggregatorLandUnitData.html#a8e61a518a587bf5dd73571c112b23e46">More...</a><br /></td></tr>
 <tr class="separator:a8e61a518a587bf5dd73571c112b23e46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0a652d7fd514484aa74d3414acb704d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMFlatAggregatorLandUnitData.html#ac0a652d7fd514484aa74d3414acb704d">subscribe</a> (NotificationCenter &amp;notificationCenter) override</td></tr>
-<tr class="memdesc:ac0a652d7fd514484aa74d3414acb704d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscribe the signal localDomainInit,TimingInit,OutputStep and Error.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMFlatAggregatorLandUnitData.html#ac0a652d7fd514484aa74d3414acb704d">More...</a><br /></td></tr>
+<tr class="memdesc:ac0a652d7fd514484aa74d3414acb704d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscribe to the signals localDomainInit,TimingInit,OutputStep and Error.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMFlatAggregatorLandUnitData.html#ac0a652d7fd514484aa74d3414acb704d">More...</a><br /></td></tr>
 <tr class="separator:ac0a652d7fd514484aa74d3414acb704d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d3750fa72721a04468f4dec431e2b2b"><td class="memItemLeft" align="right" valign="top">flint::ModuleTypes&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMFlatAggregatorLandUnitData.html#a1d3750fa72721a04468f4dec431e2b2b">moduleType</a> () override</td></tr>
 <tr class="separator:a1d3750fa72721a04468f4dec431e2b2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -450,7 +450,7 @@ else initialise it to "classifier_set"</p>
 </div><div class="memdoc">
 
 <p>doLocalDomainInit </p>
-<p>Initialise a private variables <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMFlatAggregatorLandUnitData.html#a3e87238c9c712d6daa33782f501f2c4c">CBMFlatAggregatorLandUnitData._spatialLocationInfo</a> as static_pointer_cast&lt;flint::SpatialLocationInfo&gt;( _landUnitData-&gt;getVariable("spatialLocationInfo")-&gt;value()) (shared_ptr&lt;IFlintData&gt;).</p>
+<p>Initialise <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMFlatAggregatorLandUnitData.html#a3e87238c9c712d6daa33782f501f2c4c">CBMFlatAggregatorLandUnitData._spatialLocationInfo</a> as static_pointer_cast&lt;flint::SpatialLocationInfo&gt;( _landUnitData-&gt;getVariable("spatialLocationInfo")-&gt;value()) (shared_ptr&lt;IFlintData&gt;).</p>
 <p>Get variable <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMFlatAggregatorLandUnitData.html#a93d4b7a5fbbfcb13ed0038e72c1ef109">CBMFlatAggregatorLandUnitData._classifierSetVar</a> and assign it to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMFlatAggregatorLandUnitData.html#a601bab6875679fbdf61b163c44a62714">CBMFlatAggregatorLandUnitData._classifierSet</a>. Get variable unfccc_land_class and assign it to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMFlatAggregatorLandUnitData.html#abb0fd4e62cee1b570ebe43844e85bb6c">CBMFlatAggregatorLandUnitData._landClass</a>.</p>
 <p>If _landUnitData variable contains age_class_range and age_maximum variables, Initialise an integer variable ageClassRange as age_class_range value. Initialise an integer variable ageMaximum as age_maximum value. Invoke AgeClassHelper() using ageClassRange,ageMaximum as parameters and assign it to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMFlatAggregatorLandUnitData.html#a92e98e4c4bce7e12470657b541857d0d">CBMFlatAggregatorLandUnitData._ageClassHelper</a>.</p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
@@ -789,7 +789,7 @@ else initialise it to "classifier_set"</p>
 </table>
 </div><div class="memdoc">
 
-<p>Subscribe the signal localDomainInit,TimingInit,OutputStep and Error. </p>
+<p>Subscribe to the signals localDomainInit,TimingInit,OutputStep and Error. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">notificationCenter</td><td>NotificationCenter&amp; </td></tr>

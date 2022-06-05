@@ -118,10 +118,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a1d1f2a650cfc246633ef5a6896867469"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display a log if the disturbance layers that are not in the expected format.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#a1d1f2a650cfc246633ef5a6896867469">More...</a><br /></td></tr>
 <tr class="separator:a1d1f2a650cfc246633ef5a6896867469"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00eaecef1d13bb30fe8fc63f68a68f64"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#a00eaecef1d13bb30fe8fc63f68a68f64">doTimingInit</a> () override</td></tr>
-<tr class="memdesc:a00eaecef1d13bb30fe8fc63f68a68f64"><td class="mdescLeft">&#160;</td><td class="mdescRight">doTimingInit  <a href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#a00eaecef1d13bb30fe8fc63f68a68f64">More...</a><br /></td></tr>
+<tr class="memdesc:a00eaecef1d13bb30fe8fc63f68a68f64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform at the start of the simulation.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#a00eaecef1d13bb30fe8fc63f68a68f64">More...</a><br /></td></tr>
 <tr class="separator:a00eaecef1d13bb30fe8fc63f68a68f64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad889c60334b0d6acf0797321f79dfd95"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#ad889c60334b0d6acf0797321f79dfd95">doTimingStep</a> () override</td></tr>
-<tr class="memdesc:ad889c60334b0d6acf0797321f79dfd95"><td class="mdescLeft">&#160;</td><td class="mdescRight">doTimingStep  <a href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#ad889c60334b0d6acf0797321f79dfd95">More...</a><br /></td></tr>
+<tr class="memdesc:ad889c60334b0d6acf0797321f79dfd95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform on each timing step.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#ad889c60334b0d6acf0797321f79dfd95">More...</a><br /></td></tr>
 <tr class="separator:ad889c60334b0d6acf0797321f79dfd95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55cb5c7b6faa6e8e495470986e77c084"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#a55cb5c7b6faa6e8e495470986e77c084">doDisturbanceEvent</a> (DynamicVar) override</td></tr>
 <tr class="memdesc:a55cb5c7b6faa6e8e495470986e77c084"><td class="mdescLeft">&#160;</td><td class="mdescRight">doDisturbanceEvent  <a href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#a55cb5c7b6faa6e8e495470986e77c084">More...</a><br /></td></tr>
@@ -619,8 +619,15 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>doTimingInit </p>
-<p>Detailed description here</p>
+<p>Perform at the start of the simulation. </p>
+<p>Clear <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#abac245bae1c8773b44268c98f4aed887">CBMDisturbanceListener._disturbanceHistory</a>, and if <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#af8ccc65322c58a795b51618b4d7eb0cf">CBMDisturbanceListener._classifierNames</a> is empty, <br  />
+ append classifier set to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#af8ccc65322c58a795b51618b4d7eb0cf">CBMDisturbanceListener._classifierNames</a></p>
+<p>If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#a85ab045f486efb72cf0eef4e744d5044">CBMDisturbanceListener._disturbanceConditionsInitialized</a> and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#aa80e9a315ec8067752f46390b0942356">CBMDisturbanceListener._conditionConfig</a> is not empty <br  />
+ add disturbance type to a variable matchDisturbanceTypes. Instantiate an object of class <a class="el" href="classmoja_1_1modules_1_1cbm_1_1DisturbanceCondition.html">DisturbanceCondition</a> and append <br  />
+ it to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#ae74385457e0ff90dc95708252b94df54">CBMDisturbanceListener._disturbanceConditions</a></p>
+<p>For each event in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#a8a65f0fe71307e4c8fa3be0dbf4f7b74">CBMDisturbanceListener._layers</a> if <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#a1921fda8c874b0aa34df299972312b1d" title="Add LandUnitEvent.">CBMDisturbanceListener.addLandUnitEvent</a> with parameter event is false, then <br  />
+ the layer is added to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#afde889a547180d71850a8424e6c93ee8">CBMDisturbanceListener._errorLayers</a></p>
+<p>Perform a stable_sort on each event year in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#af0e79494bea29044b7ab24cd96d7e347">CBMDisturbanceListener._landUnitEvents</a></p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#aba317ff7eb2117b26d98c0c5cee2d30b">CBMModuleBase</a>.</p>
@@ -650,8 +657,12 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>doTimingStep </p>
-<p>Detailed description here</p>
+<p>Perform on each timing step. </p>
+<p>For each event in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#af0e79494bea29044b7ab24cd96d7e347">CBMDisturbanceListener._landUnitEvents</a> of the current year, invoke CBMDisturbanceListener.checkConditions() <br  />
+If it is true, then for each condition in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#ae74385457e0ff90dc95708252b94df54">CBMDisturbanceListener._disturbanceConditions</a>, if it is applicable, <br  />
+it is assigned to variable result of <a class="el" href="structmoja_1_1modules_1_1cbm_1_1DisturbanceConditionResult.html">DisturbanceConditionResult</a> <br  />
+Apply the first matching condition from each category (run/override), conditions are prioritized in the order they're configured.</p>
+<p>If it is running on Peatland, fire <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#a536d63cc80d547f0c6df5cc017a9c8f6" title="firePeatlandDisturbanceEvent">CBMDisturbanceListener.firePeatlandDisturbanceEvent</a>, else <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#a35563cf212747eb616bfbb14123b02b8" title="fireCBMDisturbanceEvent">CBMDisturbanceListener.fireCBMDisturbanceEvent</a></p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#a7a71ee940243a639488e8b2542c52010">CBMModuleBase</a>.</p>
@@ -932,8 +943,10 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get DisturbanceType Name. </p>
-<p>Detailed description here</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>If eventData contains "disturbance_type", then extract eventData["disturbance_type"] and check if <br  />
+"disturbance_type_id" matches the "disturbance_type" in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#ae108fad5940a18da021de28444b075ca">CBMDisturbanceListener._distTypeNames</a> <br  />
+Else check if "disturbance_type_id" matches the "disturbance_type" in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#ae108fad5940a18da021de28444b075ca">CBMDisturbanceListener._distTypeNames</a><br  />
+ </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">eventData</td><td>DynamicObject </td></tr>
   </table>

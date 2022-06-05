@@ -93,6 +93,7 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ad35cf99e2b3c0532b5eef07b77ca40a0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1LmEval.html#ad35cf99e2b3c0532b5eef07b77ca40a0">lm_evaluate_default</a> (double *par, int m_dat, double *fvec, void *data, int *info)</td></tr>
+<tr class="memdesc:ad35cf99e2b3c0532b5eef07b77ca40a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluation function.  <a href="classmoja_1_1modules_1_1cbm_1_1LmEval.html#ad35cf99e2b3c0532b5eef07b77ca40a0">More...</a><br /></td></tr>
 <tr class="separator:ad35cf99e2b3c0532b5eef07b77ca40a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d71f7e8440a6262d8db38aaea4e7e7e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1LmEval.html#a6d71f7e8440a6262d8db38aaea4e7e7e">lm_print_default</a> (int n_par, double *par, int m_dat, double *fvec, void *data, int iflag, int iter, int nfev)</td></tr>
 <tr class="separator:a6d71f7e8440a6262d8db38aaea4e7e7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -175,6 +176,13 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Evaluation function. </p>
+<p>par is an input array. At the end of the minimization, it contains the approximate solution vector.</p>
+<p>m_dat is a positive integer input variable set to the number of functions.</p>
+<p>fvec is an output array of length m_dat which contains the function values the square sum of which ought to be minimized.</p>
+<p>data is a read-only pointer to <a class="el" href="structmoja_1_1modules_1_1cbm_1_1lm__data__type.html">lm_data_type</a>, as specified by lm_eval.h.</p>
+<p>info is an integer output variable. If set to a negative value, the minimization procedure will stop. </p>
 
 </div>
 </div>

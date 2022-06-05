@@ -112,7 +112,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1d3750fa72721a04468f4dec431e2b2b"><td class="memItemLeft" align="right" valign="top">flint::ModuleTypes&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#a1d3750fa72721a04468f4dec431e2b2b">moduleType</a> () override</td></tr>
 <tr class="separator:a1d3750fa72721a04468f4dec431e2b2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52f3a5680a093913b1b16a149a8c9691"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#a52f3a5680a093913b1b16a149a8c9691">doLocalDomainInit</a> () override</td></tr>
-<tr class="memdesc:a52f3a5680a093913b1b16a149a8c9691"><td class="mdescLeft">&#160;</td><td class="mdescRight">initiate local domain  <a href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#a52f3a5680a093913b1b16a149a8c9691">More...</a><br /></td></tr>
+<tr class="memdesc:a52f3a5680a093913b1b16a149a8c9691"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initiate Local Domain.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#a52f3a5680a093913b1b16a149a8c9691">More...</a><br /></td></tr>
 <tr class="separator:a52f3a5680a093913b1b16a149a8c9691"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00eaecef1d13bb30fe8fc63f68a68f64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#a00eaecef1d13bb30fe8fc63f68a68f64">doTimingInit</a> () override</td></tr>
 <tr class="memdesc:a00eaecef1d13bb30fe8fc63f68a68f64"><td class="mdescLeft">&#160;</td><td class="mdescRight">initiate timing  <a href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#a00eaecef1d13bb30fe8fc63f68a68f64">More...</a><br /></td></tr>
@@ -235,7 +235,7 @@ Private Member Functions</h2></td></tr>
 <tr class="memdesc:a8fb7090472debbb115df0a191c130216"><td class="mdescLeft">&#160;</td><td class="mdescRight">Record Age Area.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#a8fb7090472debbb115df0a191c130216">More...</a><br /></td></tr>
 <tr class="separator:a8fb7090472debbb115df0a191c130216"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb570930b0817c3f708559247162ce9f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#acb570930b0817c3f708559247162ce9f">recordAgeClass</a> ()</td></tr>
-<tr class="memdesc:acb570930b0817c3f708559247162ce9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Record age class.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#acb570930b0817c3f708559247162ce9f">More...</a><br /></td></tr>
+<tr class="memdesc:acb570930b0817c3f708559247162ce9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Record Age Class.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#acb570930b0817c3f708559247162ce9f">More...</a><br /></td></tr>
 <tr class="separator:acb570930b0817c3f708559247162ce9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89183daaaf45dd8afccbe6b569b71c60"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#a89183daaaf45dd8afccbe6b569b71c60">hasDisturbanceInfo</a> (std::shared_ptr&lt; flint::IOperationResult &gt; flux)</td></tr>
 <tr class="memdesc:a89183daaaf45dd8afccbe6b569b71c60"><td class="mdescLeft">&#160;</td><td class="mdescRight">hasDisturbanceInfo  <a href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#a89183daaaf45dd8afccbe6b569b71c60">More...</a><br /></td></tr>
@@ -529,7 +529,7 @@ else initialise it to "classifier_set"</p>
 </table>
 </div><div class="memdoc">
 
-<p>initiate local domain </p>
+<p>Initiate Local Domain. </p>
 <p>Initialize spatial location info, classifier set and land class.</p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
@@ -757,7 +757,7 @@ Assign variable ageClass CBMAggregatorLandUnitData._ageClassHelper.toAgeClass wi
 </table>
 </div><div class="memdoc">
 
-<p>Record age class. </p>
+<p>Record Age Class. </p>
 <p>If _landUnitData has the variables "age_class_range" and "age_maximum", <br  />
  object _ageClassHelper of class <a class="el" href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html">AgeClassHelper</a> is instantiated For each ageClass in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html#a8b0594cb2a3ca075a138d34d51b2446e" title="Return AgeClassHelper._ageClasses.">AgeClassHelper.getAgeClasses()</a></p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
@@ -901,7 +901,11 @@ CBMAggregatorLandUnitData_previousLocationId is set as locationId</p>
 </div><div class="memdoc">
 
 <p>Record Location. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>If parameter isSpinup is true, instantiate an object of class <a class="el" href="classmoja_1_1modules_1_1cbm_1_1DateRecord.html">DateRecord</a> with default values, else assign it with the current time of the simulation got from _landUnitData</p>
+<p>If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#a982d9b9bb75231dc3f318fe33dde0465">CBMAggregatorLandUnitData._classifierNames</a> is empty, then invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#a4acce556bb6597f8b05356cc3e510558" title="Record Classifier Names.">CBMAggregatorLandUnitData.recordClassifierNames()</a></p>
+<p>For each classifier in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#a601bab6875679fbdf61b163c44a62714">CBMAggregatorLandUnitData._classifierSet</a>, append classifier.second to a variable classifierSet</p>
+<p>Instantiate an object of type <a class="el" href="classmoja_1_1modules_1_1cbm_1_1TemporalLocationRecord.html">TemporalLocationRecord</a> with parameters classifierSetRecordId, dateRecordId, landClassRecordId, ageClassId, _landUnitArea</p>
+<p>Return the Id of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#a501f50d0f372d3c75d396be5e79d61d9">CBMAggregatorLandUnitData._locationDimension</a>-&gt;accumulate(locationRecord) </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">isSpinup</td><td>bool </td></tr>
   </table>
