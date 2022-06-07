@@ -111,10 +111,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a52f3a5680a093913b1b16a149a8c9691"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise Local Domain.  <a href="classmoja_1_1modules_1_1cbm_1_1DisturbanceMonitorModule.html#a52f3a5680a093913b1b16a149a8c9691">More...</a><br /></td></tr>
 <tr class="separator:a52f3a5680a093913b1b16a149a8c9691"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00eaecef1d13bb30fe8fc63f68a68f64"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1DisturbanceMonitorModule.html#a00eaecef1d13bb30fe8fc63f68a68f64">doTimingInit</a> () override</td></tr>
+<tr class="memdesc:a00eaecef1d13bb30fe8fc63f68a68f64"><td class="mdescLeft">&#160;</td><td class="mdescRight">doTimingInit  <a href="classmoja_1_1modules_1_1cbm_1_1DisturbanceMonitorModule.html#a00eaecef1d13bb30fe8fc63f68a68f64">More...</a><br /></td></tr>
 <tr class="separator:a00eaecef1d13bb30fe8fc63f68a68f64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31dddd03058b89e969c75c8e479be5a2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1DisturbanceMonitorModule.html#a31dddd03058b89e969c75c8e479be5a2">doOutputStep</a> () override</td></tr>
+<tr class="memdesc:a31dddd03058b89e969c75c8e479be5a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">doOutputStep  <a href="classmoja_1_1modules_1_1cbm_1_1DisturbanceMonitorModule.html#a31dddd03058b89e969c75c8e479be5a2">More...</a><br /></td></tr>
 <tr class="separator:a31dddd03058b89e969c75c8e479be5a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55cb5c7b6faa6e8e495470986e77c084"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1DisturbanceMonitorModule.html#a55cb5c7b6faa6e8e495470986e77c084">doDisturbanceEvent</a> (DynamicVar) override</td></tr>
+<tr class="memdesc:a55cb5c7b6faa6e8e495470986e77c084"><td class="mdescLeft">&#160;</td><td class="mdescRight">doDisturbanceEvent  <a href="classmoja_1_1modules_1_1cbm_1_1DisturbanceMonitorModule.html#a55cb5c7b6faa6e8e495470986e77c084">More...</a><br /></td></tr>
 <tr class="separator:a55cb5c7b6faa6e8e495470986e77c084"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classmoja_1_1modules_1_1cbm_1_1CBMModuleBase"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmoja_1_1modules_1_1cbm_1_1CBMModuleBase')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html">CBMModuleBase</a></td></tr>
 <tr class="memitem:aa1c377233491839026249eaac4a31bdc inherit pub_methods_classmoja_1_1modules_1_1cbm_1_1CBMModuleBase"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#aa1c377233491839026249eaac4a31bdc">~CBMModuleBase</a> ()=default</td></tr>
@@ -279,6 +282,16 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>doDisturbanceEvent </p>
+<p>If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1DisturbanceMonitorModule.html#a7f8239d54bd84c8fa125f32ca1c26b35">DisturbanceMonitorModule._moduleEnabled</a> is true, then assign the value of variable "disturbance_type_code" in parameter e to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1DisturbanceMonitorModule.html#a48ca2e7073b4cfc9f8c4dcfbbb5c0cb6">DisturbanceMonitorModule._currentDisturbance</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">DynamicVar</td><td>e </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#a8839d77d04859f8e203dc5cea9404265">CBMModuleBase</a>.</p>
 
 </div>
@@ -339,6 +352,10 @@ variable "current_disturbance" in _landUnitData</p>
 </table>
 </div><div class="memdoc">
 
+<p>doOutputStep </p>
+<p>If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1DisturbanceMonitorModule.html#a7f8239d54bd84c8fa125f32ca1c26b35">DisturbanceMonitorModule._moduleEnabled</a> is true, set the value of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1DisturbanceMonitorModule.html#a48ca2e7073b4cfc9f8c4dcfbbb5c0cb6">DisturbanceMonitorModule._currentDisturbance</a> to DynamicVar()</p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#a0568fcd8bdfdf4fb0dfcf72c6fc91d52">CBMModuleBase</a>.</p>
 
 </div>
@@ -365,6 +382,10 @@ variable "current_disturbance" in _landUnitData</p>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>doTimingInit </p>
+<p>If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1DisturbanceMonitorModule.html#a7f8239d54bd84c8fa125f32ca1c26b35">DisturbanceMonitorModule._moduleEnabled</a> is true, set the value of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1DisturbanceMonitorModule.html#a48ca2e7073b4cfc9f8c4dcfbbb5c0cb6">DisturbanceMonitorModule._currentDisturbance</a> to DynamicVar()</p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#aba317ff7eb2117b26d98c0c5cee2d30b">CBMModuleBase</a>.</p>
 
@@ -413,6 +434,7 @@ variable "current_disturbance" in _landUnitData</p>
 
 <p>Subscribe to signals LocalDomainInit, TimingInit, OutputStep and DisturbanceEvent <br  />
  </p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>

@@ -450,7 +450,10 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>configuration function. </p>
-<p>Initialise variable layerNames as config["vars"]. Add layerNames to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#ac42365c2988e58b174433324eb2a7d05">CBMDisturbanceListener._layerNames</a>. if config variable contains "conditions", assign the value to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#aa80e9a315ec8067752f46390b0942356">CBMDisturbanceListener._conditionConfig</a>. if not invoke DynamicVar() to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#aa80e9a315ec8067752f46390b0942356">CBMDisturbanceListener._conditionConfig</a>.</p>
+<p>Initialise variable layerNames as config["vars"]. <br  />
+Add layerNames to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#ac42365c2988e58b174433324eb2a7d05">CBMDisturbanceListener._layerNames</a>. <br  />
+if config variable contains "conditions", assign the value to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#aa80e9a315ec8067752f46390b0942356">CBMDisturbanceListener._conditionConfig</a> <br  />
+else assign the result of function DynamicVar()</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">config</td><td>DynamicObject&amp; </td></tr>
