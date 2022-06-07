@@ -115,13 +115,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a00eaecef1d13bb30fe8fc63f68a68f64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform at start of simulation.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMPeatlandSpinupOutput.html#a00eaecef1d13bb30fe8fc63f68a68f64">More...</a><br /></td></tr>
 <tr class="separator:a00eaecef1d13bb30fe8fc63f68a68f64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a119ea3fca38a0ea64aeb168f801f3be3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPeatlandSpinupOutput.html#a119ea3fca38a0ea64aeb168f801f3be3">doLocalDomainShutdown</a> () override</td></tr>
-<tr class="memdesc:a119ea3fca38a0ea64aeb168f801f3be3"><td class="mdescLeft">&#160;</td><td class="mdescRight">doLocalDomainShutDown.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMPeatlandSpinupOutput.html#a119ea3fca38a0ea64aeb168f801f3be3">More...</a><br /></td></tr>
+<tr class="memdesc:a119ea3fca38a0ea64aeb168f801f3be3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event called when the Thread dies.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMPeatlandSpinupOutput.html#a119ea3fca38a0ea64aeb168f801f3be3">More...</a><br /></td></tr>
 <tr class="separator:a119ea3fca38a0ea64aeb168f801f3be3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad889c60334b0d6acf0797321f79dfd95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPeatlandSpinupOutput.html#ad889c60334b0d6acf0797321f79dfd95">doTimingStep</a> () override</td></tr>
 <tr class="memdesc:ad889c60334b0d6acf0797321f79dfd95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform on each timing step.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMPeatlandSpinupOutput.html#ad889c60334b0d6acf0797321f79dfd95">More...</a><br /></td></tr>
 <tr class="separator:ad889c60334b0d6acf0797321f79dfd95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55cb5c7b6faa6e8e495470986e77c084"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPeatlandSpinupOutput.html#a55cb5c7b6faa6e8e495470986e77c084">doDisturbanceEvent</a> (DynamicVar) override</td></tr>
-<tr class="memdesc:a55cb5c7b6faa6e8e495470986e77c084"><td class="mdescLeft">&#160;</td><td class="mdescRight">doDisturbanceEvent.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMPeatlandSpinupOutput.html#a55cb5c7b6faa6e8e495470986e77c084">More...</a><br /></td></tr>
+<tr class="memdesc:a55cb5c7b6faa6e8e495470986e77c084"><td class="mdescLeft">&#160;</td><td class="mdescRight">When a disturbance event occurs.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMPeatlandSpinupOutput.html#a55cb5c7b6faa6e8e495470986e77c084">More...</a><br /></td></tr>
 <tr class="separator:a55cb5c7b6faa6e8e495470986e77c084"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5842d028192ff2fc3928f6c11367de23"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPeatlandSpinupOutput.html#a5842d028192ff2fc3928f6c11367de23">doPrePostDisturbanceEvent</a> () override</td></tr>
 <tr class="memdesc:a5842d028192ff2fc3928f6c11367de23"><td class="mdescLeft">&#160;</td><td class="mdescRight">doPrePostDisturbanceEvent.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMPeatlandSpinupOutput.html#a5842d028192ff2fc3928f6c11367de23">More...</a><br /></td></tr>
@@ -353,7 +353,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>doDisturbanceEvent. </p>
+<p>When a disturbance event occurs. </p>
 <p>Initialise a boolean variable cached as peat_pool_cached value.<br  />
 if <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPeatlandSpinupOutput.html#a3fd60a2a865fbc5dc58ed1e5bac38ea0">CBMPeatlandSpinupOutput._isOutputLog</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPeatlandSpinupOutput.html#a24aad14c7b79986393dae958ab1d12f9">CBMPeatlandSpinupOutput._isSpinupFileCreated</a> are true and cached is false invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPeatlandSpinupOutput.html#a743411a71ae573fb44327d535c0bda33" title="Print Pool Values.">outputPoolValues()</a>.</p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
@@ -421,7 +421,7 @@ Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPeatlandSpinupOutpu
 </table>
 </div><div class="memdoc">
 
-<p>doLocalDomainShutDown. </p>
+<p>Event called when the Thread dies. </p>
 <p>if CBMPeatlandSpinupOutput.isSpinUpFileCreated, invoke CBMPeatlandSpinupOutput.timeStepOutputFile.flush()and CBMPeatlandSpinupOutput.timeStepOutputFile.close().</p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
