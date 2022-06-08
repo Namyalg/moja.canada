@@ -96,6 +96,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa3fd0d90fcd890cfa1effb2c3f174219"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMSequencer.html#aa3fd0d90fcd890cfa1effb2c3f174219">configure</a> (flint::ITiming &amp;timing) override</td></tr>
 <tr class="separator:aa3fd0d90fcd890cfa1effb2c3f174219"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a279ecb58835310887ac15237e5434a96"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMSequencer.html#a279ecb58835310887ac15237e5434a96">Run</a> (NotificationCenter &amp;_notificationCenter, flint::ILandUnitController &amp;luc) override</td></tr>
+<tr class="memdesc:a279ecb58835310887ac15237e5434a96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Post event notifications.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMSequencer.html#a279ecb58835310887ac15237e5434a96">More...</a><br /></td></tr>
 <tr class="separator:a279ecb58835310887ac15237e5434a96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -208,6 +209,33 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Post event notifications. </p>
+<p>Post event notifications for signals TimingInit and TimingPostInit. <br  />
+Assign variables curStep as 1, curStepDate as <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMSequencer.html#a30f2c0d42425f84541452621b82c427b">CBMSequencer._startDate</a>,endStepDate as <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMSequencer.html#a30f2c0d42425f84541452621b82c427b">CBMSequencer._startDate</a> <br  />
+and timing as LandUnitController._timing <br  />
+while curStep &lt; <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMSequencer.html#a15d6a6305be3429771895011e43b44a3">CBMSequencer._endDate</a> <br  />
+set Timing._startStepDate as curStepDate,Timing._endStepDate as endStepDate,Timing._curStartDate as curStepDate, <br  />
+Timing._curEndDate as endStepDate and Timing._step as curStep. <br  />
+Post event notifications for signals TimingStep,TimingPreEndStep,TimingEndStep,OutputStep and TimingPostStep. <br  />
+Post an event notification for signal TimingShutDown. <br  />
+Create a default timing object. <br  />
+return true.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">notificationCenter</td><td>NotificationCenter&amp; </td></tr>
+    <tr><td class="paramname">luc</td><td>flint::ILandUnitController&amp; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">SimulationError&amp;</td><td>Handle exceptions during simulation </td></tr>
+    <tr><td class="paramname">exception</td><td>Handle exceptions </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 
 </div>
 </div>
