@@ -95,10 +95,13 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ad82c0df8089d32bd5f3b39065313c82f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1PrintPools.html#ad82c0df8089d32bd5f3b39065313c82f">printMossPools</a> (std::string message, flint::ILandUnitDataWrapper &amp;landUnitData)</td></tr>
+<tr class="memdesc:ad82c0df8089d32bd5f3b39065313c82f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print Values of the Moss Pools.  <a href="classmoja_1_1modules_1_1cbm_1_1PrintPools.html#ad82c0df8089d32bd5f3b39065313c82f">More...</a><br /></td></tr>
 <tr class="separator:ad82c0df8089d32bd5f3b39065313c82f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8e52da931601b1b56a470bc1863a791"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1PrintPools.html#af8e52da931601b1b56a470bc1863a791">printPeatlandPools</a> (std::string message, flint::ILandUnitDataWrapper &amp;landUnitData)</td></tr>
+<tr class="memdesc:af8e52da931601b1b56a470bc1863a791"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print Values of the Peatland Pools.  <a href="classmoja_1_1modules_1_1cbm_1_1PrintPools.html#af8e52da931601b1b56a470bc1863a791">More...</a><br /></td></tr>
 <tr class="separator:af8e52da931601b1b56a470bc1863a791"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72c33975232a3fdb067a3929fb304f81"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1PrintPools.html#a72c33975232a3fdb067a3929fb304f81">printForestPools</a> (std::string message, double mat, flint::ILandUnitDataWrapper &amp;landUnitData)</td></tr>
+<tr class="memdesc:a72c33975232a3fdb067a3929fb304f81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print Values of the Forest Pools.  <a href="classmoja_1_1modules_1_1cbm_1_1PrintPools.html#a72c33975232a3fdb067a3929fb304f81">More...</a><br /></td></tr>
 <tr class="separator:a72c33975232a3fdb067a3929fb304f81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -185,6 +188,21 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Print Values of the Forest Pools. </p>
+<p>Print one less than the value of variable "age" in parameter landUnitData.poolCollection(), <br  />
+the values of pools SoftwoodMerch, SoftwoodFoliage, SoftwoodOther, SoftwoodCoarseRoots, SoftwoodFineRoots <br  />
+, HardwoodMerch, HardwoodFoliage, HardwoodOther, HardwoodCoarseRoots, HardwoodFineRoots, AboveGroundVeryFastSoil, <br  />
+BelowGroundVeryFastSoil, AboveGroundFastSoil, BelowGroundFastSoil, SoftwoodStemSnag, SoftwoodBranchSnag <br  />
+HardwoodStemSnag, HardwoodBranchSnag, CO2, CH4, CO in landUnitData</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>message </td></tr>
+    <tr><td class="paramname">flint::ILandUnitDataWrapper&amp;</td><td>landUnitData </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
 </div>
 </div>
 <a id="ad82c0df8089d32bd5f3b39065313c82f"></a>
@@ -221,6 +239,19 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Print Values of the Moss Pools. </p>
+<p>Print one less than the value of variable "age" in parameter landUnitData.poolCollection(), <br  />
+values of pools FeatherMossLive, SphagnumMossLive, FeatherMossFast, SphagnumMossFast, SphagnumMossSlow, <br  />
+CO2, CH4, CO in landUnitData</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>message </td></tr>
+    <tr><td class="paramname">flint::ILandUnitDataWrapper&amp;</td><td>landUnitData </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
 </div>
 </div>
 <a id="af8e52da931601b1b56a470bc1863a791"></a>
@@ -256,6 +287,19 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Print Values of the Peatland Pools. </p>
+<p>If the value of variable "peatland_shrub_age" in parameter landUnitData.poolCollection() is &gt;= 0, <br  />
+Print the values of pools WoodyFoliageLive, WoodyStemsBranchesLive, WoodyRootsLive, SedgeFoliageLive <br  />
+, SphagnumMossLive, FeatherMossLive, Acrotelm_O, Acrotelm_A, Catotelm_A, Catotelm_O in landUnitData</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>message </td></tr>
+    <tr><td class="paramname">flint::ILandUnitDataWrapper&amp;</td><td>landUnitData </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
