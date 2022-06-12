@@ -226,7 +226,7 @@ Private Member Functions</h2></td></tr>
 <tr class="memdesc:ae9b35029c5ee9d6b245f93493ce1be22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Record Pools Set.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#ae9b35029c5ee9d6b245f93493ce1be22">More...</a><br /></td></tr>
 <tr class="separator:ae9b35029c5ee9d6b245f93493ce1be22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb2ba4f1a8281fd53032d7028ad461d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#acb2ba4f1a8281fd53032d7028ad461d1">recordFluxSet</a> (Int64 locationId)</td></tr>
-<tr class="memdesc:acb2ba4f1a8281fd53032d7028ad461d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">recordFluxSet  <a href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#acb2ba4f1a8281fd53032d7028ad461d1">More...</a><br /></td></tr>
+<tr class="memdesc:acb2ba4f1a8281fd53032d7028ad461d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Record the Flux Set.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#acb2ba4f1a8281fd53032d7028ad461d1">More...</a><br /></td></tr>
 <tr class="separator:acb2ba4f1a8281fd53032d7028ad461d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4acce556bb6597f8b05356cc3e510558"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#a4acce556bb6597f8b05356cc3e510558">recordClassifierNames</a> (const DynamicObject &amp;classifierSet)</td></tr>
 <tr class="memdesc:a4acce556bb6597f8b05356cc3e510558"><td class="mdescLeft">&#160;</td><td class="mdescRight">Record Classifier Names.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#a4acce556bb6597f8b05356cc3e510558">More...</a><br /></td></tr>
@@ -238,7 +238,7 @@ Private Member Functions</h2></td></tr>
 <tr class="memdesc:acb570930b0817c3f708559247162ce9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Record Age Class.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#acb570930b0817c3f708559247162ce9f">More...</a><br /></td></tr>
 <tr class="separator:acb570930b0817c3f708559247162ce9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89183daaaf45dd8afccbe6b569b71c60"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#a89183daaaf45dd8afccbe6b569b71c60">hasDisturbanceInfo</a> (std::shared_ptr&lt; flint::IOperationResult &gt; flux)</td></tr>
-<tr class="memdesc:a89183daaaf45dd8afccbe6b569b71c60"><td class="mdescLeft">&#160;</td><td class="mdescRight">hasDisturbanceInfo  <a href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#a89183daaaf45dd8afccbe6b569b71c60">More...</a><br /></td></tr>
+<tr class="memdesc:a89183daaaf45dd8afccbe6b569b71c60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check for existence of disturbances.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#a89183daaaf45dd8afccbe6b569b71c60">More...</a><br /></td></tr>
 <tr class="separator:a89183daaaf45dd8afccbe6b569b71c60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -456,8 +456,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Configuration function. </p>
-<p>Initialise <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#a93d4b7a5fbbfcb13ed0038e72c1ef109">CBMAggregatorLandUnitData._classifierSetVar</a> as config["reporting_classifier_set"] (string) if it exists, <br  />
-else initialise it to "classifier_set"</p>
+<p>Initialise <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#a93d4b7a5fbbfcb13ed0038e72c1ef109">CBMAggregatorLandUnitData._classifierSetVar</a> as variable "reporting_classifier_set" in paramter config if it exists, <br  />
+else to "classifier_set"</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">config</td><td>DynamicObject&amp; </td></tr>
@@ -659,8 +659,9 @@ Search poolInfo in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggrega
 </table>
 </div><div class="memdoc">
 
-<p>hasDisturbanceInfo </p>
-<p>Detailed description here</p>
+<p>Check for existence of disturbances. </p>
+<p>If method hasDataPackage() of parameter flux is false return false, <br  />
+If paramter flux contains all the disturbance data return true, else return false</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">flux</td><td>shared_ptr&lt;IOperationResult&gt; </td></tr>
@@ -721,9 +722,13 @@ Search poolInfo in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggrega
 </div><div class="memdoc">
 
 <p>Record Age Area. </p>
-<p>Assign variable standAge the value of variable "age" in _landUnitArea <br  />
-Assign variable ageClass CBMAggregatorLandUnitData._ageClassHelper.toAgeClass with paramter standAge <br  />
-</p>
+<p>Assign variable standAge the value of variable "age" in _landUnitArea, <br  />
+ageClass as <a class="el" href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html#a73b6fdeee9ebabde2e790f5320a689b9" title="Return value of parameter standAge in AgeClassHelper._ageClassLookup.">AgeClassHelper.toAgeClass()</a> with argument standAge <br  />
+, ageClassRange as <a class="el" href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html#a42154f24feb7301a0b69907bbc4790fa" title="Return value of paramter ageClass in AgeClassHelper._ageClasses.">AgeClassHelper.getAgeClass()</a> with argument ageClass. <br  />
+Instantiate object ageClassRecord of class <a class="el" href="classmoja_1_1modules_1_1cbm_1_1AgeClassRecord.html">AgeClassRecord</a> with argument ageClassRange, <br  />
+invoke the accumulate method on <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#aa346810bd24ae9b5951adf84a284c3a6">CBMAggregatorLandUnitData._ageClassDimension</a> with argument ageClassRecord, assign it to ageClassId. <br  />
+Instantiate object ageAreaRecord of class <a class="el" href="classmoja_1_1modules_1_1cbm_1_1AgeAreaRecord.html">AgeAreaRecord</a> with locationId, ageClassId, _landUnitArea. <br  />
+ Invoke accumulate method of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#a00fcef30024c9af35315088b6d5f332d">CBMAggregatorLandUnitData._ageAreaDimension</a> on ageAreaRecord</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">locationId</td><td>Int64 </td></tr>
@@ -758,8 +763,9 @@ Assign variable ageClass CBMAggregatorLandUnitData._ageClassHelper.toAgeClass wi
 </div><div class="memdoc">
 
 <p>Record Age Class. </p>
-<p>If _landUnitData has the variables "age_class_range" and "age_maximum", <br  />
- object _ageClassHelper of class <a class="el" href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html">AgeClassHelper</a> is instantiated For each ageClass in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html#a8b0594cb2a3ca075a138d34d51b2446e" title="Return AgeClassHelper._ageClasses.">AgeClassHelper.getAgeClasses()</a></p>
+<p>Instantiate object <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#a92e98e4c4bce7e12470657b541857d0d">CBMAggregatorLandUnitData._ageClassHelper</a> of class <a class="el" href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html">AgeClassHelper</a> if _landUnitData has the variables "age_class_range" and "age_maximum", <br  />
+</p>
+<p>For each ageClass in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html#a8b0594cb2a3ca075a138d34d51b2446e" title="Return AgeClassHelper._ageClasses.">AgeClassHelper.getAgeClasses()</a></p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
@@ -789,9 +795,10 @@ Assign variable ageClass CBMAggregatorLandUnitData._ageClassHelper.toAgeClass wi
 </div><div class="memdoc">
 
 <p>Record Classifier Names. </p>
-<p>Acquire Poco::Mutex::Scoped lock on *_classifierNamesLock If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#a982d9b9bb75231dc3f318fe33dde0465">CBMAggregatorLandUnitData._classifierNames</a> is not empty, <br  />
-for each classifier in paramter classifierSet, in the string classifier.first '.' and ' ' is <br  />
-replaced by '_' and appended to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#a982d9b9bb75231dc3f318fe33dde0465">CBMAggregatorLandUnitData._classifierNames</a></p>
+<p>Acquire Poco::Mutex::Scoped lock on *_classifierNamesLock <br  />
+If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#a982d9b9bb75231dc3f318fe33dde0465">CBMAggregatorLandUnitData._classifierNames</a> is not empty, <br  />
+for each classifier in paramter classifierSet, in the string classifier.first, replace '.' and ' ' <br  />
+by '_' and append it to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#a982d9b9bb75231dc3f318fe33dde0465">CBMAggregatorLandUnitData._classifierNames</a></p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">classifierSet</td><td>DynamicObject&amp; </td></tr>
@@ -826,8 +833,8 @@ replaced by '_' and appended to <a class="el" href="classmoja_1_1modules_1_1cbm_
 </table>
 </div><div class="memdoc">
 
-<p>recordFluxSet </p>
-<p>Detailed description here</p>
+<p>Record the Flux Set. </p>
+<p>If Flux set, i.e if _landUnitData-&gt;getOperationLastAppliedIterator() is empty, return immediately.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">locationId</td><td>Int64 </td></tr>
@@ -863,9 +870,9 @@ replaced by '_' and appended to <a class="el" href="classmoja_1_1modules_1_1cbm_
 </div><div class="memdoc">
 
 <p>Record Land Unit Data. </p>
-<p>Assign the result of CBMAggregatorLandUnitData.recordLocation(isSpinup) to a variable locationId If the value of isSpinup is True, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#aa15ba66b0adcd2211c45893259ff3d58">CBMAggregatorLandUnitData._previousLocationId</a> is set as locationId <br  />
-<a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#ae9b35029c5ee9d6b245f93493ce1be22" title="Record Pools Set.">CBMAggregatorLandUnitData.recordPoolsSet()</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#acb2ba4f1a8281fd53032d7028ad461d1" title="recordFluxSet">CBMAggregatorLandUnitData.recordFluxSet()</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#a8fb7090472debbb115df0a191c130216" title="Record Age Area.">CBMAggregatorLandUnitData.recordAgeArea()</a> are invoked passing locationId as the parameter <br  />
-CBMAggregatorLandUnitData_previousLocationId is set as locationId</p>
+<p>Assign the result of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#a4a5f8d575fb97d6dc72900dbbfcf6cea" title="Record Location.">CBMAggregatorLandUnitData.recordLocation()</a> to a variable locationId If the value of isSpinup is True, set <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#aa15ba66b0adcd2211c45893259ff3d58">CBMAggregatorLandUnitData._previousLocationId</a> as locationId <br  />
+invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#ae9b35029c5ee9d6b245f93493ce1be22" title="Record Pools Set.">CBMAggregatorLandUnitData.recordPoolsSet()</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#acb2ba4f1a8281fd53032d7028ad461d1" title="Record the Flux Set.">CBMAggregatorLandUnitData.recordFluxSet()</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#a8fb7090472debbb115df0a191c130216" title="Record Age Area.">CBMAggregatorLandUnitData.recordAgeArea()</a> with parameter locationId <br  />
+and set <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#aa15ba66b0adcd2211c45893259ff3d58">CBMAggregatorLandUnitData._previousLocationId</a> as locationId</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">isSpinup</td><td>bool </td></tr>
@@ -901,11 +908,12 @@ CBMAggregatorLandUnitData_previousLocationId is set as locationId</p>
 </div><div class="memdoc">
 
 <p>Record Location. </p>
-<p>If parameter isSpinup is true, instantiate an object of class <a class="el" href="classmoja_1_1modules_1_1cbm_1_1DateRecord.html">DateRecord</a> with default values, else assign it with the current time of the simulation got from _landUnitData</p>
-<p>If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#a982d9b9bb75231dc3f318fe33dde0465">CBMAggregatorLandUnitData._classifierNames</a> is empty, then invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#a4acce556bb6597f8b05356cc3e510558" title="Record Classifier Names.">CBMAggregatorLandUnitData.recordClassifierNames()</a></p>
+<p>If parameter isSpinup is true, instantiate an object of class <a class="el" href="classmoja_1_1modules_1_1cbm_1_1DateRecord.html">DateRecord</a> with default values, else assign it with the current time of the simulation from _landUnitData</p>
+<p>If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#a982d9b9bb75231dc3f318fe33dde0465">CBMAggregatorLandUnitData._classifierNames</a> is empty, invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#a4acce556bb6597f8b05356cc3e510558" title="Record Classifier Names.">CBMAggregatorLandUnitData.recordClassifierNames()</a></p>
 <p>For each classifier in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#a601bab6875679fbdf61b163c44a62714">CBMAggregatorLandUnitData._classifierSet</a>, append classifier.second to a variable classifierSet</p>
-<p>Instantiate an object of type <a class="el" href="classmoja_1_1modules_1_1cbm_1_1TemporalLocationRecord.html">TemporalLocationRecord</a> with parameters classifierSetRecordId, dateRecordId, landClassRecordId, ageClassId, _landUnitArea</p>
-<p>Return the Id of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#a501f50d0f372d3c75d396be5e79d61d9">CBMAggregatorLandUnitData._locationDimension</a>-&gt;accumulate(locationRecord) </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Instantiate an object of class <a class="el" href="classmoja_1_1modules_1_1cbm_1_1TemporalLocationRecord.html">TemporalLocationRecord</a> with parameters classifierSetRecordId, dateRecordId, landClassRecordId, ageClassId, _landUnitArea</p>
+<p>Return the Id of accumulated value of locationRecord in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#a501f50d0f372d3c75d396be5e79d61d9">CBMAggregatorLandUnitData._locationDimension</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">isSpinup</td><td>bool </td></tr>
   </table>
@@ -940,12 +948,10 @@ CBMAggregatorLandUnitData_previousLocationId is set as locationId</p>
 </div><div class="memdoc">
 
 <p>Record Pools Set. </p>
-<p>For each pool in _landUnitData-&gt;poolCollection(), create an object poolInfo of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PoolInfoRecord.html">PoolInfoRecord</a> <br  />
-by instantiating it with the pool name <br  />
-Assign poolId the Id of poolInfo in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#ae9135fd9a9496e05996a7c37093669ee">CBMAggregatorLandUnitData._poolInfoDimension</a> <br  />
-Assign poolValue pool-&gt;value() * <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#a790d407d7da076ed3ed7749a7686af2b">CBMAggregatorLandUnitData._landUnitArea</a> <br  />
+<p>For each pool in _landUnitData-&gt;poolCollection(), create an object poolInfo of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PoolInfoRecord.html">PoolInfoRecord</a> with the pool name <br  />
+Assign poolId the Id of poolInfo in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#ae9135fd9a9496e05996a7c37093669ee">CBMAggregatorLandUnitData._poolInfoDimension</a> , poolValue pool-&gt;value() * <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#a790d407d7da076ed3ed7749a7686af2b">CBMAggregatorLandUnitData._landUnitArea</a> <br  />
 Instantiate an object poolRecord of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PoolRecord.html">PoolRecord</a> with locationId, poolId, poolValue <br  />
-Invoke accumulate of poolRecord on <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#add7fdee3596addef0aafa1219041008c">CBMAggregatorLandUnitData._poolDimension</a></p>
+Invoke accumulate method of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorLandUnitData.html#add7fdee3596addef0aafa1219041008c">CBMAggregatorLandUnitData._poolDimension</a> on poolRecord</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">locationId</td><td>Int64 </td></tr>

@@ -92,13 +92,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:af321e77335c1f04932b2249889d861ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html#af321e77335c1f04932b2249889d861ff">More...</a><br /></td></tr>
 <tr class="separator:af321e77335c1f04932b2249889d861ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73b6fdeee9ebabde2e790f5320a689b9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html#a73b6fdeee9ebabde2e790f5320a689b9">toAgeClass</a> (int standAge)</td></tr>
-<tr class="memdesc:a73b6fdeee9ebabde2e790f5320a689b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return value of the parameter standAge in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html#aff77dfc69312e3e159e04cb7d6f874ad">AgeClassHelper._ageClassLookup</a>.  <a href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html#a73b6fdeee9ebabde2e790f5320a689b9">More...</a><br /></td></tr>
+<tr class="memdesc:a73b6fdeee9ebabde2e790f5320a689b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return value of parameter standAge in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html#aff77dfc69312e3e159e04cb7d6f874ad">AgeClassHelper._ageClassLookup</a>.  <a href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html#a73b6fdeee9ebabde2e790f5320a689b9">More...</a><br /></td></tr>
 <tr class="separator:a73b6fdeee9ebabde2e790f5320a689b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42154f24feb7301a0b69907bbc4790fa"><td class="memItemLeft" align="right" valign="top">std::tuple&lt; int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html#a42154f24feb7301a0b69907bbc4790fa">getAgeClass</a> (int ageClass)</td></tr>
 <tr class="memdesc:a42154f24feb7301a0b69907bbc4790fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return value of paramter ageClass in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html#ab225ac4e7d4bf25d03cada66a389c9ad">AgeClassHelper._ageClasses</a>.  <a href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html#a42154f24feb7301a0b69907bbc4790fa">More...</a><br /></td></tr>
 <tr class="separator:a42154f24feb7301a0b69907bbc4790fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a6b7377d624ea0260903321cdb4a795"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html#a6a6b7377d624ea0260903321cdb4a795">getAgeClassString</a> (int ageClass)</td></tr>
-<tr class="memdesc:a6a6b7377d624ea0260903321cdb4a795"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the ageClass string.  <a href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html#a6a6b7377d624ea0260903321cdb4a795">More...</a><br /></td></tr>
+<tr class="memdesc:a6a6b7377d624ea0260903321cdb4a795"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute and return the ageClass string.  <a href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html#a6a6b7377d624ea0260903321cdb4a795">More...</a><br /></td></tr>
 <tr class="separator:a6a6b7377d624ea0260903321cdb4a795"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b0594cb2a3ca075a138d34d51b2446e"><td class="memItemLeft" align="right" valign="top">std::map&lt; int, std::tuple&lt; int, int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html#a8b0594cb2a3ca075a138d34d51b2446e">getAgeClasses</a> ()</td></tr>
 <tr class="memdesc:a8b0594cb2a3ca075a138d34d51b2446e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return <a class="el" href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html#ab225ac4e7d4bf25d03cada66a389c9ad">AgeClassHelper._ageClasses</a>.  <a href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html#a8b0594cb2a3ca075a138d34d51b2446e">More...</a><br /></td></tr>
@@ -283,10 +283,11 @@ _ageClassLookup[maximumAge] is assigned <a class="el" href="classmoja_1_1modules
       </table>
 </div><div class="memdoc">
 
-<p>Return the ageClass string. </p>
-<p>ageClassRange (&lt;startAge, endAge&gt;) of parameter ageClass is obtained as <a class="el" href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html#ab225ac4e7d4bf25d03cada66a389c9ad">AgeClassHelper._ageClasses</a>[ageClass] If startAge is -1, "N/A" is returned <br  />
-If endAge is -1, "startAge+" is returned " \n
-Else "startAge-endAge" is returned</p>
+<p>Compute and return the ageClass string. </p>
+<p>ageClassRange (&lt;startAge, endAge&gt;) of parameter ageClass is obtained from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html#ab225ac4e7d4bf25d03cada66a389c9ad">AgeClassHelper._ageClasses</a> If startAge is -1, return "N/A" <br  />
+, If endAge is -1, return "startAge+" <br  />
+, Else "startAge-endAge" <br  />
+Integral values of startAge and endAge are used in the ageClass string</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ageClass</td><td>int. </td></tr>
@@ -313,8 +314,8 @@ Else "startAge-endAge" is returned</p>
       </table>
 </div><div class="memdoc">
 
-<p>Return value of the parameter standAge in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html#aff77dfc69312e3e159e04cb7d6f874ad">AgeClassHelper._ageClassLookup</a>. </p>
-<p>The minimum value of standAge is 0, maximum value is limited by <a class="el" href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html#afa9e7bbe4b3ea9fcaaacf1e56115c1e3">AgeClassHelper._maximumAge</a></p>
+<p>Return value of parameter standAge in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html#aff77dfc69312e3e159e04cb7d6f874ad">AgeClassHelper._ageClassLookup</a>. </p>
+<p>The minimum value of standAge is 0, maximum value is <a class="el" href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html#afa9e7bbe4b3ea9fcaaacf1e56115c1e3">AgeClassHelper._maximumAge</a></p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">standAge</td><td>int </td></tr>

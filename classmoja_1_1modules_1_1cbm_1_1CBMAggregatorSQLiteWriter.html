@@ -213,7 +213,7 @@ Public Member Functions</h2></td></tr>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:ad6d6bcdefba2dd0204fa7af7953903cf"><td class="memTemplParams" colspan="2">template&lt;typename TAccumulator &gt; </td></tr>
 <tr class="memitem:ad6d6bcdefba2dd0204fa7af7953903cf"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorSQLiteWriter.html#ad6d6bcdefba2dd0204fa7af7953903cf">load</a> (Poco::Data::Session &amp;session, const std::string &amp;table, std::shared_ptr&lt; TAccumulator &gt; dataDimension)</td></tr>
-<tr class="memdesc:ad6d6bcdefba2dd0204fa7af7953903cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load data.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorSQLiteWriter.html#ad6d6bcdefba2dd0204fa7af7953903cf">More...</a><br /></td></tr>
+<tr class="memdesc:ad6d6bcdefba2dd0204fa7af7953903cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load persistable collecton data into the table using SQL.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorSQLiteWriter.html#ad6d6bcdefba2dd0204fa7af7953903cf">More...</a><br /></td></tr>
 <tr class="separator:ad6d6bcdefba2dd0204fa7af7953903cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
@@ -423,7 +423,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Configuration function. </p>
-<p>Initialize <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorSQLiteWriter.html#a03cdf55b72279331e9ca32581db03945">CBMAggregatorSQLiteWriter._dbName</a> as config["databasename"]</p>
+<p>Initialize <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorSQLiteWriter.html#a03cdf55b72279331e9ca32581db03945">CBMAggregatorSQLiteWriter._dbName</a> as variable "databasename" in parameter config</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">config</td><td>DynamicObject&amp; </td></tr>
@@ -458,7 +458,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Perform on start of simulation. </p>
-<p>Remove the database name.</p>
+<p>If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorSQLiteWriter.html#a65b5a0bc7389fa8923f2448d44d0d1de">CBMAggregatorSQLiteWriter._isPrimaryAggregator</a> is true, remove the database name</p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#a50722f9d43d0c7c7ec924a5189864b53">CBMModuleBase</a>.</p>
@@ -539,8 +539,7 @@ and AgeArea if they do not already exist, and loads data into these tables on SQ
 </table>
 </div><div class="memdoc">
 
-<p>Load data. </p>
-<p>Load persistable collecton data into the table using SQL</p>
+<p>Load persistable collecton data into the table using SQL. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">session</td><td>Session&amp; </td></tr>

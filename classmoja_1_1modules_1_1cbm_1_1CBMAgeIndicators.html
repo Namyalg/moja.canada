@@ -315,7 +315,7 @@ Private Attributes</h2></td></tr>
 
 <p>Initiate Local Domain. </p>
 <p>Event is fired at the start of the simulation. If _landUnitData has variables "age_class_range" and "age_maximum" , <br  />
- _ageClassHelper of class <a class="el" href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html">AgeClassHelper</a> is instantiated</p>
+ object _ageClassHelper of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html">AgeClassHelper</a> is instantiated</p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#ae5c72527099317707d2347e45763975d">CBMModuleBase</a>.</p>
@@ -346,9 +346,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Perform on each timing step. </p>
-<p>Variable standAge (integer) is determined by _landUnitData-&gt;getVariable("age"), <br  />
-ageClass (integer) is determined by <a class="el" href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html#a73b6fdeee9ebabde2e790f5320a689b9" title="Return value of the parameter standAge in AgeClassHelper._ageClassLookup.">AgeClassHelper.toAgeClass()</a> with argument standAge, <br  />
-Variable "age_class" in _landUnitData is set to ageClass</p>
+<p>Obtain the ageClass of variable "age" in _landUnitData using <a class="el" href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html#a73b6fdeee9ebabde2e790f5320a689b9" title="Return value of parameter standAge in AgeClassHelper._ageClassLookup.">AgeClassHelper.toAgeClass()</a>, <br  />
+, assign this to variable "age_class" in _landUnitData</p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#a7a71ee940243a639488e8b2542c52010">CBMModuleBase</a>.</p>

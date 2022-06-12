@@ -107,7 +107,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8e41f51154c5772b8a205c208eb8a03d"><td class="memItemLeft" align="right" valign="top">flint::ModuleTypes&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceEventModule.html#a8e41f51154c5772b8a205c208eb8a03d">moduleType</a> ()</td></tr>
 <tr class="separator:a8e41f51154c5772b8a205c208eb8a03d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55cb5c7b6faa6e8e495470986e77c084"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceEventModule.html#a55cb5c7b6faa6e8e495470986e77c084">doDisturbanceEvent</a> (DynamicVar) override</td></tr>
-<tr class="memdesc:a55cb5c7b6faa6e8e495470986e77c084"><td class="mdescLeft">&#160;</td><td class="mdescRight">doDisturbanceEvent  <a href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceEventModule.html#a55cb5c7b6faa6e8e495470986e77c084">More...</a><br /></td></tr>
+<tr class="memdesc:a55cb5c7b6faa6e8e495470986e77c084"><td class="mdescLeft">&#160;</td><td class="mdescRight">Peform on a disturbance event.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceEventModule.html#a55cb5c7b6faa6e8e495470986e77c084">More...</a><br /></td></tr>
 <tr class="separator:a55cb5c7b6faa6e8e495470986e77c084"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52f3a5680a093913b1b16a149a8c9691"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceEventModule.html#a52f3a5680a093913b1b16a149a8c9691">doLocalDomainInit</a> () override</td></tr>
 <tr class="memdesc:a52f3a5680a093913b1b16a149a8c9691"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform at the start of simulation.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceEventModule.html#a52f3a5680a093913b1b16a149a8c9691">More...</a><br /></td></tr>
@@ -311,8 +311,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>doDisturbanceEvent </p>
-<p>Detailed description here</p>
+<p>Peform on a disturbance event. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">n</td><td>DynamicVar </td></tr>
@@ -349,7 +348,11 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Perform at the start of simulation. </p>
-<p>Initialise private pool variables of _softwoodMerch, _softwoodFoliage, _softwoodOther, _softwoodCoarseRoots,_softwoodFineRoots, _hardwoodMerch, _hardwoodFoliage, _hardwoodOther, _hardwoodCoarseRoots, _hardwoodFineRoots. Initialise private variables of _age. Initialise the variables _woodyFoliageLive,_woodyStemsBranchesLive _woodyRootsLive,_softwoodStem, _hardwoodStem,_shrubAge,_smalltreeAge for peatland.</p>
+<p>Initialise pools <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceEventModule.html#a73fda9a963577444be1d6ea885df5359">CBMDisturbanceEventModule._softwoodMerch</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceEventModule.html#a89cdd527ffa7e8613679d833d24ba1c4">CBMDisturbanceEventModule._softwoodFoliage</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceEventModule.html#a4b776d93d5f29b12578d9ac675dddf16">CBMDisturbanceEventModule._softwoodOther</a>, <br  />
+<a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceEventModule.html#a9a0dc2a27f5cdfbd010705a11b6b26db">CBMDisturbanceEventModule._softwoodCoarseRoots</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceEventModule.html#af94b0c6b008c6fcfd1a08c43ded3c3fd">CBMDisturbanceEventModule._softwoodFineRoots</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceEventModule.html#aa92b53f1040b31bd1b4d870899ce2ca5">CBMDisturbanceEventModule._hardwoodMerch</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceEventModule.html#acee0d85be161cdd2dcc1575975709c18">CBMDisturbanceEventModule._hardwoodFoliage</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceEventModule.html#a9a7cbac725b0b097c4cacfc8b2a129b8">CBMDisturbanceEventModule._hardwoodOther</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceEventModule.html#a7728db25f7d0a67df7f61730a35164ce">CBMDisturbanceEventModule._hardwoodCoarseRoots</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceEventModule.html#aa28600196c300d43f2b5788fe5bbd9e2">CBMDisturbanceEventModule._hardwoodFineRoots</a>. and variable "age" from _landUnitData <br  />
+If _landUnitData has variable "enable_peatland" and it is not null, <br  />
+initialise pools <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceEventModule.html#a4bdca2c75761036b05e2793be98b9fa1">CBMDisturbanceEventModule._woodyFoliageLive</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceEventModule.html#a7bf88c6bf92f29a26c87ede7dca845dd">CBMDisturbanceEventModule._woodyStemsBranchesLive</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceEventModule.html#aacec13ce541fd962b7a5996aa84fdcae">CBMDisturbanceEventModule._woodyRootsLive</a>, <br  />
+<a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceEventModule.html#a1fae1c2a03f1a8427ef19bca2d6a30bf">CBMDisturbanceEventModule._softwoodStem</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceEventModule.html#aa7c6ba87a6eed37cfac8494db7dffd32">CBMDisturbanceEventModule._hardwoodStem</a> and variables <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceEventModule.html#a459ec1d23d345c238b452692d52000a1">CBMDisturbanceEventModule._shrubAge</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceEventModule.html#a69ff2d9d1082fe31cc02b06b47136ecc">CBMDisturbanceEventModule._smalltreeAge</a> from _landUnitData</p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#ae5c72527099317707d2347e45763975d">CBMModuleBase</a>.</p>

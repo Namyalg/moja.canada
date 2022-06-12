@@ -301,7 +301,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Configuration function. </p>
-<p>Add all mask variables if mask variables have values.</p>
+<p>Add all mask variables to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMBuildLandUnitModule.html#a14a5fff68b9139a69b3eeb9a4c1900c2">CBMBuildLandUnitModule._maskVarNames</a> if parameter config has variable "mask_vars"</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">config</td><td>DynamicObject&amp; </td></tr>
@@ -339,7 +339,7 @@ Private Attributes</h2></td></tr>
 <p>Initialise <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMBuildLandUnitModule.html#aff48342b7f5632d90f89c1cc6b94d434">CBMBuildLandUnitModule._initialAge</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMBuildLandUnitModule.html#a288ba2e2a55298302c348196fdc75cd8">CBMBuildLandUnitModule._age</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMBuildLandUnitModule.html#a464547291fb99c5593f5d5c7e0f0d7c8">CBMBuildLandUnitModule._buildWorked</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMBuildLandUnitModule.html#a22183afcae4a165556460ff8be2fc91d">CBMBuildLandUnitModule._initialCSet</a>, <br  />
 <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMBuildLandUnitModule.html#a68470c233f1a412dc1dba5a7a7c56214">CBMBuildLandUnitModule._cset</a>, CBMBuildLandUnitModule._intialHistoricLandClass, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMBuildLandUnitModule.html#a1067299a3e8a07f4c769627cd053b50e">CBMBuildLandUnitModule._initialCurrentLandClass</a>, _historicLandClass <br  />
 _currentLandClass and _isForest from _landUnitData <br  />
-Add <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMBuildLandUnitModule.html#a22183afcae4a165556460ff8be2fc91d">CBMBuildLandUnitModule._initialCSet</a> for the non-peatland run and, all mask variables to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMBuildLandUnitModule.html#a429954b5b271da4df81d3bdf8bac70c0">CBMBuildLandUnitModule._maskVars</a></p>
+Add <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMBuildLandUnitModule.html#a22183afcae4a165556460ff8be2fc91d">CBMBuildLandUnitModule._initialCSet</a> for the non-peatland run and all mask variables to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMBuildLandUnitModule.html#a429954b5b271da4df81d3bdf8bac70c0">CBMBuildLandUnitModule._maskVars</a></p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#ae5c72527099317707d2347e45763975d">CBMModuleBase</a>.</p>
@@ -370,20 +370,16 @@ Add <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMBuildLandUnitModule.ht
 </div><div class="memdoc">
 
 <p>Run before start of simulation. </p>
-<p>Assign variable initialCSet as <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMBuildLandUnitModule.html#a22183afcae4a165556460ff8be2fc91d">CBMBuildLandUnitModule._initialCSet</a>, if initialCSet empty, <br  />
-check if _landUnitData has variable "peatland_class" <br  />
-Assign variable peatlandClass the value of "peatland_class" on _landUnitData, if peatlandClass is empty, <br  />
- assign a false boolean value to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMBuildLandUnitModule.html#a464547291fb99c5593f5d5c7e0f0d7c8">CBMBuildLandUnitModule._buildWorked</a> variable and return</p>
-<p>Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMBuildLandUnitModule.html#a68470c233f1a412dc1dba5a7a7c56214">CBMBuildLandUnitModule._cset</a> as initialCSet <br  />
+<p>If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMBuildLandUnitModule.html#a22183afcae4a165556460ff8be2fc91d">CBMBuildLandUnitModule._initialCSet</a> is empty, _landUnitData has the variable "peatland_class" and it is empty, <br  />
+ assign a false boolean value to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMBuildLandUnitModule.html#a464547291fb99c5593f5d5c7e0f0d7c8">CBMBuildLandUnitModule._buildWorked</a> and return <br  />
+Else assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMBuildLandUnitModule.html#a68470c233f1a412dc1dba5a7a7c56214">CBMBuildLandUnitModule._cset</a> the value of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMBuildLandUnitModule.html#a22183afcae4a165556460ff8be2fc91d">CBMBuildLandUnitModule._initialCSet</a> <br  />
  If the value of each mask variable in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMBuildLandUnitModule.html#a429954b5b271da4df81d3bdf8bac70c0">CBMBuildLandUnitModule._maskVars</a> is empty, assign a false boolean <br  />
-value to _buildWorked variable and return</p>
-<p>Assign variable historicLandClass as CBMBuildLandUnitModule._initialHistoricLandClassvariable <br  />
- and assign historicLandClass to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMBuildLandUnitModule.html#aaff1912aad486ff7136d326070327046">CBMBuildLandUnitModule._historicLandClass</a> variable.</p>
-<p>Assign variable currentLandClass as <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMBuildLandUnitModule.html#a1067299a3e8a07f4c769627cd053b50e">CBMBuildLandUnitModule._initialCurrentLandClass</a> If currentLandClass is empty, assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMBuildLandUnitModule.html#a8373c455999bdaec1f339decb7d4cc1b">CBMBuildLandUnitModule._currentLandClass</a> as historicLandClass <br  />
-else, assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMBuildLandUnitModule.html#a8373c455999bdaec1f339decb7d4cc1b">CBMBuildLandUnitModule._currentLandClass</a> as currrentLandClass</p>
+value to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMBuildLandUnitModule.html#a464547291fb99c5593f5d5c7e0f0d7c8">CBMBuildLandUnitModule._buildWorked</a> and return</p>
+<p>Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMBuildLandUnitModule.html#aaff1912aad486ff7136d326070327046">CBMBuildLandUnitModule._historicLandClass</a> the value of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMBuildLandUnitModule.html#a9fecac4729047c0c1c52cf0e00e70dc5">CBMBuildLandUnitModule._initialHistoricLandClass</a> <br  />
+<a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMBuildLandUnitModule.html#a8373c455999bdaec1f339decb7d4cc1b">CBMBuildLandUnitModule._currentLandClass</a> the value of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMBuildLandUnitModule.html#a1067299a3e8a07f4c769627cd053b50e">CBMBuildLandUnitModule._initialCurrentLandClass</a> if it is not empty, <br  />
+else to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMBuildLandUnitModule.html#aaff1912aad486ff7136d326070327046">CBMBuildLandUnitModule._historicLandClass</a></p>
 <p>If the value of CBMBuildLandUnitModule._intialAge is empty, assign the number 0 to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMBuildLandUnitModule.html#a288ba2e2a55298302c348196fdc75cd8">CBMBuildLandUnitModule._age</a> <br  />
-Assign a true boolean value to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMBuildLandUnitModule.html">CBMBuildLandUnitModule</a>.._isForest, <br  />
- a true boolean value to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMBuildLandUnitModule.html">CBMBuildLandUnitModule</a>.._buildWorked</p>
+Assign a true boolean value to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMBuildLandUnitModule.html#a37afa641144f3cf0874f95648891ae27">CBMBuildLandUnitModule._isForest</a> and to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMBuildLandUnitModule.html#a464547291fb99c5593f5d5c7e0f0d7c8">CBMBuildLandUnitModule._buildWorked</a></p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#ab2a4e74eae454f4a5560fa6e140fa1d7">CBMModuleBase</a>.</p>
