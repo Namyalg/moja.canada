@@ -112,10 +112,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1d3750fa72721a04468f4dec431e2b2b"><td class="memItemLeft" align="right" valign="top">flint::ModuleTypes&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorSQLiteWriter.html#a1d3750fa72721a04468f4dec431e2b2b">moduleType</a> () override</td></tr>
 <tr class="separator:a1d3750fa72721a04468f4dec431e2b2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4bd4c5b7e100e182f021e00774b0de9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorSQLiteWriter.html#a4bd4c5b7e100e182f021e00774b0de9a">doSystemInit</a> () override</td></tr>
-<tr class="memdesc:a4bd4c5b7e100e182f021e00774b0de9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform on start of simulation.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorSQLiteWriter.html#a4bd4c5b7e100e182f021e00774b0de9a">More...</a><br /></td></tr>
 <tr class="separator:a4bd4c5b7e100e182f021e00774b0de9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d1f2a650cfc246633ef5a6896867469"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorSQLiteWriter.html#a1d1f2a650cfc246633ef5a6896867469">doSystemShutdown</a> () override</td></tr>
-<tr class="memdesc:a1d1f2a650cfc246633ef5a6896867469"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform on end of simulation.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorSQLiteWriter.html#a1d1f2a650cfc246633ef5a6896867469">More...</a><br /></td></tr>
 <tr class="separator:a1d1f2a650cfc246633ef5a6896867469"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classmoja_1_1modules_1_1cbm_1_1CBMModuleBase"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmoja_1_1modules_1_1cbm_1_1CBMModuleBase')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html">CBMModuleBase</a></td></tr>
 <tr class="memitem:aa1c377233491839026249eaac4a31bdc inherit pub_methods_classmoja_1_1modules_1_1cbm_1_1CBMModuleBase"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#aa1c377233491839026249eaac4a31bdc">~CBMModuleBase</a> ()=default</td></tr>
@@ -456,8 +454,6 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Perform on start of simulation. </p>
 <p>If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorSQLiteWriter.html#a65b5a0bc7389fa8923f2448d44d0d1de">CBMAggregatorSQLiteWriter._isPrimaryAggregator</a> is true, remove the database name</p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
@@ -487,8 +483,6 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Perform on end of simulation. </p>
 <p>If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorSQLiteWriter.html#a65b5a0bc7389fa8923f2448d44d0d1de">CBMAggregatorSQLiteWriter._isPrimaryAggregator</a>, creates unlogged tables for the DateDimension, LandClassDimension, <br  />
 PoolDimension, ClassifierSetDimension, ModuleInfoDimension, LocationDimension, DisturbanceTypeDimension,&#160;<br  />
 DisturbanceDimension, Pools, Fluxes, ErrorDimension, AgeClassDimension, LocationErrorDimension, <br  />
