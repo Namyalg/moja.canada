@@ -104,10 +104,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8489b81d80eb9d02dce10247f333ecb1"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#a8489b81d80eb9d02dce10247f333ecb1">~CBMDisturbanceListener</a> ()=default</td></tr>
 <tr class="separator:a8489b81d80eb9d02dce10247f333ecb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e61a518a587bf5dd73571c112b23e46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#a8e61a518a587bf5dd73571c112b23e46">configure</a> (const DynamicObject &amp;config) override</td></tr>
-<tr class="memdesc:a8e61a518a587bf5dd73571c112b23e46"><td class="mdescLeft">&#160;</td><td class="mdescRight">configuration function.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#a8e61a518a587bf5dd73571c112b23e46">More...</a><br /></td></tr>
+<tr class="memdesc:a8e61a518a587bf5dd73571c112b23e46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration function.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#a8e61a518a587bf5dd73571c112b23e46">More...</a><br /></td></tr>
 <tr class="separator:a8e61a518a587bf5dd73571c112b23e46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0a652d7fd514484aa74d3414acb704d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#ac0a652d7fd514484aa74d3414acb704d">subscribe</a> (NotificationCenter &amp;notificationCenter) override</td></tr>
-<tr class="memdesc:ac0a652d7fd514484aa74d3414acb704d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscribe the signals localDomainInit,SystemShutdown,TimingInit,DisturbanceEvent,and TimingStep.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#ac0a652d7fd514484aa74d3414acb704d">More...</a><br /></td></tr>
+<tr class="memdesc:ac0a652d7fd514484aa74d3414acb704d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscribe to the signals LocalDomainInit, SystemShutdown, TimingInit, DisturbanceEvent, and TimingStep.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#ac0a652d7fd514484aa74d3414acb704d">More...</a><br /></td></tr>
 <tr class="separator:ac0a652d7fd514484aa74d3414acb704d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e41f51154c5772b8a205c208eb8a03d"><td class="memItemLeft" align="right" valign="top">flint::ModuleTypes&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#a8e41f51154c5772b8a205c208eb8a03d">moduleType</a> ()</td></tr>
 <tr class="separator:a8e41f51154c5772b8a205c208eb8a03d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -445,10 +445,10 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>configuration function. </p>
-<p>Initialise variable layerNames as config["vars"]. <br  />
-Add layerNames to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#ac42365c2988e58b174433324eb2a7d05">CBMDisturbanceListener._layerNames</a>. <br  />
-if config variable contains "conditions", assign the value to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#aa80e9a315ec8067752f46390b0942356">CBMDisturbanceListener._conditionConfig</a> <br  />
+<p>Configuration function. </p>
+<p>If parameter config has variable "vars" and is not empty, <br  />
+ add each layer in config["vars"] to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#ac42365c2988e58b174433324eb2a7d05">CBMDisturbanceListener._layerNames</a> <br  />
+If parameter config has variable "conditions", assign the value to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#aa80e9a315ec8067752f46390b0942356">CBMDisturbanceListener._conditionConfig</a> <br  />
 else assign the result of function DynamicVar()</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -554,7 +554,7 @@ else assign the result of function DynamicVar()</p>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Add layerNames to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#a8a65f0fe71307e4c8fa3be0dbf4f7b74">CBMDisturbanceListener._layers</a> variable. Invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#a8496aa0398741926c468fe15226dc547" title="fetchMatrices">fetchMatrices()</a>,fetchDMAssoiciations(),fetchLandClassTransistions(), fetchhDistTypeCodes(),<a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#ac014a28a4b9828c95e9257afd864c455" title="Insert PeatlandDMAssiociations.">fetchPeatlandDMAssociations()</a> and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#a991ac5d965b8019bf07501204eab69ce" title="fetchDisturbanceOrder">fetchDisturbanceOrder()</a>. initialise the <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#abb0fd4e62cee1b570ebe43844e85bb6c">CBMDisturbanceListener._landClass</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#acf0f33d7d7092d81d017522ccc0bfc73">CBMDisturbanceListener._spu</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#a601bab6875679fbdf61b163c44a62714">CBMDisturbanceListener._classifierSet</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#a288ba2e2a55298302c348196fdc75cd8">CBMDisturbanceListener._age</a>.</p>
+<p>Add layerNames to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#a8a65f0fe71307e4c8fa3be0dbf4f7b74">CBMDisturbanceListener._layers</a> variable. Invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#a8496aa0398741926c468fe15226dc547" title="fetchMatrices">CBMDisturbanceListener.fetchMatrices()</a>, CBMDisturbanceListener.fetchDMAssoiciations(), CBMDisturbanceListener.fetchLandClassTransistions(), <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#a82e0df210ef578efb3e564a1044001ad" title="fetchDistTypeCodes">CBMDisturbanceListener.fetchDistTypeCodes()</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#ac014a28a4b9828c95e9257afd864c455" title="Insert PeatlandDMAssiociations.">CBMDisturbanceListener.fetchPeatlandDMAssociations()</a> and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#a991ac5d965b8019bf07501204eab69ce" title="fetchDisturbanceOrder">CBMDisturbanceListener.fetchDisturbanceOrder()</a>. Initialise <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#abb0fd4e62cee1b570ebe43844e85bb6c">CBMDisturbanceListener._landClass</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#acf0f33d7d7092d81d017522ccc0bfc73">CBMDisturbanceListener._spu</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#a601bab6875679fbdf61b163c44a62714">CBMDisturbanceListener._classifierSet</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#a288ba2e2a55298302c348196fdc75cd8">CBMDisturbanceListener._age</a>. from _landUnitData</p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#ae5c72527099317707d2347e45763975d">CBMModuleBase</a>.</p>
@@ -988,7 +988,7 @@ Else check if "disturbance_type_id" matches the "disturbance_type" in <a class="
 </table>
 </div><div class="memdoc">
 
-<p>Subscribe the signals localDomainInit,SystemShutdown,TimingInit,DisturbanceEvent,and TimingStep. </p>
+<p>Subscribe to the signals LocalDomainInit, SystemShutdown, TimingInit, DisturbanceEvent, and TimingStep. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">notificationCenter</td><td>NotificationCenter&amp; </td></tr>
