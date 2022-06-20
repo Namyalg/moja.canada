@@ -274,7 +274,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Configuration function.</p>
+<p>Configuration function</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">config</td><td>DynamicObject&amp; </td></tr>
@@ -307,9 +307,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Initiate Local Domain.</p>
-<p>Event is fired at the start of the simulation. If _landUnitData has variables "age_class_range" and "age_maximum" , <br  />
- object _ageClassHelper of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html">AgeClassHelper</a> is instantiated</p>
+<p>Event is fired at the start of the simulation. Instantiate an object of class <a class="el" href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html">AgeClassHelper</a> with values of variables "age_class_range" and "age_maximum", if the variables are present in _landUnitData</p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#ae5c72527099317707d2347e45763975d">CBMModuleBase</a>.</p>
@@ -338,9 +336,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Perform on each timing step.</p>
 <p>Obtain the ageClass of variable "age" in _landUnitData using <a class="el" href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html#a73b6fdeee9ebabde2e790f5320a689b9">AgeClassHelper.toAgeClass()</a>, <br  />
-, assign this to variable "age_class" in _landUnitData</p>
+assign this to variable "age_class" in _landUnitData</p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#a7a71ee940243a639488e8b2542c52010">CBMModuleBase</a>.</p>

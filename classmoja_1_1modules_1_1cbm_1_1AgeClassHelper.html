@@ -195,11 +195,10 @@ and invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.htm
 <p>_ageClasses is a map, where the keys range from 0 to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html#a6bc665d1b481ec838838cde910b0a321">AgeClassHelper._numAgeClasses</a> <br  />
 _ageClasses[0] is reserved for non-forest 1, assigned a value [-1, -1] <br  />
 _ageClasses[<a class="el" href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html#a6bc665d1b481ec838838cde910b0a321">AgeClassHelper._numAgeClasses</a>] is assigned [maximumAge, -1] <br  />
-For each key in the range, 1 to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html#a6bc665d1b481ec838838cde910b0a321">AgeClassHelper._numAgeClasses</a>, _ageClasses[key] is assigned [startAge, endAge] where <br  />
+For each ageClassNumber in the range, 1 to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html#a6bc665d1b481ec838838cde910b0a321">AgeClassHelper._numAgeClasses</a>, _ageClasses[ageClassNumber] is assigned [startAge, endAge] where <br  />
 startAge is given as (key - 1) * ageClassSize and endAge is given as key * ageClassSize - 1 <br  />
 endAge is bounded by the value maximumAge - 1</p>
-<p>For every key in _ageClasses, every age in the range startAge to endAge, <br  />
-serves as a key. The corresponding value is the key in _ageClasses from which the range was generated <br  />
+<p>Assign each age in the range startAge to endAge in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html#aff77dfc69312e3e159e04cb7d6f874ad">AgeClassHelper._ageClassLookup</a> to ageClassNumber, i.e <a class="el" href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html#aff77dfc69312e3e159e04cb7d6f874ad">AgeClassHelper._ageClassLookup</a>[age] = ageClassNumber <br  />
 _ageClassLookup[maximumAge] is assigned <a class="el" href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html#a6bc665d1b481ec838838cde910b0a321">AgeClassHelper._numAgeClasses</a></p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -273,7 +272,8 @@ _ageClassLookup[maximumAge] is assigned <a class="el" href="classmoja_1_1modules
       </table>
 </div><div class="memdoc">
 <p>Compute and return the ageClass string</p>
-<p>ageClassRange (&lt;startAge, endAge&gt;) of parameter ageClass is obtained from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html#ab225ac4e7d4bf25d03cada66a389c9ad">AgeClassHelper._ageClasses</a> If startAge is -1, return "N/A" <br  />
+<p>ageClassRange of parameter ageClass is obtained from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1AgeClassHelper.html#ab225ac4e7d4bf25d03cada66a389c9ad">AgeClassHelper._ageClasses</a>, ageClassRange is a tuple containing &lt;startAge, endAge&gt; <br  />
+If startAge is -1, return "N/A" <br  />
 , If endAge is -1, return "startAge+" <br  />
 , Else "startAge-endAge" <br  />
 Integral values of startAge and endAge are used in the ageClass string</p>

@@ -245,7 +245,7 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1TreeYieldTable.html#aed48a39b914527412531eaffaa7eb01b" title="Total volume of the speciese growth curve">TreeYieldTable.totalVolume()</a> on parameter yieldTable is &gt; 0, if the forest species is <a class="el" href="namespacemoja_1_1modules_1_1cbm.html#a50651af47c56ea0e27235468d23542cfa5ea45015a6f923dd7f5a12b0e3c5eb84">SpeciesType::Softwood</a>, append yieldTable to StandGrowthCurve._softwoodYieldTable, else to StandGrowthCurve._hardwoodYieldTable</p>
+<p>If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1TreeYieldTable.html#aed48a39b914527412531eaffaa7eb01b" title="Total volume of the species growth curve">TreeYieldTable.totalVolume()</a> on parameter yieldTable is &gt; 0, if the forest species is <a class="el" href="namespacemoja_1_1modules_1_1cbm.html#a50651af47c56ea0e27235468d23542cfa5ea45015a6f923dd7f5a12b0e3c5eb84">SpeciesType::Softwood</a>, append yieldTable to StandGrowthCurve._softwoodYieldTable, else to StandGrowthCurve._hardwoodYieldTable</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">yieldTable</td><td><a class="el" href="classmoja_1_1modules_1_1cbm_1_1TreeYieldTable.html">TreeYieldTable</a>&amp; </td></tr>
@@ -370,6 +370,7 @@ If one yield table has less data of volume, repeatedly append the yield data wit
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Get the stand age at which the stand has the maximum merchantable volume</p>
 <p>Return <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#adf6653291e80e99a384753053474416c">StandGrowthCurve._standAgeForMaximumMerchVolume</a></p>
 <dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
 
@@ -670,7 +671,15 @@ If the componentType is <a class="el" href="namespacemoja_1_1modules_1_1cbm.html
   </tr>
 </table>
 </div><div class="memdoc">
-<p>First, try to sum up the softwood. If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#aede52b057a176dcdd8aaf1d1d554a9d1">StandGrowthCurve._softwoodYieldTables</a> is not empty,</p>
+<p>First, try to sum up the softwood. If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#aede52b057a176dcdd8aaf1d1d554a9d1">StandGrowthCurve._softwoodYieldTables</a> is not empty, loop over the softwood yield tables, If the size of each yield table is &gt; 0, loop over ages of each yield table in the range 0 to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#ad0e61758ac2efbe610fdb7090ae711cb">StandGrowthCurve._standMaxAge</a> <br  />
+Record the stand total volume at this age as the total softwood volume at this age, add the value of the yield to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#a995259e869371ff7d0adb149427cb8f2">StandGrowthCurve._standMerchVolumeAtEachAge</a> at key age</p>
+<p>Second, try to sum up the hardwood and update the stand total volume at an age. <br  />
+If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#aede52b057a176dcdd8aaf1d1d554a9d1">StandGrowthCurve._softwoodYieldTables</a> is empty for ages in the range 0 to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#ad0e61758ac2efbe610fdb7090ae711cb">StandGrowthCurve._standMaxAge</a>, set the value of each age in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#a6b0401fd3e5e04dd184da767d9522f59">StandGrowthCurve._standSoftwoodVolumeRatioAtEachAge</a> to 1.0 <br  />
+Else, assign a variable hardwoodVolumeTotalAgAge as 0, loop over each of the hardwood yield tables, add up the hardwood volume at this age to hardwoodVolumeTotalAgAge <br  />
+Get the stand softwood volume at this age using <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#a995259e869371ff7d0adb149427cb8f2">StandGrowthCurve._standMerchVolumeAtEachAge</a> and assign it to variable softwoodVolumeTotalAgAge <br  />
+Calculate softwoodRatioAtAge as softwoodVolumetotalAtAge / (softwoodVolumetotalAtAge + hardwoodVolumeTotalAgAge), if denominator is not 0, else set softwoodRatioAtAge to 1 <br  />
+Update the stand total volume at this age by adding hardwoodVolumeTotalAgAge <br  />
+Set <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#a6b0401fd3e5e04dd184da767d9522f59">StandGrowthCurve._standSoftwoodVolumeRatioAtEachAge</a> at the current age to softwoodRatioAtAge</p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>

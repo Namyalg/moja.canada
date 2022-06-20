@@ -343,9 +343,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Configuration function.</p>
+<p>Configuration function</p>
 <p>Assign CBMFlatFile._outputPath value of "outptut_path" in parameter config, <br  />
- CBMFlatFile._separateYears value of "separate_years" if it exists in parameter config</p>
+ CBMFlatFile._separateYears value of "separate_years", if it exists in parameter config</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">config</td><td>DynamicObject&amp; </td></tr>
@@ -378,9 +378,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Initiate Local Domain.</p>
-<p>Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorCsvWriter.html#a4be4cb7cf544cb9f0838f3f9ec2a98e0">CBMAggregatorCsvWriter._jobId</a> the value of variable "job_id" in _landUnitData, <br  />
-if it exists, else to 0</p>
+<p>Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorCsvWriter.html#a4be4cb7cf544cb9f0838f3f9ec2a98e0">CBMAggregatorCsvWriter._jobId</a> the value of variable "job_id" in _landUnitData, if it exists, else to 0</p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#ae5c72527099317707d2347e45763975d">CBMModuleBase</a>.</p>
@@ -409,7 +407,6 @@ if it exists, else to 0</p>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Do System Init.</p>
 <p>If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorCsvWriter.html#a65b5a0bc7389fa8923f2448d44d0d1de">CBMAggregatorCsvWriter._isPrimaryAggregator</a> is true, then create output directories</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -452,10 +449,7 @@ if it exists, else to 0</p>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Perform System Shut Down.</p>
-<p>If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorCsvWriter.html#a65b5a0bc7389fa8923f2448d44d0d1de">CBMAggregatorCsvWriter._isPrimaryAggregator</a> is true and if, <br  />
-<a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorCsvWriter.html#a982d9b9bb75231dc3f318fe33dde0465">CBMAggregatorCsvWriter._classifierNames</a> is not empty, <br  />
-load the flux, pool, error, age and disturbance data</p>
+<p>If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorCsvWriter.html#a65b5a0bc7389fa8923f2448d44d0d1de">CBMAggregatorCsvWriter._isPrimaryAggregator</a> is true and if, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorCsvWriter.html#a982d9b9bb75231dc3f318fe33dde0465">CBMAggregatorCsvWriter._classifierNames</a> is not empty, load the flux, pool, error, age and disturbance data</p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#a854ef56de579c20fffdb78ba470fc6aa">CBMModuleBase</a>.</p>
@@ -508,8 +502,7 @@ load the flux, pool, error, age and disturbance data</p>
 </table>
 </div><div class="memdoc">
 <p>Inserting Records</p>
-<p>Assign variable records as dataDimension-&gt;records() <br  />
-If records is empty, return <br  />
+<p>Assign variable records as dataDimension-&gt;records(). If records is empty, return <br  />
  If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorCsvWriter.html#aec67631c9952514550ce730d998eb9d8">CBMAggregatorCsvWriter._separateYears</a> is false, create output directories and write each record to the output stream <br  />
 Else write the records to the output stream grouped based on the year</p>
 <dl class="params"><dt>Parameters</dt><dd>

@@ -135,11 +135,11 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Constructor.</p>
+<p>Constructor</p>
 <p>Initialise <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMFlatFile.html#ab812f4f2b9b231479c186d16850dd7e0">CBMFlatFile._tempPath</a> to a temporary file path, as parameter path + "_" + random number generated using rand(), <br  />
-<a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMFlatFile.html#a3420c6167ce1a4450a9ff0a87fb91f3d">CBMFlatFile._outputFile</a> as make_unique&lt;Poco::File&gt;(_tempPath), <br  />
-<a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMFlatFile.html#a9aa3483264e8a727630ef2d6e27982ea">CBMFlatFile._streamFile</a> as make_unique&lt;Poco::FileOutputStream&gt;(_tempPath), <br  />
-<a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMFlatFile.html">CBMFlatFile</a>. _outputStream as make_unique&lt;Poco::TeeOutputStream&gt;(*_streamFile)</p>
+<a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMFlatFile.html#a3420c6167ce1a4450a9ff0a87fb91f3d">CBMFlatFile._outputFile</a> as a unique pointer to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMFlatFile.html#ab812f4f2b9b231479c186d16850dd7e0">CBMFlatFile._tempPath</a> of type Poco::File, <br  />
+<a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMFlatFile.html#a9aa3483264e8a727630ef2d6e27982ea">CBMFlatFile._streamFile</a> as a unique pointer to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMFlatFile.html#ab812f4f2b9b231479c186d16850dd7e0">CBMFlatFile._tempPath</a> of type Poco::FileOutputStream <br  />
+<a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMFlatFile.html">CBMFlatFile</a>. _outputStream as a unique pointer to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMFlatFile.html#a9aa3483264e8a727630ef2d6e27982ea">CBMFlatFile._streamFile</a> of type Poco::TeeOutputStream</p>
 <p>The parameter is written in the _outputStream.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -192,7 +192,7 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Save an existing file.</p>
+<p>Save an existing file</p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
@@ -212,7 +212,7 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Write parameter text to *_outputStream.</p>
+<p>Write parameter text to *_outputStream</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">text</td><td>string&amp; </td></tr>
