@@ -217,6 +217,15 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Constructor</p>
+<p>Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#a5ce02f1e2c69283e0be75fa6f89ad3bc">StandGrowthCurve._standGrowthCurveID</a> and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#aefc2f5bcd8a77d45f5fca6fd3427dbe4">StandGrowthCurve._spuID</a> as paramters standGrowthCurveID, spuID, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#ad0e61758ac2efbe610fdb7090ae711cb">StandGrowthCurve._standMaxAge</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#adf6653291e80e99a384753053474416c">StandGrowthCurve._standAgeForMaximumMerchVolume</a> and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#a94138b26c7dccc4ddb521b140f9bb552">StandGrowthCurve._standMaximumMerchVolume</a> as 0</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">standGrowthCurveID</td><td>Int64 </td></tr>
+    <tr><td class="paramname">spuID</td><td>Int64 </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -236,6 +245,14 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1TreeYieldTable.html#aed48a39b914527412531eaffaa7eb01b" title="Total volume of the speciese growth curve">TreeYieldTable.totalVolume()</a> on parameter yieldTable is &gt; 0, if the forest species is <a class="el" href="namespacemoja_1_1modules_1_1cbm.html#a50651af47c56ea0e27235468d23542cfa5ea45015a6f923dd7f5a12b0e3c5eb84">SpeciesType::Softwood</a>, append yieldTable to StandGrowthCurve._softwoodYieldTable, else to StandGrowthCurve._hardwoodYieldTable</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">yieldTable</td><td><a class="el" href="classmoja_1_1modules_1_1cbm_1_1TreeYieldTable.html">TreeYieldTable</a>&amp; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -261,6 +278,10 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p><a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#aede52b057a176dcdd8aaf1d1d554a9d1">StandGrowthCurve._softwoodYieldTables</a> and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#a36f09ba23c2c6563a11ee94335816c83">StandGrowthCurve._hardwoodYieldTables</a> () should have valid volume data for each age up to the maximum stand age <br  />
+Each yield table must have the same pairs of [age, volume] and the age should be up to the maximum stand age <br  />
+If one yield table has less data of volume, repeatedly append the yield data with the last available volume.Use vector.push_back(lastAvailableVolume) instead of use resize() and then assign value <br  />
+ </p><dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -278,6 +299,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Return <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#a94138b26c7dccc4ddb521b140f9bb552">StandGrowthCurve._standMaximumMerchVolume</a></p>
+<dl class="section return"><dt>Returns</dt><dd>double </dd></dl>
 
 </div>
 </div>
@@ -296,7 +319,7 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Return the forest configuration of parameter speciesType</p>
+<p>If parameter speciesType is <a class="el" href="namespacemoja_1_1modules_1_1cbm.html#a50651af47c56ea0e27235468d23542cfa5ea45015a6f923dd7f5a12b0e3c5eb84">SpeciesType::Softwood</a> return <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#a4fbe60bea97aa8775c893d6e881e0393">StandGrowthCurve._swForestTypeConfiguration</a>, else return <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#a2e9f6de9a535d11be70cf1df43031267">StandGrowthCurve._hwForestTypeConfiguration</a></p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">speciesType</td><td>SpeciesType </td></tr>
@@ -322,6 +345,14 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>If parameter speciesType is <a class="el" href="namespacemoja_1_1modules_1_1cbm.html#a50651af47c56ea0e27235468d23542cfa5ea45015a6f923dd7f5a12b0e3c5eb84">SpeciesType::Softwood</a> return <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#a5241a777faafa6c91d261f9e6427de7b">StandGrowthCurve._swPERDFactor</a>, else return <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#aaec46fcec5adb641aab188e9943d3a9a">StandGrowthCurve._hwPERDFactor</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">speciesType</td><td>SpeciesType </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>shared_ptr&lt;const PERDFactor&gt; </dd></dl>
 
 </div>
 </div>
@@ -339,6 +370,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Return <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#adf6653291e80e99a384753053474416c">StandGrowthCurve._standAgeForMaximumMerchVolume</a></p>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
 
 </div>
 </div>
@@ -357,6 +390,13 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>If parameter age &gt; <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#ad0e61758ac2efbe610fdb7090ae711cb">StandGrowthCurve._standMaxAge</a> return the value of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#ad0e61758ac2efbe610fdb7090ae711cb">StandGrowthCurve._standMaxAge</a> in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#a6b0401fd3e5e04dd184da767d9522f59">StandGrowthCurve._standSoftwoodVolumeRatioAtEachAge</a>, else return the value of age in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#a6b0401fd3e5e04dd184da767d9522f59">StandGrowthCurve._standSoftwoodVolumeRatioAtEachAge</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">age</td><td>int </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -375,6 +415,13 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>If parameter age &gt; <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#ad0e61758ac2efbe610fdb7090ae711cb">StandGrowthCurve._standMaxAge</a> return the value of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#ad0e61758ac2efbe610fdb7090ae711cb">StandGrowthCurve._standMaxAge</a> in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#a995259e869371ff7d0adb149427cb8f2">StandGrowthCurve._standMerchVolumeAtEachAge</a>, else return the value of age in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#a995259e869371ff7d0adb149427cb8f2">StandGrowthCurve._standMerchVolumeAtEachAge</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">age</td><td>int </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -393,6 +440,15 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>If the componentType is <a class="el" href="namespacemoja_1_1modules_1_1cbm.html#a50651af47c56ea0e27235468d23542cfa5ea45015a6f923dd7f5a12b0e3c5eb84">SpeciesType::Softwood</a> return true if <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#a5241a777faafa6c91d261f9e6427de7b">StandGrowthCurve._swPERDFactor</a> is not null and size of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#aede52b057a176dcdd8aaf1d1d554a9d1">StandGrowthCurve._softwoodYieldTables</a> is not empty <br  />
+If the componentType is <a class="el" href="namespacemoja_1_1modules_1_1cbm.html#a50651af47c56ea0e27235468d23542cfad72e3e3ff877721b95bf42452e11e3df">SpeciesType::Hardwood</a> return true if <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#aaec46fcec5adb641aab188e9943d3a9a">StandGrowthCurve._hwPERDFactor</a> is not null and size of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#a36f09ba23c2c6563a11ee94335816c83">StandGrowthCurve._hardwoodYieldTables</a> is not empty <br  />
+ </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">componentType</td><td>SpeciesType </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 
 </div>
 </div>
@@ -418,6 +474,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Resize <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#a995259e869371ff7d0adb149427cb8f2">StandGrowthCurve._standMerchVolumeAtEachAge</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#a6b0401fd3e5e04dd184da767d9522f59">StandGrowthCurve._standSoftwoodVolumeRatioAtEachAge</a> to _standMaxAge + 1</p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -435,6 +493,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#a845f5e4a6e164ca20a9cf4b8ef1ccbcb">StandGrowthCurve.resolveStandGrowthCurveMaxAge()</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#a272b31ba86479cff437738527cb088cb">StandGrowthCurve.initStandYieldDataStorage()</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#a95914a6dbe1c23f6e23df8ef5bb7515c">StandGrowthCurve.checkAndUpdateYieldTables()</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#a9768086b19566894a247d3e1bc937e69">StandGrowthCurve.summarizeStandComponentYieldTables()</a> and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#a6dc57710b2c9e66d7708e89954290a20">StandGrowthCurve.updateStandMaximumVolumeAgeInfo()</a></p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -460,6 +520,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Set the value of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#ad0e61758ac2efbe610fdb7090ae711cb">StandGrowthCurve._standMaxAge</a> to the maximum value of the yield data in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#aede52b057a176dcdd8aaf1d1d554a9d1">StandGrowthCurve._softwoodYieldTables</a> and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#a36f09ba23c2c6563a11ee94335816c83">StandGrowthCurve._hardwoodYieldTables</a></p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -488,6 +550,14 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>If parameter speciesType is <a class="el" href="namespacemoja_1_1modules_1_1cbm.html#a50651af47c56ea0e27235468d23542cfa5ea45015a6f923dd7f5a12b0e3c5eb84">SpeciesType::Softwood</a>, set <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#a4fbe60bea97aa8775c893d6e881e0393">StandGrowthCurve._swForestTypeConfiguration</a> to parameter value, else set <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#a2e9f6de9a535d11be70cf1df43031267">StandGrowthCurve._hwForestTypeConfiguration</a> to value</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>shared_ptr&lt;PERDFactor&gt; </td></tr>
+    <tr><td class="paramname">speciesType</td><td>Speciestype </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -516,6 +586,14 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>If parameter speciesType is <a class="el" href="namespacemoja_1_1modules_1_1cbm.html#a50651af47c56ea0e27235468d23542cfa5ea45015a6f923dd7f5a12b0e3c5eb84">SpeciesType::Softwood</a>, set <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#a5241a777faafa6c91d261f9e6427de7b">StandGrowthCurve._swPERDFactor</a> to parameter value, else set <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#aaec46fcec5adb641aab188e9943d3a9a">StandGrowthCurve._hwPERDFactor</a> to value</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>shared_ptr&lt;PERDFactor&gt; </td></tr>
+    <tr><td class="paramname">speciesType</td><td>Speciestype </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -592,6 +670,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>First, try to sum up the softwood. If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#aede52b057a176dcdd8aaf1d1d554a9d1">StandGrowthCurve._softwoodYieldTables</a> is not empty,</p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -617,6 +697,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Set the maximum value of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#a995259e869371ff7d0adb149427cb8f2">StandGrowthCurve._standMerchVolumeAtEachAge</a> to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#a94138b26c7dccc4ddb521b140f9bb552">StandGrowthCurve._standMaximumMerchVolume</a>, and the age corresponding to the maximum value to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#adf6653291e80e99a384753053474416c">StandGrowthCurve._standAgeForMaximumMerchVolume</a></p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
