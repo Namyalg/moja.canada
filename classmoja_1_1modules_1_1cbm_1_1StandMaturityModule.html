@@ -282,6 +282,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandMaturityModule.html#a9c10477c7bc98f12d0e087e47b7a5d13">StandMaturityModule._standMaturity</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandMaturityModule.html#a04ab8ceb8f4e27134a67b00651407426">StandMaturityModule._age</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandMaturityModule.html#ac0a3aacca442655d137350076f15b040">StandMaturityModule._gcId</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandMaturityModule.html#a35c6eb4a9ad3631f77ad35cb34aacfbe">StandMaturityModule._spuId</a>, StandMaturityModule._swFoilage, StandMaturityModule._hwFoilage values of variables "stand_maturity", "age", "growth_curve_id", "spatial_unit_id", "SoftwoodFoliage", "HardwoodFoliage" in _landUnitData</p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#ae5c72527099317707d2347e45763975d">CBMModuleBase</a>.</p>
 
@@ -309,6 +311,12 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>If the value of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandMaturityModule.html#ac0a3aacca442655d137350076f15b040">StandMaturityModule._gcId</a> or <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandMaturityModule.html#a35c6eb4a9ad3631f77ad35cb34aacfbe">StandMaturityModule._spuId</a> or <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandMaturityModule.html#a04ab8ceb8f4e27134a67b00651407426">StandMaturityModule._age</a> is empty, set the value of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandMaturityModule.html#a9c10477c7bc98f12d0e087e47b7a5d13">StandMaturityModule._standMaturity</a> to 0.0 and return, else assign the values to variables standGrowthCurveId, spuId, ageVar <br  />
+If isBiomassCarbonCurveAvailable() with arguments standGrowthCurveId, spuId on <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandMaturityModule.html#a4a8268fbfed90b3859375b3569d9b68f">StandMaturityModule._volumeToBioGrowth</a> is false, call createStandGrowthCurve() with arguments standGrowthCurveId, spuId, *_landUnitData on <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandMaturityModule.html#a52cf04f8bcdcb02726025c86eae4e76a">StandMaturityModule._gcFactory</a> to create the stand growth curve, invoke generateBiomassCarbonCurve() on <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandMaturityModule.html#a4a8268fbfed90b3859375b3569d9b68f">StandMaturityModule._volumeToBioGrowth</a> to process and convert yield volume to carbon curves <br  />
+Assign variable maxFoilage, the value corresponding to the tuple key (standGrowthCurveId, spuId) in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandMaturityModule.html#a30264998e0a41458559fb6b8d9a25079">StandMaturityModule._maxFoliageValues</a>, if found. <br  />
+Else, get the foilageCurve from getFoliageCarbonCurve() on <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandMaturityModule.html#a4a8268fbfed90b3859375b3569d9b68f">StandMaturityModule._volumeToBioGrowth</a> with arguments standGrowthCurveId, spuId. Assign maxFoilage the maximum of the iterator maxFoilage, if not empty, else 0 Set the value of the key (standGrowthCurveId, spuId) in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandMaturityModule.html#a30264998e0a41458559fb6b8d9a25079">StandMaturityModule._maxFoliageValues</a> to maxFoilage <br  />
+Set the value of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandMaturityModule.html#a9c10477c7bc98f12d0e087e47b7a5d13">StandMaturityModule._standMaturity</a> to 0 if maxFoilage is 0, else to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandMaturityModule.html#a31e6420102fff7fdfee1ad899f3a2d8e">StandMaturityModule.getCurrentFoliageValue()</a> / maxFoilage</p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#ad920565d063d5ba5ef6f6b48374dddcf">CBMModuleBase</a>.</p>
 
@@ -336,6 +344,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Set the value of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandMaturityModule.html#a9c10477c7bc98f12d0e087e47b7a5d13">StandMaturityModule._standMaturity</a> to 0.0</p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#aba317ff7eb2117b26d98c0c5cee2d30b">CBMModuleBase</a>.</p>
 
@@ -363,6 +373,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Return the sum of the values of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandMaturityModule.html#af43bd7600f000bafee6ca1bb07a42865">StandMaturityModule._swFoliage</a> and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandMaturityModule.html#a9eb18d3d3adb8a6cd48469c43f4cf95a">StandMaturityModule._hwFoliage</a></p>
+<dl class="section return"><dt>Returns</dt><dd>double </dd></dl>
 
 </div>
 </div>
@@ -414,6 +426,14 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Subscribe to the signals LocalDomainInit, TimingInit and TimingEndStep</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">notificationCenter</td><td>NotificationCenter&amp; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>

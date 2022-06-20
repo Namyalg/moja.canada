@@ -125,6 +125,7 @@ Private Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Constructor </p>
 
 </div>
 </div>
@@ -187,6 +188,15 @@ Private Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Add the result of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#afb2ef29ed5306ccfe20f8bcf055c1e56">StandGrowthCurve.standGrowthCurveID()</a> on parameter standGrowthCurve and parameter standGrowthCurve to the cache using <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurveFactory.html#ac0655e7b82399f14b7daf27912148738">StandGrowthCurveFactory.getCache()</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">standGrowthCurveID</td><td>Int64 </td></tr>
+    <tr><td class="paramname">standGrowthCurve</td><td><a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html">StandGrowthCurve</a>&amp; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -221,6 +231,21 @@ Private Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Instantiate an object standGrowthCurve of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html">StandGrowthCurve</a> with parameters standGrowthCurveID, spuID <br  />
+Get the softwoodYieldTable and hardwoodYieldTable from variables "softwood_yield_table", "hardwood_yield_table" in parameter landUnitData <br  />
+Instantiate an object of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1TreeYieldTable.html" title="ADT - Tree yield table">TreeYieldTable</a> with softwoodYieldTable, <a class="el" href="namespacemoja_1_1modules_1_1cbm.html#a50651af47c56ea0e27235468d23542cfa5ea45015a6f923dd7f5a12b0e3c5eb84">SpeciesType::Softwood</a> and add it to standGrowthCurve <br  />
+Instantiate an object of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1TreeYieldTable.html" title="ADT - Tree yield table">TreeYieldTable</a> with hardwoodYieldTable, <a class="el" href="namespacemoja_1_1modules_1_1cbm.html#a50651af47c56ea0e27235468d23542cfad72e3e3ff877721b95bf42452e11e3df">SpeciesType::Hardwood</a> and add it to standGrowthCurve <br  />
+For each row of variable "volume_to_biomass_parameters" in parameter landUnitData, query for the appropriate PERD factor data, based on the value of "forest_type" for each row either "Softwood" or "Hardwood", invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#a699c25307394bcad8e8fe6b01a46012b">StandGrowthCurve.setPERDFactor()</a> and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#a8a2f5b48e751e093a96ec71b6a1ab702">StandGrowthCurve.setForestTypeConfiguration()</a> <br  />
+Invoke StandGrowthCurveFactory.processStandYieldTables() to pre-process the stand growth curve, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurveFactory.html#a12a72984967f666fd15de734abf4c6cd">addStandGrowthCurve()</a> with arguments standGrowthCurveID and standGrowthCurve and return the value of standGrowthCurveID in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurveFactory.html#ac0655e7b82399f14b7daf27912148738">StandGrowthCurveFactory.getCache()</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">standGrowthCurveID</td><td>Int64 </td></tr>
+    <tr><td class="paramname">spuID</td><td>Int64 </td></tr>
+    <tr><td class="paramname">landUnitData</td><td>flint::ILandUnitDataWrapper&amp; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Poco::SharedPtr&lt;StandGrowthCurve&gt; </dd></dl>
 
 </div>
 </div>
@@ -264,6 +289,14 @@ Private Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Return the value of paramter growthCurveID in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurveFactory.html#ac0655e7b82399f14b7daf27912148738">StandGrowthCurveFactory.getCache()</a> if not null, else return nullptr</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">growthCurveID</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Poco::SharedPtr&lt;StandGrowthCurve&gt; </dd></dl>
 
 </div>
 </div>
