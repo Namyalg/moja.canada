@@ -173,6 +173,17 @@ Private Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Generate Biomass carbon curves</p>
+<p>If parameter standGrowthCurve has the yield component <a class="el" href="namespacemoja_1_1modules_1_1cbm.html#a50651af47c56ea0e27235468d23542cfa5ea45015a6f923dd7f5a12b0e3c5eb84">SpeciesType::Softwood</a> or/and <a class="el" href="namespacemoja_1_1modules_1_1cbm.html#a50651af47c56ea0e27235468d23542cfad72e3e3ff877721b95bf42452e11e3df">SpeciesType::Hardwood</a>, generate the component biomass carbon curve and the root biomass equation corresponding to the forest configuration using moja::modules::CBM::StandGrowthCurve.getForestTypeConfiguration() <br  />
+Add the components species type, root biomass equation and carbon curve to the parameter standCarbonCurve <br  />
+Add the standCarbonCurve to the cache using <a class="el" href="classmoja_1_1modules_1_1cbm_1_1VolumeToBiomassCarbonGrowth.html#a625d015940c69cce4f76ce977acb8560">VolumeToBiomassCarbonGrowth.getCache()</a> for the tuple key (<a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#afb2ef29ed5306ccfe20f8bcf055c1e56">StandGrowthCurve.standGrowthCurveID()</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#ac7a4780b2ff55ad381b82ff9e2860e54">StandGrowthCurve.spuID()</a>)</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">standGrowthCurve</td><td><a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html">StandGrowthCurve</a>&amp; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -201,6 +212,15 @@ Private Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>If the tuple parameter growthCurveId, spuId exists in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1VolumeToBiomassCarbonGrowth.html#a625d015940c69cce4f76ce977acb8560">VolumeToBiomassCarbonGrowth.getCache()</a>, get the <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandBiomassCarbonCurve.html">StandBiomassCarbonCurve</a> object from cache, and return the result of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1VolumeToBiomassCarbonGrowth.html#afffa3c97ec64a720fe2d6415fe96b47a">VolumeToBiomassCarbonGrowth.getAboveGroundCarbonCurve()</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">growthCurveId</td><td>Int64 </td></tr>
+    <tr><td class="paramname">spuId</td><td>Int64 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>vector&lt;double&gt; </dd></dl>
 
 </div>
 </div>
@@ -263,6 +283,16 @@ Private Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>If the tuple parameter growthCurveId, spuId exists in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1VolumeToBiomassCarbonGrowth.html#a625d015940c69cce4f76ce977acb8560">VolumeToBiomassCarbonGrowth.getCache()</a>, get the <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandBiomassCarbonCurve.html">StandBiomassCarbonCurve</a> object from cache, and return the result of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandBiomassCarbonCurve.html#a91f90ba416fd61145e1efb88f46f5b62">StandBiomassCarbonCurve.getIncrements()</a> with argument as parameter landUnitData</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">landUnitData</td><td>flint::ILandUnitDataWrapper* </td></tr>
+    <tr><td class="paramname">growthCurveID</td><td>Int64 </td></tr>
+    <tr><td class="paramname">spuID</td><td>Int64 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>unordered_map&lt;std::string, double&gt; </dd></dl>
 
 </div>
 </div>
@@ -341,6 +371,15 @@ Private Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>If the tuple parameter growthCurveId, spuId exists in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1VolumeToBiomassCarbonGrowth.html#a625d015940c69cce4f76ce977acb8560">VolumeToBiomassCarbonGrowth.getCache()</a>, if the <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandBiomassCarbonCurve.html">StandBiomassCarbonCurve</a> object returned from cache is not null, return it, else return nullptr</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">growthCurveId</td><td>Int64 </td></tr>
+    <tr><td class="paramname">spuId</td><td>Int64 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>vector&lt;double&gt; </dd></dl>
 
 </div>
 </div>
@@ -369,6 +408,15 @@ Private Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Return if <a class="el" href="classmoja_1_1modules_1_1cbm_1_1VolumeToBiomassCarbonGrowth.html#afe9fa77ddcf4265b35c35ca619d57390">VolumeToBiomassCarbonGrowth.getBiomassCarbonCurve()</a> with arguments growthCurveID, spuID is not null</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">growthCurveID</td><td>Int64 </td></tr>
+    <tr><td class="paramname">spuID</td><td>Int64 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 
 </div>
 </div>

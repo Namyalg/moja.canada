@@ -96,7 +96,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa3fd0d90fcd890cfa1effb2c3f174219"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMSequencer.html#aa3fd0d90fcd890cfa1effb2c3f174219">configure</a> (flint::ITiming &amp;timing) override</td></tr>
 <tr class="separator:aa3fd0d90fcd890cfa1effb2c3f174219"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a279ecb58835310887ac15237e5434a96"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMSequencer.html#a279ecb58835310887ac15237e5434a96">Run</a> (NotificationCenter &amp;_notificationCenter, flint::ILandUnitController &amp;luc) override</td></tr>
-<tr class="memdesc:a279ecb58835310887ac15237e5434a96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Post event notifications.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMSequencer.html#a279ecb58835310887ac15237e5434a96">More...</a><br /></td></tr>
 <tr class="separator:a279ecb58835310887ac15237e5434a96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -209,8 +208,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Post event notifications. </p>
+<p>Post event notifications.</p>
 <p>Post event notifications for signals TimingInit and TimingPostInit. <br  />
 Assign a variable curStepDate as <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMSequencer.html">CBMSequencer</a>. _startDate, while curStepDate is less than <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMSequencer.html">CBMSequencer</a>. _endDate, post event notifications for signals <br  />
  TimingPreEndStep, TimingEndStep. OutputStep and TimingPostStep. In every iteration, increment the value of curStepDate by 1 year <br  />

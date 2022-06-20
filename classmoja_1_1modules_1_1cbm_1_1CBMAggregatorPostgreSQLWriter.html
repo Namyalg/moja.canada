@@ -104,11 +104,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a26edfca208611f6cbdb0bf11796a1193"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorPostgreSQLWriter.html#a26edfca208611f6cbdb0bf11796a1193">~CBMAggregatorPostgreSQLWriter</a> ()=default</td></tr>
 <tr class="separator:a26edfca208611f6cbdb0bf11796a1193"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e61a518a587bf5dd73571c112b23e46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorPostgreSQLWriter.html#a8e61a518a587bf5dd73571c112b23e46">configure</a> (const DynamicObject &amp;config) override</td></tr>
-<tr class="memdesc:a8e61a518a587bf5dd73571c112b23e46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration function Assign the <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorPostgreSQLWriter.html#ac379f32af41f62820fa72966f33fd2bd">CBMAggregatorPostgreSQLWriter._connectionString</a> as config["connection_string"], <br  />
-<a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorPostgreSQLWriter.html#a8f83c5b38aaa4858e083c6ca329a8f08">CBMAggregatorPostgreSQLWriter._schema</a> as config["schema"] If parameter config has "drop_schema", assign it to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorPostgreSQLWriter.html#a50cd38f278fa6424144456c030bd57bc">CBMAggregatorPostgreSQLWriter._dropSchema</a>.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorPostgreSQLWriter.html#a8e61a518a587bf5dd73571c112b23e46">More...</a><br /></td></tr>
 <tr class="separator:a8e61a518a587bf5dd73571c112b23e46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0a652d7fd514484aa74d3414acb704d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorPostgreSQLWriter.html#ac0a652d7fd514484aa74d3414acb704d">subscribe</a> (NotificationCenter &amp;notificationCenter) override</td></tr>
-<tr class="memdesc:ac0a652d7fd514484aa74d3414acb704d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscribe to the signals SystemInit and SystemShutdown.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorPostgreSQLWriter.html#ac0a652d7fd514484aa74d3414acb704d">More...</a><br /></td></tr>
 <tr class="separator:ac0a652d7fd514484aa74d3414acb704d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d3750fa72721a04468f4dec431e2b2b"><td class="memItemLeft" align="right" valign="top">flint::ModuleTypes&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorPostgreSQLWriter.html#a1d3750fa72721a04468f4dec431e2b2b">moduleType</a> () override</td></tr>
 <tr class="separator:a1d3750fa72721a04468f4dec431e2b2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -212,13 +209,11 @@ Public Member Functions</h2></td></tr>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a8478edd4a4a35c7034ec55911dae5584"><td class="memTemplParams" colspan="2">template&lt;typename TAccumulator &gt; </td></tr>
 <tr class="memitem:a8478edd4a4a35c7034ec55911dae5584"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorPostgreSQLWriter.html#a8478edd4a4a35c7034ec55911dae5584">load</a> (Poco::Data::Session &amp;session, Int64 jobId, const std::string &amp;table, std::shared_ptr&lt; TAccumulator &gt; dataDimension)</td></tr>
-<tr class="memdesc:a8478edd4a4a35c7034ec55911dae5584"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load persistable collecton data into the table using SQL.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorPostgreSQLWriter.html#a8478edd4a4a35c7034ec55911dae5584">More...</a><br /></td></tr>
 <tr class="separator:a8478edd4a4a35c7034ec55911dae5584"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
 Static Private Member Functions</h2></td></tr>
 <tr class="memitem:aaac657f417559bb935b04d0f77c23904"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorPostgreSQLWriter.html#aaac657f417559bb935b04d0f77c23904">tryExecute</a> (Poco::Data::Session &amp;session, std::function&lt; void(Poco::Data::Session &amp;)&gt; fn)</td></tr>
-<tr class="memdesc:aaac657f417559bb935b04d0f77c23904"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes the session.  <a href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorPostgreSQLWriter.html#aaac657f417559bb935b04d0f77c23904">More...</a><br /></td></tr>
 <tr class="separator:aaac657f417559bb935b04d0f77c23904"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -430,9 +425,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Configuration function Assign the <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorPostgreSQLWriter.html#ac379f32af41f62820fa72966f33fd2bd">CBMAggregatorPostgreSQLWriter._connectionString</a> as config["connection_string"], <br  />
-<a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorPostgreSQLWriter.html#a8f83c5b38aaa4858e083c6ca329a8f08">CBMAggregatorPostgreSQLWriter._schema</a> as config["schema"] If parameter config has "drop_schema", assign it to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorPostgreSQLWriter.html#a50cd38f278fa6424144456c030bd57bc">CBMAggregatorPostgreSQLWriter._dropSchema</a>. </p>
+<p>Configuration function Assign the <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorPostgreSQLWriter.html#ac379f32af41f62820fa72966f33fd2bd">CBMAggregatorPostgreSQLWriter._connectionString</a> as value of "connection_string", <br  />
+<a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorPostgreSQLWriter.html#a8f83c5b38aaa4858e083c6ca329a8f08">CBMAggregatorPostgreSQLWriter._schema</a> as "schema" in parameter config If parameter config has "drop_schema", assign it to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMAggregatorPostgreSQLWriter.html#a50cd38f278fa6424144456c030bd57bc">CBMAggregatorPostgreSQLWriter._dropSchema</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">config</td><td>DynamicObject&amp; </td></tr>
@@ -550,8 +544,7 @@ and AgeArea if they do not already exist, and loads data into these tables on Po
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Load persistable collecton data into the table using SQL. </p>
+<p>Load persistable collecton data into the table using SQL.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">session</td><td>Session&amp; </td></tr>
@@ -612,8 +605,7 @@ and AgeArea if they do not already exist, and loads data into these tables on Po
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Subscribe to the signals SystemInit and SystemShutdown. </p>
+<p>Subscribe to the signals SystemInit and SystemShutdown</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">notificationCenter</td><td>NotificationCenter&amp; </td></tr>
@@ -657,8 +649,7 @@ and AgeArea if they do not already exist, and loads data into these tables on Po
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Executes the session. </p>
+<p>Executes the session.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">session</td><td>Session&amp; </td></tr>
