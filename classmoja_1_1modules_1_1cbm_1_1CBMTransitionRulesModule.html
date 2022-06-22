@@ -333,6 +333,10 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Assign double variable totalAgBiomass as 0.0 <br  />
+for each pool in the array,add the pool value to totalAgBiomass. <br  />
+return totalAgBiomass.</p>
+<dl class="section return"><dt>Returns</dt><dd>double </dd></dl>
 
 </div>
 </div>
@@ -359,6 +363,27 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Assign transitionRuleId as -1. <br  />
+if parameter n contains "transition", assign transitionRuleId as "transition" of parameter n. <br  />
+if <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#abd1e8e472b7800b04d0166094db86804">CBMTransitionRulesModule._allowMatchingRules</a> and transitionRuleId are both equal to -1, <br  />
+Invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#a4227cbf606a8c66d1d24265472a2689f">findTransitionRule()</a> using "disturbance" of parameter n as a parameter and assign the value to transitionRuleId. Assign transition as transitionRuleId of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#aa9e78db4b6fbb8372eea65f6a6ef4525">CBMTransitionRulesModule._transitions</a> value. <br  />
+Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#af4a2d73bc8bbadb2a6249ec59987a26e">CBMTransitionRulesModule._regenDelay</a> value as transition <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#af4a2d73bc8bbadb2a6249ec59987a26e">CBMTransitionRulesModule._regenDelay</a>. <br  />
+Assign cset as <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#a68470c233f1a412dc1dba5a7a7c56214">CBMTransitionRulesModule._cset</a> value. For each classifer in transition CBMTransitionRulesModule._classifers, <br  />
+if the second element of classifer is not equal to "?", Assign first element of classifer of cset as second element of classifier. <br  />
+Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#a68470c233f1a412dc1dba5a7a7c56214">CBMTransitionRulesModule._cset</a> value as cset. <br  />
+Assign variables resetType as CBMTransitionRulesModule._resetType of transition and resetAge as CBMTransitionRulesModule._resetAge of transition. <br  />
+if resetAge is equal to <a class="el" href="namespacemoja_1_1modules_1_1cbm.html#a1a858ce54816bda0573aaa5e3a19ad59ab51ca26c6c89cfc9bec338f7a0d3e0c8">AgeResetType::Absolute</a> and resetAge is greater than -1, Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#a288ba2e2a55298302c348196fdc75cd8">CBMTransitionRulesModule._age</a> value as resetAge. else if resetAge is equal to <a class="el" href="namespacemoja_1_1modules_1_1cbm.html#a1a858ce54816bda0573aaa5e3a19ad59a2ca9469819fb0fb61ff98e914a7ccca0">AgeResetType::Relative</a>, assign integer variables currentAge as <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#a288ba2e2a55298302c348196fdc75cd8">CBMTransitionRulesModule._age</a> value and <br  />
+newAge as the max of 0 and sum of currentAge and resetAge. <br  />
+Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#a288ba2e2a55298302c348196fdc75cd8">CBMTransitionRulesModule._age</a> value as newAge. <br  />
+else if resetType is equal to <a class="el" href="namespacemoja_1_1modules_1_1cbm.html#a1a858ce54816bda0573aaa5e3a19ad59a97345487190c327e1e3ac998e4bf4d08">AgeResetType::Yield</a>, invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#a1961784e3bbb26d88831591278e314ed">findYieldCurveAge()</a> and assign the value to integer variable newAge. <br  />
+Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#a288ba2e2a55298302c348196fdc75cd8">CBMTransitionRulesModule._age</a> value as newAge.</p>
+<p>@exp Simulation Error : Handles error during simulation. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>DynamicVar </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#a8839d77d04859f8e203dc5cea9404265">CBMModuleBase</a>.</p>
 
@@ -386,6 +411,26 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Initialise <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#abe913e5bcdb44efa2d751013920a6ae4">CBMTransitionRulesModule._gcId</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#adff7c6f527c49a77be1e5a5d6abe6a09">CBMTransitionRulesModule._spuId</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#a288ba2e2a55298302c348196fdc75cd8">CBMTransitionRulesModule._age</a>, <br  />
+<a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#a68470c233f1a412dc1dba5a7a7c56214">CBMTransitionRulesModule._cset</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#af4a2d73bc8bbadb2a6249ec59987a26e">CBMTransitionRulesModule._regenDelay</a>,CBMTransitionRulesModule._softwoddMerch, <br  />
+<a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#a89cdd527ffa7e8613679d833d24ba1c4">CBMTransitionRulesModule._softwoodFoliage</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#a4b776d93d5f29b12578d9ac675dddf16">CBMTransitionRulesModule._softwoodOther</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#a9a0dc2a27f5cdfbd010705a11b6b26db">CBMTransitionRulesModule._softwoodCoarseRoots</a>, <br  />
+<a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#af94b0c6b008c6fcfd1a08c43ded3c3fd">CBMTransitionRulesModule._softwoodFineRoots</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#aa92b53f1040b31bd1b4d870899ce2ca5">CBMTransitionRulesModule._hardwoodMerch</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#acee0d85be161cdd2dcc1575975709c18">CBMTransitionRulesModule._hardwoodFoliage</a>, <br  />
+<a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#a9a7cbac725b0b097c4cacfc8b2a129b8">CBMTransitionRulesModule._hardwoodOther</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#a7728db25f7d0a67df7f61730a35164ce">CBMTransitionRulesModule._hardwoodCoarseRoots</a> and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#aa28600196c300d43f2b5788fe5bbd9e2">CBMTransitionRulesModule._hardwoodFineRoots</a>. <br  />
+If _landUnitData has variable "transition_rules_matches", assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#abaf6532d4a1316dfba543f2bf54ba89f">CBMTransitionRulesModule._transitionRuleMatches</a> as "transition_rule_matches" in _landUnitData and <br  />
+<a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#abd1e8e472b7800b04d0166094db86804">CBMTransitionRulesModule._allowMatchingRules</a> as true. <br  />
+Assign a constant variable transitionRules as "transition_rules" value in _landUnitData. <br  />
+If transitionRules is a vector, <br  />
+for each transitionRuleData in transitionRules, create a <a class="el" href="classmoja_1_1modules_1_1cbm_1_1TransitionRule.html">TransitionRule</a> object using transitionRuleData as a parameter and <br  />
+assign the index <a class="el" href="classmoja_1_1modules_1_1cbm_1_1TransitionRule.html">TransitionRule</a> object Id in CBMTransitionRulesModule._ transitions as the <a class="el" href="classmoja_1_1modules_1_1cbm_1_1TransitionRule.html">TransitionRule</a> object. <br  />
+else, create a <a class="el" href="classmoja_1_1modules_1_1cbm_1_1TransitionRule.html">TransitionRule</a> object using a dynamic object of transitionRules and <br  />
+assign the index TransistionRule object Id in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#aa9e78db4b6fbb8372eea65f6a6ef4525">CBMTransitionRulesModule._transitions</a> as the <a class="el" href="classmoja_1_1modules_1_1cbm_1_1TransitionRule.html">TransitionRule</a> object. <br  />
+Assign a constant variable transitionRuleClassifiers as "transition_rule_classifiers" value in _landUnitData. <br  />
+if transitionRuleClassifers is not empty,check if transitionRuleClassifiers is a vector and <br  />
+for each transitionRule in transitionRuleClassifiers, <br  />
+add classifier using "classifer_name" and "classifer_value" in transistionRule to index transitionRule id in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#aa9e78db4b6fbb8372eea65f6a6ef4525">CBMTransitionRulesModule._transitions</a>. <br  />
+if transistionRuleClassifiers is not a vector, <br  />
+add classifier using "classifer_name" and "classifer_value" in transistionRuleClassifers to index transitionRuleClassifers id in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#aa9e78db4b6fbb8372eea65f6a6ef4525">CBMTransitionRulesModule._transitions</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#ae5c72527099317707d2347e45763975d">CBMModuleBase</a>.</p>
 
@@ -413,6 +458,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#af4a2d73bc8bbadb2a6249ec59987a26e">CBMTransitionRulesModule._regenDelay</a> value as 0 and <br  />
+<a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#a651d81159766496e67739845ba9d42cd">CBMTransitionRulesModule._standSpuId</a> as <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#adff7c6f527c49a77be1e5a5d6abe6a09">CBMTransitionRulesModule._spuId</a> value.</p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#aba317ff7eb2117b26d98c0c5cee2d30b">CBMModuleBase</a>.</p>
 
@@ -440,6 +488,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#af4a2d73bc8bbadb2a6249ec59987a26e">CBMTransitionRulesModule._regenDelay</a> value as 0.</p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#a80bafe3cd60122fbf104a9634eb5b49f">CBMModuleBase</a>.</p>
 
@@ -468,6 +518,14 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#abaf6532d4a1316dfba543f2bf54ba89f">CBMTransitionRulesModule._transitionRuleMatches</a> value contains parameter disturbanceType, return the index disturbanceType in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#abaf6532d4a1316dfba543f2bf54ba89f">CBMTransitionRulesModule._transitionRuleMatches</a>. else return -1.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">disturbanceType</td><td>string </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
 
 </div>
 </div>
@@ -493,6 +551,17 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#abe913e5bcdb44efa2d751013920a6ae4">CBMTransitionRulesModule._gcId</a> is empty, assign variable standGrowthCurveId as - 1, <br  />
+else assign standGrowthCurveId as <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#abe913e5bcdb44efa2d751013920a6ae4">CBMTransitionRulesModule._gcId</a>. <br  />
+Assign boolean variable carbonCurveFound as stand growth curve and related yield table from memory. <br  />
+If carbonCurveFound is false, Create stand growth curve using standGrowthCurveId, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#a651d81159766496e67739845ba9d42cd">CBMTransitionRulesModule._standSpuId</a> and *_landUnitData. <br  />
+Generate Biomass Carbon curve using standGrowthCurve as a parameter. <br  />
+Invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#a571f9d5b7dec1fff8f78e55d57017eea">calculateBiomass()</a> and assign the value to standBiomass. <br  />
+Invoke getAboveGroundCarbonCurve using standGrowthCurveId and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#a651d81159766496e67739845ba9d42cd">CBMTransitionRulesModule._standSpuId</a> and assign it to agCarbonCurve. <br  />
+Assign integer variable matchingAge as the size of agCarbonCurve -1. <br  />
+For each iteration in ageCarbonCurve, check if ageCarbonCurve is greater than standBiomass and <br  />
+assign matchingAge as the index. return matchingAge.</p>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
 
 </div>
 </div>
@@ -536,6 +605,14 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Subscribe to signals LocalDomainInit,DisturbanceEvent,TimingInit and TimingShutdown.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">notificationCenter</td><td>NotificationCenter&amp; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
