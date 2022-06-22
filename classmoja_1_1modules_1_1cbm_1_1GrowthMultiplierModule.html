@@ -291,6 +291,10 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Set the next multiplier in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthMultiplierModule.html#abc5b27e46702ba89b8f5924a794640bb">GrowthMultiplierModule._activeMultiplierSet</a> to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthMultiplierModule.html#a0ceafe9ae570b947ce7828d141b1839c">GrowthMultiplierModule._currentGrowthMultipliers</a></p>
+<p>If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthMultiplierSet.html#af545ab12986d2fe462f1013c3bafb5f3">GrowthMultiplierSet.end()</a> returns false on <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthMultiplierModule.html#abc5b27e46702ba89b8f5924a794640bb">GrowthMultiplierModule._activeMultiplierSet</a>, set the value of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthMultiplierModule.html#a0ceafe9ae570b947ce7828d141b1839c">GrowthMultiplierModule._currentGrowthMultipliers</a> to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthMultiplierSet.html#a974e3f4bb16fd51609cf71dd65b74ca6">GrowthMultiplierSet.next()</a> on <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthMultiplierModule.html#abc5b27e46702ba89b8f5924a794640bb">GrowthMultiplierModule._activeMultiplierSet</a>. <br  />
+Else, if the value of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthMultiplierModule.html#a0ceafe9ae570b947ce7828d141b1839c">GrowthMultiplierModule._currentGrowthMultipliers</a> is not empty, set it to DynamicVar()</p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -316,6 +320,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthMultiplierModule.html#a7f8239d54bd84c8fa125f32ca1c26b35">GrowthMultiplierModule._moduleEnabled</a> is false, return <br  />
+Set the value of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthMultiplierModule.html#a0ceafe9ae570b947ce7828d141b1839c">GrowthMultiplierModule._currentGrowthMultipliers</a> to DynamicVar(), instantiate <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthMultiplierModule.html#abc5b27e46702ba89b8f5924a794640bb">GrowthMultiplierModule._activeMultiplierSet</a> as an object of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthMultiplierSet.html">GrowthMultiplierSet</a></p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -342,6 +349,15 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Configuration function</p>
+<p>Assign value of "debugging_enabled" in parameter config to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthMultiplierModule.html#a5a089b5485ef8ff9fb4bc89e7982aa34">GrowthMultiplierModule._debuggingEnabled</a> if it exists</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">config</td><td>const DynamicObject&amp; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -368,6 +384,16 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthMultiplierModule.html#a7f8239d54bd84c8fa125f32ca1c26b35">GrowthMultiplierModule._moduleEnabled</a> is false, return. <br  />
+Else if the disturbanceType in parameter e, given by "disturbance" is not found in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthMultiplierModule.html#a49b4e3bfc530e74cc9ea55ca7f451ed1">GrowthMultiplierModule._growthMultiplierSets</a>, assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthMultiplierModule.html#abc5b27e46702ba89b8f5924a794640bb">GrowthMultiplierModule._activeMultiplierSet</a> an object of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthMultiplierSet.html">GrowthMultiplierSet</a>, else the <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthMultiplierSet.html">GrowthMultiplierSet</a> object corresponding to the disturbanceType in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthMultiplierModule.html#a49b4e3bfc530e74cc9ea55ca7f451ed1">GrowthMultiplierModule._growthMultiplierSets</a>. <br  />
+If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthMultiplierModule.html#a5a089b5485ef8ff9fb4bc89e7982aa34">GrowthMultiplierModule._debuggingEnabled</a> is true and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthMultiplierSet.html#af545ab12986d2fe462f1013c3bafb5f3">GrowthMultiplierSet.end()</a> returns false on <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthMultiplierModule.html#abc5b27e46702ba89b8f5924a794640bb">GrowthMultiplierModule._activeMultiplierSet</a>, print all the growth multipliers for the current disturbanceType stored in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthMultiplierModule.html#abc5b27e46702ba89b8f5924a794640bb">GrowthMultiplierModule._activeMultiplierSet</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>DynamicVar </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#a8839d77d04859f8e203dc5cea9404265">CBMModuleBase</a>.</p>
 
@@ -395,6 +421,12 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>If _landUnitData does not have variable "current_growth_multipliers", set <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthMultiplierModule.html#a7f8239d54bd84c8fa125f32ca1c26b35">GrowthMultiplierModule._moduleEnabled</a> to false and return <br  />
+Else, set <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthMultiplierModule.html#a7f8239d54bd84c8fa125f32ca1c26b35">GrowthMultiplierModule._moduleEnabled</a> to true. <br  />
+Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthMultiplierModule.html#a0ceafe9ae570b947ce7828d141b1839c">GrowthMultiplierModule._currentGrowthMultipliers</a> value of variable "current_growth_multipliers" in _landUnitData <br  />
+For each multiplier in variable "growth_multipliers" of _landUnitData, if the "disturbance_type" of the multiplier is not found in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthMultiplierModule.html#a49b4e3bfc530e74cc9ea55ca7f451ed1">GrowthMultiplierModule._growthMultiplierSets</a>, create an object of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthMultiplierSet.html">GrowthMultiplierSet</a>, invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthMultiplierSet.html#ad6eb0a0f069a2fc8db5c2fdaac4e5eec">GrowthMultiplierSet.add()</a> on the object with "forest_type", "time_step" and "multiplier" of the multiplier. <br  />
+Add to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthMultiplierModule.html#a49b4e3bfc530e74cc9ea55ca7f451ed1">GrowthMultiplierModule._growthMultiplierSets</a>, the "disturbance_type" as a key and set it to the <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthMultiplierModule.html">GrowthMultiplierModule</a> object created</p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#ae5c72527099317707d2347e45763975d">CBMModuleBase</a>.</p>
 
@@ -422,6 +454,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthMultiplierModule.html#adcbff3e00e71fc0ed933aa4d82ee7ceb">GrowthMultiplierModule.clearMultipliers()</a></p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#aba317ff7eb2117b26d98c0c5cee2d30b">CBMModuleBase</a>.</p>
 
@@ -449,6 +483,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthMultiplierModule.html#adcbff3e00e71fc0ed933aa4d82ee7ceb">GrowthMultiplierModule.clearMultipliers()</a></p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#a80bafe3cd60122fbf104a9634eb5b49f">CBMModuleBase</a>.</p>
 
@@ -476,6 +512,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthMultiplierModule.html#a7f8239d54bd84c8fa125f32ca1c26b35">GrowthMultiplierModule._moduleEnabled</a> is false, return <br  />
+Invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthMultiplierModule.html#ac58ca92e46477e13026aa0bb6575d4d2">GrowthMultiplierModule.advanceMultipliers()</a></p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#a7a71ee940243a639488e8b2542c52010">CBMModuleBase</a>.</p>
 
@@ -521,6 +560,14 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Subscribe to the signals LocalDomainInit, TimingInit, TimingStep, DisturbanceEvent and TimingShutdown</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">notificationCenter</td><td>NotificationCenter&amp; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>

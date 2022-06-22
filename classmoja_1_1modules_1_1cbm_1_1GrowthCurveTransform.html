@@ -147,6 +147,14 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Return all the classifier names and values in parameter classifierSet, in the format classifierName : classifierValue, separated by a ","</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">classifierSet</td><td>const DynamicObject&amp; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>string </dd></dl>
 
 </div>
 </div>
@@ -173,6 +181,17 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Replace the placeholder values in SQL queries <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthCurveTransform.html#aed2a9ad7c4d3986cd956473fe4b3ca1a">GrowthCurveTransform._baseSql</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthCurveTransform.html#a5e712d90503b752d9f98ca5efea272c9">GrowthCurveTransform._matchSql</a></p>
+<p>Create variables classifierNames, a vector of strings and classifierValuesSql, a string <br  />
+For each classifier in parameter classifierSet, append classifier.first to classifierNames, concatenate classifierValuesSql with the SQL query <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthCurveTransform.html#a5e712d90503b752d9f98ca5efea272c9">GrowthCurveTransform._matchSql</a>, placeholder values clasifier.first and classifier.second (gives the classifier value) Assign a variable classifierNamesSql the join vector classifierNames, separated by "," <br  />
+Return the SQL query <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthCurveTransform.html#aed2a9ad7c4d3986cd956473fe4b3ca1a">GrowthCurveTransform._baseSql</a> with placeholders classifierNamesSql and classifierValuesSql</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">classifierSet</td><td>const DynamicObject&amp; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>string </dd></dl>
 
 </div>
 </div>
@@ -215,6 +234,17 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthCurveTransform.html#a1802f79cda96f755f9798fbb4dcc4766">GrowthCurveTransform._landUnitController</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthCurveTransform.html#aa3301ed714708a9fc790a6c693f40088">GrowthCurveTransform._dataRepository</a> as parameters &amp;landUnitController, &amp;dataRepository <br  />
+<a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthCurveTransform.html#ad1ad78da43b731f596cc32c167febace">GrowthCurveTransform._provider</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthCurveTransform.html#a09d96acb625c3355762e1b1a4fb0fc6c">GrowthCurveTransform._csetVar</a> value of "provider", "classifier_set_var" in parameter config</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">config</td><td>DynamicObject </td></tr>
+    <tr><td class="paramname">landUnitController</td><td>const flint::ILandUnitController&amp; </td></tr>
+    <tr><td class="paramname">dataRepository</td><td>datarepository::DataRepository&amp; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -241,6 +271,14 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthCurveTransform.html#a1802f79cda96f755f9798fbb4dcc4766">GrowthCurveTransform._landUnitController</a> as parameter &amp;controller</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">controller</td><td>const flint::ILandUnitController&amp; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -266,6 +304,14 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>If value of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthCurveTransform.html#a09d96acb625c3355762e1b1a4fb0fc6c">GrowthCurveTransform._csetVar</a> is empty assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthCurveTransform.html#ac80e1dab9c81f899c117298c9adfc94f">GrowthCurveTransform._value</a> as DynamicObject() and return <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthCurveTransform.html#ac80e1dab9c81f899c117298c9adfc94f">GrowthCurveTransform._value</a> <br  />
+Extract DynamicObject from the value of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthCurveTransform.html#a09d96acb625c3355762e1b1a4fb0fc6c">GrowthCurveTransform._csetVar</a> and store it in variable cset <br  />
+Assign variable sql, the result of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthCurveTransform.html#ab1e6dbd38207c10c68eda2d38527abf9">GrowthCurveTransform.buildSql()</a> on argument cset <br  />
+If sql has a null value in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthCurveTransform.html#a6c74ee4f3891f1ea51936534d2ee89db">GrowthCurveTransform._cache</a>, return a pointer to the result <br  />
+If the result of GetDataSet() on <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthCurveTransform.html#ad1ad78da43b731f596cc32c167febace">GrowthCurveTransform._provider</a> with argument sql has a size &gt; 0, add sql, and "growth_curve_id" at index 0 of the result to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthCurveTransform.html#a6c74ee4f3891f1ea51936534d2ee89db">GrowthCurveTransform._cache</a>, <br  />
+else add sql, and a variable of type DynamicVar to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthCurveTransform.html#a6c74ee4f3891f1ea51936534d2ee89db">GrowthCurveTransform._cache</a>, indicate an error and invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthCurveTransform.html#ab221018c343d54bf3d0e1264efeb0817">GrowthCurveTransform.buildDebuggingInfo()</a> with argument cset <br  />
+Return a pointer to the value of sql in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1GrowthCurveTransform.html#a6c74ee4f3891f1ea51936534d2ee89db">GrowthCurveTransform._cache</a></p>
+<dl class="section return"><dt>Returns</dt><dd>const DynamicVar&amp; </dd></dl>
 
 </div>
 </div>
