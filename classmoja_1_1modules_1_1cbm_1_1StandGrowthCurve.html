@@ -245,7 +245,7 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1TreeYieldTable.html#aed48a39b914527412531eaffaa7eb01b" title="Total volume of the species growth curve">TreeYieldTable.totalVolume()</a> on parameter yieldTable is &gt; 0, if the forest species is <a class="el" href="namespacemoja_1_1modules_1_1cbm.html#a50651af47c56ea0e27235468d23542cfa5ea45015a6f923dd7f5a12b0e3c5eb84">SpeciesType::Softwood</a>, append yieldTable to StandGrowthCurve._softwoodYieldTable, else to StandGrowthCurve._hardwoodYieldTable</p>
+<p>If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1TreeYieldTable.html#aed48a39b914527412531eaffaa7eb01b" title="Total volume of the species growth curve">TreeYieldTable.totalVolume()</a> on parameter yieldTable is &gt; 0, if the forest species is <a class="el" href="namespacemoja_1_1modules_1_1cbm.html#a50651af47c56ea0e27235468d23542cfa5ea45015a6f923dd7f5a12b0e3c5eb84">SpeciesType::Softwood</a>, append yieldTable to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#aede52b057a176dcdd8aaf1d1d554a9d1">StandGrowthCurve._softwoodYieldTables</a>, else to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#a36f09ba23c2c6563a11ee94335816c83">StandGrowthCurve._hardwoodYieldTables</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">yieldTable</td><td><a class="el" href="classmoja_1_1modules_1_1cbm_1_1TreeYieldTable.html">TreeYieldTable</a>&amp; </td></tr>
@@ -278,7 +278,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p><a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#aede52b057a176dcdd8aaf1d1d554a9d1">StandGrowthCurve._softwoodYieldTables</a> and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#a36f09ba23c2c6563a11ee94335816c83">StandGrowthCurve._hardwoodYieldTables</a> () should have valid volume data for each age up to the maximum stand age <br  />
+<p><a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#aede52b057a176dcdd8aaf1d1d554a9d1">StandGrowthCurve._softwoodYieldTables</a> and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#a36f09ba23c2c6563a11ee94335816c83">StandGrowthCurve._hardwoodYieldTables</a> should have valid volume data for each age up to the maximum stand age <br  />
 Each yield table must have the same pairs of [age, volume] and the age should be up to the maximum stand age <br  />
 If one yield table has less data of volume, repeatedly append the yield data with the last available volume.Use vector.push_back(lastAvailableVolume) instead of use resize() and then assign value <br  />
  </p><dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
@@ -475,7 +475,7 @@ If the componentType is <a class="el" href="namespacemoja_1_1modules_1_1cbm.html
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Resize <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#a995259e869371ff7d0adb149427cb8f2">StandGrowthCurve._standMerchVolumeAtEachAge</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#a6b0401fd3e5e04dd184da767d9522f59">StandGrowthCurve._standSoftwoodVolumeRatioAtEachAge</a> to _standMaxAge + 1</p>
+<p>Resize <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#a995259e869371ff7d0adb149427cb8f2">StandGrowthCurve._standMerchVolumeAtEachAge</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#a6b0401fd3e5e04dd184da767d9522f59">StandGrowthCurve._standSoftwoodVolumeRatioAtEachAge</a> to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html#ad0e61758ac2efbe610fdb7090ae711cb">StandGrowthCurve._standMaxAge</a> + 1</p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
