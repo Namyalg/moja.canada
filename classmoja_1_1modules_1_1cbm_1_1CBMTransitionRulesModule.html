@@ -371,13 +371,19 @@ Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModu
 Assign cset as <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#a68470c233f1a412dc1dba5a7a7c56214">CBMTransitionRulesModule._cset</a> value. For each classifer in transition CBMTransitionRulesModule._classifers, <br  />
 if the second element of classifer is not equal to "?", Assign first element of classifer of cset as second element of classifier. <br  />
 Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#a68470c233f1a412dc1dba5a7a7c56214">CBMTransitionRulesModule._cset</a> value as cset. <br  />
-Assign variables resetType as CBMTransitionRulesModule._resetType of transition and resetAge as CBMTransitionRulesModule._resetAge of transition. <br  />
+Assign variables resetType as transition <a class="el" href="classmoja_1_1modules_1_1cbm_1_1TransitionRule.html#abe517bcf35193368aa80b209abf78043">TransitionRule._resetType</a> and resetAge as transition <a class="el" href="classmoja_1_1modules_1_1cbm_1_1TransitionRule.html#adc952f96e1e9d229fb2e22bb5e85b3a1">TransitionRule._resetAge</a> . <br  />
 if resetAge is equal to <a class="el" href="namespacemoja_1_1modules_1_1cbm.html#a1a858ce54816bda0573aaa5e3a19ad59ab51ca26c6c89cfc9bec338f7a0d3e0c8">AgeResetType::Absolute</a> and resetAge is greater than -1, Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#a288ba2e2a55298302c348196fdc75cd8">CBMTransitionRulesModule._age</a> value as resetAge. else if resetAge is equal to <a class="el" href="namespacemoja_1_1modules_1_1cbm.html#a1a858ce54816bda0573aaa5e3a19ad59a2ca9469819fb0fb61ff98e914a7ccca0">AgeResetType::Relative</a>, assign integer variables currentAge as <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#a288ba2e2a55298302c348196fdc75cd8">CBMTransitionRulesModule._age</a> value and <br  />
 newAge as the max of 0 and sum of currentAge and resetAge. <br  />
 Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#a288ba2e2a55298302c348196fdc75cd8">CBMTransitionRulesModule._age</a> value as newAge. <br  />
 else if resetType is equal to <a class="el" href="namespacemoja_1_1modules_1_1cbm.html#a1a858ce54816bda0573aaa5e3a19ad59a97345487190c327e1e3ac998e4bf4d08">AgeResetType::Yield</a>, invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#a1961784e3bbb26d88831591278e314ed">findYieldCurveAge()</a> and assign the value to integer variable newAge. <br  />
 Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMTransitionRulesModule.html#a288ba2e2a55298302c348196fdc75cd8">CBMTransitionRulesModule._age</a> value as newAge.</p>
-<p>@exp Simulation Error : Handles error during simulation. </p><dl class="params"><dt>Parameters</dt><dd>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Simulation</td><td>Error : Handles error during simulation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">n</td><td>DynamicVar </td></tr>
   </table>
