@@ -187,6 +187,13 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Get the absolute total aboveground carbon at each age, where index = age</p>
+<p>Create a vector variable, curve, to store the absolute total aboveground carbon at each age <br  />
+For each component in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandBiomassCarbonCurve.html#a6f6b36768bf60adeace900f8000f4c9b">StandBiomassCarbonCurve._components</a>, invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandComponent.html#a6d2966a89a03e77030920b553ce4d1cf">StandComponent.getAboveGroundCarbonCurve()</a> and assign it to variable componentCurve <br  />
+ If the size of componentCurve &gt; size of curve, resize variable curve to the size of componentCurve, initialise the new indices in curve to 0.0 <br  />
+For each index in range 0 to the size of componentCurve, add the value of componentCurve at that index to the value at the same index in variable curve <br  />
+Return variable curve</p>
+<dl class="section return"><dt>Returns</dt><dd>vector&lt;double&gt; </dd></dl>
 
 </div>
 </div>
@@ -204,6 +211,13 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Get the absolute total foliage carbon at each age, where index = age</p>
+<p>Create a vector variable, curve, to store the absolute total foliage carbon at each age <br  />
+For each component in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandBiomassCarbonCurve.html#a6f6b36768bf60adeace900f8000f4c9b">StandBiomassCarbonCurve._components</a>, invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandComponent.html#aac061f50af6f49d3cc7bcb9a76a28267">StandComponent.getFoliageCarbonCurve()</a> and assign it to variable componentCurve <br  />
+ If the size of componentCurve &gt; size of curve, resize variable curve to the size of componentCurve, initialise the new indices in curve to 0.0 <br  />
+For each index in range 0 to the size of componentCurve, add the value of componentCurve at that index to the value at the same index in variable curve <br  />
+Return variable curve</p>
+<dl class="section return"><dt>Returns</dt><dd>vector&lt;double&gt; </dd></dl>
 
 </div>
 </div>
@@ -222,6 +236,18 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Create a variable standRootBiomass with initial value 0.0 <br  />
+Add to standRootBiomass the result of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandComponent.html#a293a64701258f6dd7c6d6ca0304e2a17">StandComponent.calculateRootBiomass()</a> on each component in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandBiomassCarbonCurve.html#a6f6b36768bf60adeace900f8000f4c9b">StandBiomassCarbonCurve._components</a> <br  />
+Create an unoredered_map&lt;string::double&gt; variable increments <br  />
+For each component in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandBiomassCarbonCurve.html#a6f6b36768bf60adeace900f8000f4c9b">StandBiomassCarbonCurve._components</a>, add the result of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandComponent.html#ae7bcdd57822eb8c0a94b36f8910cd304">StandComponent.getIncrements()</a> with arguments as parameter landUnitData and variable standRootBiomass to variable increments <br  />
+Return increments</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">landUnitData</td><td>flint::ILandUnitDataWrapper* </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>nordered_map&lt;string, double&gt; </dd></dl>
 
 </div>
 </div>
@@ -239,6 +265,13 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Get the absolute total merchantable carbon at each age, where index = age</p>
+<p>Create a vector variable, curve, to store the absolute total merchantable carbon at each age <br  />
+For each component in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandBiomassCarbonCurve.html#a6f6b36768bf60adeace900f8000f4c9b">StandBiomassCarbonCurve._components</a>, invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandComponent.html#abd710c27d2e22531650597bf3b065448">StandComponent.getMerchCarbonCurve()</a> and assign it to variable componentCurve <br  />
+ If the size of componentCurve &gt; size of curve, resize variable curve to the size of componentCurve, initialise the new indices in curve to 0.0 <br  />
+For each index in range 0 to the size of componentCurve, add the value of componentCurve at that index to the value at the same index in variable curve <br  />
+Return variable curve</p>
+<dl class="section return"><dt>Returns</dt><dd>vector&lt;double&gt; </dd></dl>
 
 </div>
 </div>
@@ -256,6 +289,13 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Get the absolute total other carbon at each age, where index = age</p>
+<p>Create a vector variable, curve, to store the absolute total other carbon at each age <br  />
+For each component in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandBiomassCarbonCurve.html#a6f6b36768bf60adeace900f8000f4c9b">StandBiomassCarbonCurve._components</a>, invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandComponent.html#adeebd03bb24fcf3b98cf857ae1edd782">StandComponent.getOtherCarbonCurve()</a> and assign it to variable componentCurve <br  />
+ If the size of componentCurve &gt; size of curve, resize variable curve to the size of componentCurve, initialise the new indices in curve to 0.0 <br  />
+For each index in range 0 to the size of componentCurve, add the value of componentCurve at that index to the value at the same index in variable curve <br  />
+Return variable curve</p>
+<dl class="section return"><dt>Returns</dt><dd>vector&lt;double&gt; </dd></dl>
 
 </div>
 </div>
@@ -274,6 +314,14 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Write the results of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandBiomassCarbonCurve.html#ad9140dcf5d9af99bbc02af80be8d0e0f">StandBiomassCarbonCurve.getMerchCarbonCurve()</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandBiomassCarbonCurve.html#ad90b382fbb9485da735bdbb5d49797ea">StandBiomassCarbonCurve.getFoliageCarbonCurve()</a>, and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandBiomassCarbonCurve.html#a57a99e24eb91e1ee79fe417d8d0d93bf">StandBiomassCarbonCurve.getOtherCarbonCurve()</a> to a file, parameter path is the output file path</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>string&amp; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
