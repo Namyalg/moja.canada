@@ -258,10 +258,13 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:af4a2d73bc8bbadb2a6249ec59987a26e"><td class="memItemLeft" align="right" valign="top">flint::IVariable *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#af4a2d73bc8bbadb2a6249ec59987a26e">_regenDelay</a> = nullptr</td></tr>
 <tr class="separator:af4a2d73bc8bbadb2a6249ec59987a26e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a459ec1d23d345c238b452692d52000a1"><td class="memItemLeft" align="right" valign="top">flint::IVariable *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#a459ec1d23d345c238b452692d52000a1">_shrubAge</a> = nullptr</td></tr>
+<tr class="memdesc:a459ec1d23d345c238b452692d52000a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Peatland shrub age variable, which may be very old /summary&gt;  <a href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#a459ec1d23d345c238b452692d52000a1">More...</a><br /></td></tr>
 <tr class="separator:a459ec1d23d345c238b452692d52000a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a225b4b1ae7fc771387a53a5ed9154839"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverParameters.html">PeatlandTurnoverParameters</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#a225b4b1ae7fc771387a53a5ed9154839">turnoverParas</a> = nullptr</td></tr>
+<tr class="memdesc:a225b4b1ae7fc771387a53a5ed9154839"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turnover parameters associated to this peatland unit /summary&gt;  <a href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#a225b4b1ae7fc771387a53a5ed9154839">More...</a><br /></td></tr>
 <tr class="separator:a225b4b1ae7fc771387a53a5ed9154839"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10aa54eddbc83f933d707377307b147a"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandGrowthParameters.html">PeatlandGrowthParameters</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#a10aa54eddbc83f933d707377307b147a">growthParas</a> = nullptr</td></tr>
+<tr class="memdesc:a10aa54eddbc83f933d707377307b147a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Growth parameters associated to this peatland unit /summary&gt;  <a href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#a10aa54eddbc83f933d707377307b147a">More...</a><br /></td></tr>
 <tr class="separator:a10aa54eddbc83f933d707377307b147a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b5e460dbdf2820801c12388f7b261b6"><td class="memItemLeft" align="right" valign="top">DynamicObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#a1b5e460dbdf2820801c12388f7b261b6">baseWTDParameters</a></td></tr>
 <tr class="separator:a1b5e460dbdf2820801c12388f7b261b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -373,6 +376,16 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">previousAwtd</td><td>double </td></tr>
+    <tr><td class="paramname">currentAwtd</td><td>double </td></tr>
+    <tr><td class="paramname">a</td><td>double </td></tr>
+    <tr><td class="paramname">b</td><td>double </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>double </dd></dl>
 
 </div>
 </div>
@@ -409,6 +422,16 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Compute the water table depth</p>
+<p>Return -0.045 * parameter dc + value of peatlandID (converted to a string) in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#a1b5e460dbdf2820801c12388f7b261b6">PeatlandTurnoverModuleBase.baseWTDParameters</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>double </td></tr>
+    <tr><td class="paramname">peatlandID</td><td>int </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>double </dd></dl>
 
 </div>
 </div>
@@ -435,6 +458,14 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Configuration function</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">config</td><td>const DynamicObject&amp; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -460,6 +491,11 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Live to Dead pool turnover transfers</p>
+<p>Invoke createStockOperation() on _landUnitData <br  />
+</p>
+<p>Invoke submitOperation() on _landUnitData to submit the transfers, applyOperations() to apply the transfers</p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -486,6 +522,14 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Subscribe to the signals LocalDomainInit, TimingInit and TimingStep</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">notificationCenter</td><td>NotificationCenter&amp; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -511,6 +555,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Set <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#a107c7633137934da860261ef09c5bc40">PeatlandTurnoverModuleBase.woodyFoliageLive</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#a8a359105b15c26ae704ffad112a26345">PeatlandTurnoverModuleBase.woodyStemsBranchesLive</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#a2537f5b15c452b92bafa07879708e6c5">PeatlandTurnoverModuleBase.woodyRootsLive</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#ac661b8b204ee582a71f8da257613c7dd">PeatlandTurnoverModuleBase.sedgeFoliageLive</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#ad26a84556751aa70d7bb8778c67998bd">PeatlandTurnoverModuleBase.sedgeRootsLive</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#af09de153ac2f2d2aec9e47ef3456a226">PeatlandTurnoverModuleBase.featherMossLive</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#abba2b7de1adc0ec60a51ece9ed12caf6">PeatlandTurnoverModuleBase.sphagnumMossLive</a> to the values of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#a4bdca2c75761036b05e2793be98b9fa1">PeatlandTurnoverModuleBase._woodyFoliageLive</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#a7bf88c6bf92f29a26c87ede7dca845dd">PeatlandTurnoverModuleBase._woodyStemsBranchesLive</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#aacec13ce541fd962b7a5996aa84fdcae">PeatlandTurnoverModuleBase._woodyRootsLive</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#a182df2e3527b82d6b6a49ff5741807dd">PeatlandTurnoverModuleBase._sedgeFoliageLive</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#a48ec30f5dc8cb9b2fd00af423f21696a">PeatlandTurnoverModuleBase._sedgeRootsLive</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#a196f4d5a05b22eb3976a10f87213ba06">PeatlandTurnoverModuleBase._featherMossLive</a> and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#a340dd4e8e6743ca82b19317764e63117">PeatlandTurnoverModuleBase._sphagnumMossLive</a></p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -843,6 +889,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Peatland shrub age variable, which may be very old /summary&gt; </p>
+
 </div>
 </div>
 <a id="a340dd4e8e6743ca82b19317764e63117"></a>
@@ -1085,6 +1133,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Growth parameters associated to this peatland unit /summary&gt; </p>
+
 </div>
 </div>
 <a id="ac661b8b204ee582a71f8da257613c7dd"></a>
@@ -1172,6 +1222,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Turnover parameters associated to this peatland unit /summary&gt; </p>
 
 </div>
 </div>

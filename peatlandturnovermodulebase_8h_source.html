@@ -114,39 +114,39 @@ $(function() {
 <div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#af4a2d73bc8bbadb2a6249ec59987a26e">   42</a></span>&#160;                flint::IVariable* _regenDelay = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                <span class="comment">//peatland shrub age variable, which may be very old</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#a459ec1d23d345c238b452692d52000a1">   45</a></span>&#160;                flint::IVariable* _shrubAge = <span class="keyword">nullptr</span>;;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                <span class="comment">// the turnover parameters associated to this peatland unit</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#a225b4b1ae7fc771387a53a5ed9154839">   48</a></span>&#160;                std::shared_ptr&lt;PeatlandTurnoverParameters&gt; turnoverParas = <span class="keyword">nullptr</span>;;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#a459ec1d23d345c238b452692d52000a1">   48</a></span>&#160;<span class="comment"></span>                flint::IVariable* _shrubAge = <span class="keyword">nullptr</span>;;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                <span class="comment">// the growth parameters associated to this peatland unit</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#a10aa54eddbc83f933d707377307b147a">   51</a></span>&#160;                std::shared_ptr&lt;PeatlandGrowthParameters&gt; growthParas = <span class="keyword">nullptr</span>;;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                DynamicObject baseWTDParameters;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                <span class="comment">//current peatland pool value</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#a107c7633137934da860261ef09c5bc40">   56</a></span>&#160;                <span class="keywordtype">double</span> woodyFoliageLive{ 0 };</div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#a8a359105b15c26ae704ffad112a26345">   57</a></span>&#160;                <span class="keywordtype">double</span> woodyStemsBranchesLive{ 0 };</div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#a2537f5b15c452b92bafa07879708e6c5">   58</a></span>&#160;                <span class="keywordtype">double</span> woodyRootsLive{ 0 };</div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#ac661b8b204ee582a71f8da257613c7dd">   59</a></span>&#160;                <span class="keywordtype">double</span> sedgeFoliageLive{ 0 };</div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#ad26a84556751aa70d7bb8778c67998bd">   60</a></span>&#160;                <span class="keywordtype">double</span> sedgeRootsLive{ 0 };</div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#af09de153ac2f2d2aec9e47ef3456a226">   61</a></span>&#160;                <span class="keywordtype">double</span> featherMossLive{ 0 };</div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#abba2b7de1adc0ec60a51ece9ed12caf6">   62</a></span>&#160;                <span class="keywordtype">double</span> sphagnumMossLive{ 0 };</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                <span class="comment">// the turnover parameters associated to this peatland unit</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#a225b4b1ae7fc771387a53a5ed9154839">   54</a></span>&#160;<span class="comment"></span>                std::shared_ptr&lt;PeatlandTurnoverParameters&gt; turnoverParas = <span class="keyword">nullptr</span>;;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                <span class="comment">// the growth parameters associated to this peatland unit</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#a10aa54eddbc83f933d707377307b147a">   60</a></span>&#160;<span class="comment"></span>                std::shared_ptr&lt;PeatlandGrowthParameters&gt; growthParas = <span class="keyword">nullptr</span>;;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                DynamicObject baseWTDParameters;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#a71318ee311a3c4b727a1e3af9d5eba26">   64</a></span>&#160;                <span class="keywordtype">bool</span> _runPeatland{ <span class="keyword">false</span> };</div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#ae02f2669f55ed08483dbfaff0bb342b9">   65</a></span>&#160;                <span class="keywordtype">int</span> _peatlandId{ -1 };</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                <span class="keywordtype">void</span> updatePeatlandLivePoolValue();</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                <span class="keywordtype">void</span> doLivePoolTurnover();</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <span class="keywordtype">double</span> computeWaterTableDepth(<span class="keywordtype">double</span> dc, <span class="keywordtype">int</span> peatlandID);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                <span class="keywordtype">double</span> computeCarbonTransfers(<span class="keywordtype">double</span> previousAwtd, <span class="keywordtype">double</span> currentAwtd, <span class="keywordtype">double</span> a, <span class="keywordtype">double</span> b);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            };</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        }</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;} <span class="comment">// namespace moja::modules::cbm</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#endif // MOJA_MODULES_CBM_PLTURNOVER_H_</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                <span class="comment">//current peatland pool value</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#a107c7633137934da860261ef09c5bc40">   65</a></span>&#160;                <span class="keywordtype">double</span> woodyFoliageLive{ 0 };</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#a8a359105b15c26ae704ffad112a26345">   66</a></span>&#160;                <span class="keywordtype">double</span> woodyStemsBranchesLive{ 0 };</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#a2537f5b15c452b92bafa07879708e6c5">   67</a></span>&#160;                <span class="keywordtype">double</span> woodyRootsLive{ 0 };</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#ac661b8b204ee582a71f8da257613c7dd">   68</a></span>&#160;                <span class="keywordtype">double</span> sedgeFoliageLive{ 0 };</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#ad26a84556751aa70d7bb8778c67998bd">   69</a></span>&#160;                <span class="keywordtype">double</span> sedgeRootsLive{ 0 };</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#af09de153ac2f2d2aec9e47ef3456a226">   70</a></span>&#160;                <span class="keywordtype">double</span> featherMossLive{ 0 };</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#abba2b7de1adc0ec60a51ece9ed12caf6">   71</a></span>&#160;                <span class="keywordtype">double</span> sphagnumMossLive{ 0 };</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#a71318ee311a3c4b727a1e3af9d5eba26">   73</a></span>&#160;                <span class="keywordtype">bool</span> _runPeatland{ <span class="keyword">false</span> };</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#ae02f2669f55ed08483dbfaff0bb342b9">   74</a></span>&#160;                <span class="keywordtype">int</span> _peatlandId{ -1 };</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                <span class="keywordtype">void</span> updatePeatlandLivePoolValue();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                <span class="keywordtype">void</span> doLivePoolTurnover();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                <span class="keywordtype">double</span> computeWaterTableDepth(<span class="keywordtype">double</span> dc, <span class="keywordtype">int</span> peatlandID);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                <span class="keywordtype">double</span> computeCarbonTransfers(<span class="keywordtype">double</span> previousAwtd, <span class="keywordtype">double</span> currentAwtd, <span class="keywordtype">double</span> a, <span class="keywordtype">double</span> b);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            };</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;} <span class="comment">// namespace moja::modules::cbm</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">#endif // MOJA_MODULES_CBM_PLTURNOVER_H_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespacemoja_1_1modules_1_1cbm_html"><div class="ttname"><a href="namespacemoja_1_1modules_1_1cbm.html">moja::modules::cbm</a></div><div class="ttdef"><b>Definition:</b> ageclasshelper.cpp:14</div></div>
 <div class="ttc" id="apeatlandgrowthparameters_8h_html"><div class="ttname"><a href="peatlandgrowthparameters_8h.html">peatlandgrowthparameters.h</a></div></div>
