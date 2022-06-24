@@ -98,6 +98,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8e61a518a587bf5dd73571c112b23e46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#a8e61a518a587bf5dd73571c112b23e46">configure</a> (const DynamicObject &amp;config) override</td></tr>
 <tr class="separator:a8e61a518a587bf5dd73571c112b23e46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3fd0d90fcd890cfa1effb2c3f174219"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#aa3fd0d90fcd890cfa1effb2c3f174219">configure</a> (flint::ITiming &amp;timing) override</td></tr>
+<tr class="memdesc:aa3fd0d90fcd890cfa1effb2c3f174219"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the value of startDate and endDate from parameter timing  <a href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#aa3fd0d90fcd890cfa1effb2c3f174219">More...</a><br /></td></tr>
 <tr class="separator:aa3fd0d90fcd890cfa1effb2c3f174219"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a279ecb58835310887ac15237e5434a96"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#a279ecb58835310887ac15237e5434a96">Run</a> (NotificationCenter &amp;_notificationCenter, flint::ILandUnitController &amp;luc) override</td></tr>
 <tr class="separator:a279ecb58835310887ac15237e5434a96"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,22 +146,31 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:af27823b2ae94aab42492a5619b4b342c"><td class="memItemLeft" align="right" valign="top">flint::IVariable *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#af27823b2ae94aab42492a5619b4b342c">_delay</a></td></tr>
 <tr class="separator:af27823b2ae94aab42492a5619b4b342c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af52fa6e954bddc3e40060cb8d26795fb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#af52fa6e954bddc3e40060cb8d26795fb">_maxRotationValue</a></td></tr>
+<tr class="memdesc:af52fa6e954bddc3e40060cb8d26795fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum rotations to do the spinup, 30, each rotation is 125 years  <a href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#af52fa6e954bddc3e40060cb8d26795fb">More...</a><br /></td></tr>
 <tr class="separator:af52fa6e954bddc3e40060cb8d26795fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6509df410c301d144a13afd527a9a02"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#aa6509df410c301d144a13afd527a9a02">_miniumRotation</a></td></tr>
+<tr class="memdesc:aa6509df410c301d144a13afd527a9a02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum rotation to do the spinup, 3  <a href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#aa6509df410c301d144a13afd527a9a02">More...</a><br /></td></tr>
 <tr class="separator:aa6509df410c301d144a13afd527a9a02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ced966eb10ee9aa3bb107c0870e268c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#a1ced966eb10ee9aa3bb107c0870e268c">_ageReturnInterval</a></td></tr>
+<tr class="memdesc:a1ced966eb10ee9aa3bb107c0870e268c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Age interval to fire a historic disturbance, 125 years  <a href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#a1ced966eb10ee9aa3bb107c0870e268c">More...</a><br /></td></tr>
 <tr class="separator:a1ced966eb10ee9aa3bb107c0870e268c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad048d5c5a610ac189b403f7cf729f31d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#ad048d5c5a610ac189b403f7cf729f31d">_standAge</a></td></tr>
+<tr class="memdesc:ad048d5c5a610ac189b403f7cf729f31d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stand age to grow after the last disturbance  <a href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#ad048d5c5a610ac189b403f7cf729f31d">More...</a><br /></td></tr>
 <tr class="separator:ad048d5c5a610ac189b403f7cf729f31d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8dcd080da9248a04c0517bc308036012"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#a8dcd080da9248a04c0517bc308036012">_standDelay</a></td></tr>
+<tr class="memdesc:a8dcd080da9248a04c0517bc308036012"><td class="mdescLeft">&#160;</td><td class="mdescRight">Years to delay, during delay period, only turnover and decay processes  <a href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#a8dcd080da9248a04c0517bc308036012">More...</a><br /></td></tr>
 <tr class="separator:a8dcd080da9248a04c0517bc308036012"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5c5180056b251e76ef1ff5ab8677a4e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#af5c5180056b251e76ef1ff5ab8677a4e">_spinupGrowthCurveID</a></td></tr>
+<tr class="memdesc:af5c5180056b251e76ef1ff5ab8677a4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spinup growth curve ID  <a href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#af5c5180056b251e76ef1ff5ab8677a4e">More...</a><br /></td></tr>
 <tr class="separator:af5c5180056b251e76ef1ff5ab8677a4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17b2db25d1e38add76f51ddf3c5e93c8"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#a17b2db25d1e38add76f51ddf3c5e93c8">_historicDistType</a></td></tr>
+<tr class="memdesc:a17b2db25d1e38add76f51ddf3c5e93c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Historic disturbance type happened at each age interval  <a href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#a17b2db25d1e38add76f51ddf3c5e93c8">More...</a><br /></td></tr>
 <tr class="separator:a17b2db25d1e38add76f51ddf3c5e93c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28b6f3014ca415f9cd55d4a08a116adf"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#a28b6f3014ca415f9cd55d4a08a116adf">_lastPassDistType</a></td></tr>
+<tr class="memdesc:a28b6f3014ca415f9cd55d4a08a116adf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Last disturance type happened when the slow pool is stable and minimum rotations are done  <a href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#a28b6f3014ca415f9cd55d4a08a116adf">More...</a><br /></td></tr>
 <tr class="separator:a28b6f3014ca415f9cd55d4a08a116adf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f10a8569617ae6021fa74a197bcb1fb"><td class="memItemLeft" align="right" valign="top">Poco::Nullable&lt; DateTime &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#a9f10a8569617ae6021fa74a197bcb1fb">_rampStartDate</a></td></tr>
+<tr class="memdesc:a9f10a8569617ae6021fa74a197bcb1fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Last disturance type happened when the slow pool is stable and minimum rotations are done Optional ramp to use at the end of the spinup period; used when, for example, spinup uses a value of 10 for a variable, and the rest of the simulation uses a value of 20, and the values need to blend smoothly together, so the user prepares a 10-value ramp which is used for the last 10 timesteps of the spinup period: 10, 11, 12, 13, ...  <a href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#a9f10a8569617ae6021fa74a197bcb1fb">More...</a><br /></td></tr>
 <tr class="separator:a9f10a8569617ae6021fa74a197bcb1fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b1f36c37f7f886acf815505deb66bc9"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#a1b1f36c37f7f886acf815505deb66bc9">_distTypeCodes</a></td></tr>
 <tr class="separator:a1b1f36c37f7f886acf815505deb66bc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -259,6 +269,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Set the value of startDate and endDate from parameter timing </p>
+
 </div>
 </div>
 <a id="a82e0df210ef578efb3e564a1044001ad"></a>
@@ -283,6 +295,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get disturbance type and disturbance type codes</p>
+<p>If _landUnitData has the variable "disturbance_type_codes", for each code in variable "disturbance_type_codes", populate <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#a1b1f36c37f7f886acf815505deb66bc9">ESGYMSpinupSequencer._distTypeCodes</a> mapping the "disturbance_type" to the "disturbance_type_code" value.</p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -325,6 +340,18 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Fire historical and last disturbance</p>
+<p>Post the moja::signals::DisturbanceEvent notification with argument data, and also post a generic follow-up notification after the subscriber receives the original signal <br  />
+data is a DynamicVar with key "disturbance", value as parameter disturbanceName, key "disturbance_type_code", which takes the value of parameter disturbanceName in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#a1b1f36c37f7f886acf815505deb66bc9">ESGYMSpinupSequencer._distTypeCodes</a> if count of parameter disturbanceName in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#a1b1f36c37f7f886acf815505deb66bc9">ESGYMSpinupSequencer._distTypeCodes</a> &gt; 0 else takes value -1 , key "transfers", a vector of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDistEventTransfer.html">CBMDistEventTransfer</a> to keep the event pool transfers</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">notificationCenter</td><td>NotificationCenter&amp; </td></tr>
+    <tr><td class="paramname">luc</td><td>flint::ILandUnitController&amp; </td></tr>
+    <tr><td class="paramname">disturbanceName</td><td>string </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -373,6 +400,24 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Fire timing events</p>
+<p>For each time step in the range 0 to paraemter maximumSteps, get the timing object from _landUnitData, invoke setStep() on timing, set the current timestep to the previous timestep + 1, <br  />
+setStartStepDate() on timing, increment the current timestep start date by 1 year, <br  />
+setEndStepDate() on timing, increment the current timestep end date by 1 year, <br  />
+setCurStartDate() on timing, increment the current fractional timestep start date by 1 year, <br  />
+setCurEndDate() on timing, increment the current fractional timestep end date by 1 year, <br  />
+ Post notifications moja::signals::TimingStep, moja::signals::TimingPreEndStep and also post a generic follow-up notification after the subscriber receives the original signal <br  />
+Post notification moja::signals::TimingEndStep and moja::signals::TimingPostStep</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">notificationCenter</td><td>NotificationCenter&amp; </td></tr>
+    <tr><td class="paramname">luc</td><td>flint::ILandUnitController&amp; </td></tr>
+    <tr><td class="paramname">maximumSteps</td><td>int </td></tr>
+    <tr><td class="paramname">incrementStep</td><td>bool </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -399,6 +444,21 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get spinup parameters for this land unit</p>
+<p>If value of variable "spinup_parameters" in parameter landUnitData is false, return false <br  />
+Extract DynamicObject from variable "spinup_parameters" in parameter landUnitData and store it in a variable spinupParams <br  />
+Assign values of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#a3a0e2e975a9a2a76a3c900eee956c719">ESGYMSpinupSequencer::returnInverval</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#a4c1c1af8ce6364ef3af6a1f5f6b3b575">ESGYMSpinupSequencer::maxRotation</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#a6d3cdb0a6912e4904d1a69bbfe9ea3d9">ESGYMSpinupSequencer::historicDistType</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#a336a61303377faf59f5dad0ff05692b1">ESGYMSpinupSequencer::lastDistType</a> in spinupParams to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#a1ced966eb10ee9aa3bb107c0870e268c" title="Age interval to fire a historic disturbance, 125 years">ESGYMSpinupSequencer._ageReturnInterval</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#af52fa6e954bddc3e40060cb8d26795fb" title="Maximum rotations to do the spinup, 30, each rotation is 125 years">ESGYMSpinupSequencer._maxRotationValue</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#a17b2db25d1e38add76f51ddf3c5e93c8" title="Historic disturbance type happened at each age interval">ESGYMSpinupSequencer._historicDistType</a> and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#a28b6f3014ca415f9cd55d4a08a116adf" title="Last disturance type happened when the slow pool is stable and minimum rotations are done">ESGYMSpinupSequencer._lastPassDistType</a> <br  />
+If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#ae11a119e44bbc13c058348382245fdfa">ESGYMSpinupSequencer::inventoryDelay</a> exists in spinupParams, assign it to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#a8dcd080da9248a04c0517bc308036012" title="Years to delay, during delay period, only turnover and decay processes">ESGYMSpinupSequencer._standDelay</a>, else assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#a134aa7970c90a369a6eaf698e8c5d313">ESGYMSpinupSequencer::delay</a> <br  />
+Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#aa6509df410c301d144a13afd527a9a02" title="Minimum rotation to do the spinup, 3">ESGYMSpinupSequencer._miniumRotation</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#a288ba2e2a55298302c348196fdc75cd8">ESGYMSpinupSequencer._age</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#ad048d5c5a610ac189b403f7cf729f31d" title="Stand age to grow after the last disturbance">ESGYMSpinupSequencer._standAge</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#af27823b2ae94aab42492a5619b4b342c">ESGYMSpinupSequencer._delay</a> values of variables "minimum_rotation", "age", "initial_age", "delay" in parameter landUnitData, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#aead02a514f3310faa46ef8ed56cf4197">ESGYMSpinupSequencer._aboveGroundSlowSoil</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#a511e4f56e0b86c78aeb2c5833af6e515">ESGYMSpinupSequencer._belowGroundSlowSoil</a> values of pools "AboveGroundSlowSoil", "BelowGroundSlowSoil" in parameter landUnitData <br  />
+Set the value of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#af27823b2ae94aab42492a5619b4b342c">ESGYMSpinupSequencer._delay</a> to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#a8dcd080da9248a04c0517bc308036012" title="Years to delay, during delay period, only turnover and decay processes">ESGYMSpinupSequencer._standDelay</a></p>
+<p>Return true</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">landUnit</td><td>flint::ILandUnitDataWrapper&amp; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 
 </div>
 </div>
@@ -435,6 +495,16 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Check if the slow pool is stable</p>
+<p>Return true if the ratio of parameter currentSlowPoolValue / parameter lastSlowPoolValue &gt; 0.999 and &lt; 1.001, where lastSlowPoolValue != 0, else return false</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lastSlowPoolValue</td><td>double </td></tr>
+    <tr><td class="paramname">currentSlowPoolValue</td><td>double </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 
 </div>
 </div>
@@ -471,6 +541,28 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#a1b1f36c37f7f886acf815505deb66bc9">ESGYMSpinupSequencer._distTypeCodes</a> is empty and _landUnitData has a variable "disturbance_type_codes", invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#a82e0df210ef578efb3e564a1044001ad">ESGYMSpinupSequencer.fetchDistTypeCodes()</a> <br  />
+If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#aeaa20762d1c07921b960a55b3b6e4cc1">getSpinupParameters()</a> on _landUnitData returns false, return false <br  />
+ Set the stepping period of the simulation to TimeStepping::Annual <br  />
+ If _rampStartDate is true, set the simulation start date to _rampStartDate, set the simulation end date to luc.timing().<a class="el" href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#a601669853ae03e35b04c3f9111523337">startDate()</a>, set the current timestep start date, current timestamp end date, current fractional timestep start date and current fractional timestep end date to the start date of the simulation, result of the <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#a601669853ae03e35b04c3f9111523337">startDate()</a> on _landUnitData-&gt;timing()</p>
+<p>Post notifications moja::signals::TimingInit and moja::signals::TimingPostInit</p>
+<p>Create a variable currentRotation with value 0, till the time currentRotation is less than <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#af52fa6e954bddc3e40060cb8d26795fb" title="Maximum rotations to do the spinup, 30, each rotation is 125 years">ESGYMSpinupSequencer._maxRotationValue</a>, fire spinup pass, each pass is up to the stand age return interval, get the slow pool values at the end of the current age interval as the sum of values _aboveGroundSlowSoil and _belowGroundSlowSoil and assign it to variable currentSlowPoolValue, the slow pool value at the end of the previous iteration is stored in variable lastSlowPoolValue <br  />
+If the result of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#a82812e34818a8abac2569a909516ff84">ESGYMSpinupSequencer.isSlowPoolStable()</a> with arguments lastSlowPoolValue and currentSlowPoolValue is true, and variable currentRotation &gt; _miniumRotation, break from the loop, as slow pool is stable, and the minimum rotations are done <br  />
+Whenever the max rotations are reached, stop even if the slow pool is not stable</p>
+<p>CBM spinup is not done, notify to simulate the historic disturbance.</p>
+<p>Perform the optional ramp-up from spinup to regular simulation values <br  />
+Determine the number of years the final stages of the simulation need to run without advancing the timestep into the ramp-up period; i.e. all spinup timeseries variables are aligned to the end of spinup for each pixel.</p>
+<p>Fire up the spinup sequencer to grow the stand to the original stand age, set value of _age to 0 <br  />
+If there is stand delay, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ESGYMSpinupSequencer.html#a8dcd080da9248a04c0517bc308036012" title="Years to delay, during delay period, only turnover and decay processes">ESGYMSpinupSequencer._standDelay</a> &gt; 0 , due to deforestation disturbance, fire up the stand delay to do turnover and decay only <br  />
+</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">notificationCenter</td><td>flint::NotificationCenter&amp; </td></tr>
+    <tr><td class="paramname">luc</td><td>flint::ILandUnitController&amp; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 
 </div>
 </div>
@@ -538,6 +630,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Age interval to fire a historic disturbance, 125 years </p>
 
 </div>
 </div>
@@ -627,6 +721,10 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Historic disturbance type happened at each age interval </p>
+<p><br  />
+ </p>
+
 </div>
 </div>
 <a id="a28b6f3014ca415f9cd55d4a08a116adf"></a>
@@ -648,6 +746,10 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Last disturance type happened when the slow pool is stable and minimum rotations are done </p>
+<p><br  />
+ </p>
 
 </div>
 </div>
@@ -671,6 +773,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Maximum rotations to do the spinup, 30, each rotation is 125 years </p>
+
 </div>
 </div>
 <a id="aa6509df410c301d144a13afd527a9a02"></a>
@@ -692,6 +796,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Minimum rotation to do the spinup, 3 </p>
 
 </div>
 </div>
@@ -715,6 +821,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Last disturance type happened when the slow pool is stable and minimum rotations are done Optional ramp to use at the end of the spinup period; used when, for example, spinup uses a value of 10 for a variable, and the rest of the simulation uses a value of 20, and the values need to blend smoothly together, so the user prepares a 10-value ramp which is used for the last 10 timesteps of the spinup period: 10, 11, 12, 13, ... </p>
+
 </div>
 </div>
 <a id="af5c5180056b251e76ef1ff5ab8677a4e"></a>
@@ -736,6 +844,10 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Spinup growth curve ID </p>
+<p><br  />
+ </p>
 
 </div>
 </div>
@@ -759,6 +871,10 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Stand age to grow after the last disturbance </p>
+<p><br  />
+ </p>
+
 </div>
 </div>
 <a id="a8dcd080da9248a04c0517bc308036012"></a>
@@ -780,6 +896,10 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Years to delay, during delay period, only turnover and decay processes </p>
+<p><br  />
+ </p>
 
 </div>
 </div>
