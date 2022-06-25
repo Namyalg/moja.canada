@@ -143,6 +143,15 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Constructor.</p>
+<p>Initialise variables <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ErrorRecord.html#ac01ca554d3611d1a408d52b3eaf8d004">ErrorRecord._module</a> as module and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ErrorRecord.html#a675a1ab0f89c56317181987e8d345842">ErrorRecord._error</a> as error.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">module</td><td>string </td></tr>
+    <tr><td class="paramname">error</td><td>string </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -178,6 +187,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Return ErrorRow using <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ErrorRecord.html#a2fb68a5ecd23366882be5277b8ac3c65">ErrorRecord._id</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1ErrorRecord.html#ac01ca554d3611d1a408d52b3eaf8d004">ErrorRecord._module</a> and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ErrorRecord.html#a675a1ab0f89c56317181987e8d345842">ErrorRecord._error</a> as parameters.</p>
+<dl class="section return"><dt>Returns</dt><dd>ErrorRow </dd></dl>
 
 </div>
 </div>
@@ -195,6 +206,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Return StdErrorRow using <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ErrorRecord.html#a2fb68a5ecd23366882be5277b8ac3c65">ErrorRecord._id</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1ErrorRecord.html#ac01ca554d3611d1a408d52b3eaf8d004">ErrorRecord._module</a> and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ErrorRecord.html#a675a1ab0f89c56317181987e8d345842">ErrorRecord._error</a> as parameters.</p>
+<dl class="section return"><dt>Returns</dt><dd>StdErrorRow </dd></dl>
 
 </div>
 </div>
@@ -229,6 +242,10 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ErrorRecord.html#ae059dfbd9014bb0672749a5fdb785c6e">ErrorRecord._hash</a> is equal to -1, <br  />
+assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ErrorRecord.html#ae059dfbd9014bb0672749a5fdb785c6e">ErrorRecord._hash</a> as moja::hash::hash_combine() using <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ErrorRecord.html#ac01ca554d3611d1a408d52b3eaf8d004">ErrorRecord._module</a> and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ErrorRecord.html#a675a1ab0f89c56317181987e8d345842">ErrorRecord._error</a>. <br  />
+return <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ErrorRecord.html#ae059dfbd9014bb0672749a5fdb785c6e">ErrorRecord._hash</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>size_t </dd></dl>
 
 </div>
 </div>
@@ -265,6 +282,15 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Check if <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ErrorRecord.html#ac01ca554d3611d1a408d52b3eaf8d004">ErrorRecord._module</a> is equal parameter other <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ErrorRecord.html#ac01ca554d3611d1a408d52b3eaf8d004">ErrorRecord._module</a> and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ErrorRecord.html#a675a1ab0f89c56317181987e8d345842">ErrorRecord._error</a> is equal to parameter other <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ErrorRecord.html#a675a1ab0f89c56317181987e8d345842">ErrorRecord._error</a>. <br  />
+return the boolean value.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td><a class="el" href="classmoja_1_1modules_1_1cbm_1_1ErrorRecord.html">ErrorRecord</a>&amp; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 
 </div>
 </div>

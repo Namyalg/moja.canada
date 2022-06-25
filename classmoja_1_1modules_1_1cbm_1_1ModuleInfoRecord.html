@@ -167,6 +167,19 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Constructor.</p>
+<p>Initialise variables <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ModuleInfoRecord.html#a3f5862bafbf61734349ca2290631546e">ModuleInfoRecord._libType</a> as parameter libType, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ModuleInfoRecord.html#ab6b789ba99094d26a86f92fdfd663e15">ModuleInfoRecord._libInfoId</a> as parameter libInfoId, <br  />
+<a class="el" href="classmoja_1_1modules_1_1cbm_1_1ModuleInfoRecord.html#ab90b31b5c16486b96bffaccc5a17731c">ModuleInfoRecord._moduleType</a> as parameter moduleType,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1ModuleInfoRecord.html#a76f9ee9feca9c5d51918ca25b2dfe280">ModuleInfoRecord._moduleId</a> as parameter moduleId,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1ModuleInfoRecord.html#ab61cb99f14b357c17dd995490a0f1f7a">ModuleInfoRecord._moduleName</a> as parameter moduleName.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">libType</td><td>int </td></tr>
+    <tr><td class="paramname">libInfoId</td><td>int </td></tr>
+    <tr><td class="paramname">moduleType</td><td>int </td></tr>
+    <tr><td class="paramname">moduleId</td><td></td></tr>
+    <tr><td class="paramname">moduleName</td><td>string </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -202,6 +215,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Return ModuleInfoRow using <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ModuleInfoRecord.html#a2fb68a5ecd23366882be5277b8ac3c65">ModuleInfoRecord._id</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1ModuleInfoRecord.html#a3f5862bafbf61734349ca2290631546e">ModuleInfoRecord._libType</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1ModuleInfoRecord.html#ab90b31b5c16486b96bffaccc5a17731c">ModuleInfoRecord._moduleType</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1ModuleInfoRecord.html#a76f9ee9feca9c5d51918ca25b2dfe280">ModuleInfoRecord._moduleId</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1ModuleInfoRecord.html#ab61cb99f14b357c17dd995490a0f1f7a">ModuleInfoRecord._moduleName</a> as paramters.</p>
+<dl class="section return"><dt>Returns</dt><dd>ModuleInfoRow </dd></dl>
 
 </div>
 </div>
@@ -219,6 +234,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Return StdModuleInfoRow using <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ModuleInfoRecord.html#a2fb68a5ecd23366882be5277b8ac3c65">ModuleInfoRecord._id</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1ModuleInfoRecord.html#a3f5862bafbf61734349ca2290631546e">ModuleInfoRecord._libType</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1ModuleInfoRecord.html#ab90b31b5c16486b96bffaccc5a17731c">ModuleInfoRecord._moduleType</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1ModuleInfoRecord.html#a76f9ee9feca9c5d51918ca25b2dfe280">ModuleInfoRecord._moduleId</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1ModuleInfoRecord.html#ab61cb99f14b357c17dd995490a0f1f7a">ModuleInfoRecord._moduleName</a> as paramters.</p>
+<dl class="section return"><dt>Returns</dt><dd>ModuleInfoRow </dd></dl>
 
 </div>
 </div>
@@ -253,6 +270,10 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ModuleInfoRecord.html#ae059dfbd9014bb0672749a5fdb785c6e">ModuleInfoRecord._hash</a> is equal to -1, <br  />
+assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ModuleInfoRecord.html#ae059dfbd9014bb0672749a5fdb785c6e">ModuleInfoRecord._hash</a> as moja::hash::hash_combine() using <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ModuleInfoRecord.html#ab61cb99f14b357c17dd995490a0f1f7a">ModuleInfoRecord._moduleName</a> as a parameter. <br  />
+return <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ModuleInfoRecord.html#ae059dfbd9014bb0672749a5fdb785c6e">ModuleInfoRecord._hash</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>size_t </dd></dl>
 
 </div>
 </div>
@@ -289,6 +310,15 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Check if <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ModuleInfoRecord.html#ab61cb99f14b357c17dd995490a0f1f7a">ModuleInfoRecord._moduleName</a> is equal to parameter other <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ModuleInfoRecord.html#ab61cb99f14b357c17dd995490a0f1f7a">ModuleInfoRecord._moduleName</a>. <br  />
+return the boolean value.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td><a class="el" href="classmoja_1_1modules_1_1cbm_1_1ModuleInfoRecord.html">ModuleInfoRecord</a>&amp; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 
 </div>
 </div>

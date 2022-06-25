@@ -175,6 +175,20 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Constructor.</p>
+<p>Initialise variables <a class="el" href="classmoja_1_1modules_1_1cbm_1_1DateRecord.html#ac9a59b283baa2f546e431adf3a3ada8c">DateRecord._step</a> as parameter step,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1DateRecord.html#ad60d94703926c0139348473f99c531b2">DateRecord._year</a> as parameter year,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1DateRecord.html#a947e6271f1f1d1ec45fc897d516a7486">DateRecord._month</a> as parameter month <br  />
+<a class="el" href="classmoja_1_1modules_1_1cbm_1_1DateRecord.html#ad7911489526416029505473e78e4f3f7">DateRecord._day</a> as parameter day,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1DateRecord.html#ae8082a3d2f3b71952a7c8b7a59527e58">DateRecord._fracOfStep</a> as fracOfStep and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1DateRecord.html#a9f18b754ecd68ca3c67d848748f06484">DateRecord._yearsInStep</a> as yearsInStep.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">step</td><td>int </td></tr>
+    <tr><td class="paramname">year</td><td>int </td></tr>
+    <tr><td class="paramname">month</td><td>int </td></tr>
+    <tr><td class="paramname">day</td><td>int </td></tr>
+    <tr><td class="paramname">fracOfStep</td><td>double </td></tr>
+    <tr><td class="paramname">yearsInStep</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -210,6 +224,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Return DateRow using <a class="el" href="classmoja_1_1modules_1_1cbm_1_1DateRecord.html#a2fb68a5ecd23366882be5277b8ac3c65">DateRecord._id</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1DateRecord.html#ac9a59b283baa2f546e431adf3a3ada8c">DateRecord._step</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1DateRecord.html#a947e6271f1f1d1ec45fc897d516a7486">DateRecord._month</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1DateRecord.html#ad7911489526416029505473e78e4f3f7">DateRecord._day</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1DateRecord.html#ae8082a3d2f3b71952a7c8b7a59527e58">DateRecord._fracOfStep</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1DateRecord.html#a9f18b754ecd68ca3c67d848748f06484">DateRecord._yearsInStep</a> as paramters.</p>
+<dl class="section return"><dt>Returns</dt><dd>DateRow </dd></dl>
 
 </div>
 </div>
@@ -227,6 +243,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Return stdDateRow using <a class="el" href="classmoja_1_1modules_1_1cbm_1_1DateRecord.html#a2fb68a5ecd23366882be5277b8ac3c65">DateRecord._id</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1DateRecord.html#ac9a59b283baa2f546e431adf3a3ada8c">DateRecord._step</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1DateRecord.html#a947e6271f1f1d1ec45fc897d516a7486">DateRecord._month</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1DateRecord.html#ad7911489526416029505473e78e4f3f7">DateRecord._day</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1DateRecord.html#ae8082a3d2f3b71952a7c8b7a59527e58">DateRecord._fracOfStep</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1DateRecord.html#a9f18b754ecd68ca3c67d848748f06484">DateRecord._yearsInStep</a> as paramters.</p>
+<dl class="section return"><dt>Returns</dt><dd>StdDateRow </dd></dl>
 
 </div>
 </div>
@@ -261,6 +279,9 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1DateRecord.html#ae059dfbd9014bb0672749a5fdb785c6e">DateRecord._hash</a> is equal to -1, assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1DateRecord.html#ae059dfbd9014bb0672749a5fdb785c6e">DateRecord._hash</a> as moja::hash::hash_combine() using <a class="el" href="classmoja_1_1modules_1_1cbm_1_1DateRecord.html#ac9a59b283baa2f546e431adf3a3ada8c">DateRecord._step</a> as a parameter. <br  />
+return <a class="el" href="classmoja_1_1modules_1_1cbm_1_1DateRecord.html#ae059dfbd9014bb0672749a5fdb785c6e">DateRecord._hash</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>size_t </dd></dl>
 
 </div>
 </div>
@@ -297,6 +318,14 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Return <a class="el" href="classmoja_1_1modules_1_1cbm_1_1DateRecord.html#ac9a59b283baa2f546e431adf3a3ada8c">DateRecord._step</a> as parameter other <a class="el" href="classmoja_1_1modules_1_1cbm_1_1DateRecord.html#ac9a59b283baa2f546e431adf3a3ada8c">DateRecord._step</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td><a class="el" href="classmoja_1_1modules_1_1cbm_1_1DateRecord.html">DateRecord</a>&amp; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 
 </div>
 </div>

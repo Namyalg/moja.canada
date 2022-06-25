@@ -175,6 +175,20 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Constructor</p>
+<p>Initialise variables <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FluxRecord.html#a5e5da5f40a75fed23533626b37b6e873">FluxRecord._locationId</a> as parameter locationId,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1FluxRecord.html#af4632a2fb6d156e57e9b43c2a9971c7e">FluxRecord._moduleId</a> as parameter moduleId, <br  />
+<a class="el" href="classmoja_1_1modules_1_1cbm_1_1FluxRecord.html#a3d749c78804c95c3522dc834a2b56255">FluxRecord._distId</a> as parameter distId,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1FluxRecord.html#aca90ef1937e11b9fd7bfd3909271c59d">FluxRecord._srcPoolId</a> as parameter srcPoolId,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1FluxRecord.html#a92a916a89e7d4f1e51a832853f24c82b">FluxRecord._dstPoolId</a> as parameter dstPoolId ans <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FluxRecord.html#aec3a0262a2fd0911d707c812cbf2e627">FluxRecord._flux</a> as parameter flux.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">locationId</td><td>Int64 </td></tr>
+    <tr><td class="paramname">moduleId</td><td>Int64 </td></tr>
+    <tr><td class="paramname">distId</td><td>Poco::Nullable&lt;Int64&gt; </td></tr>
+    <tr><td class="paramname">srcPoolId</td><td>Int64 </td></tr>
+    <tr><td class="paramname">dstPoolId</td><td>Int64 </td></tr>
+    <tr><td class="paramname">flux</td><td>double </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -210,6 +224,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Return FluxRow using <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FluxRecord.html#a2fb68a5ecd23366882be5277b8ac3c65">FluxRecord._id</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1FluxRecord.html#a5e5da5f40a75fed23533626b37b6e873">FluxRecord._locationId</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1FluxRecord.html#af4632a2fb6d156e57e9b43c2a9971c7e">FluxRecord._moduleId</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1FluxRecord.html#aca90ef1937e11b9fd7bfd3909271c59d">FluxRecord._srcPoolId</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1FluxRecord.html#a92a916a89e7d4f1e51a832853f24c82b">FluxRecord._dstPoolId</a> and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FluxRecord.html#aec3a0262a2fd0911d707c812cbf2e627">FluxRecord._flux</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>FluxRow </dd></dl>
 
 </div>
 </div>
@@ -227,6 +243,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Return StdFluxRow using <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FluxRecord.html#a2fb68a5ecd23366882be5277b8ac3c65">FluxRecord._id</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1FluxRecord.html#a5e5da5f40a75fed23533626b37b6e873">FluxRecord._locationId</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1FluxRecord.html#af4632a2fb6d156e57e9b43c2a9971c7e">FluxRecord._moduleId</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1FluxRecord.html#aca90ef1937e11b9fd7bfd3909271c59d">FluxRecord._srcPoolId</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1FluxRecord.html#a92a916a89e7d4f1e51a832853f24c82b">FluxRecord._dstPoolId</a> and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FluxRecord.html#aec3a0262a2fd0911d707c812cbf2e627">FluxRecord._flux</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>StdFluxRow </dd></dl>
 
 </div>
 </div>
@@ -261,6 +279,9 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FluxRecord.html#ae059dfbd9014bb0672749a5fdb785c6e">FluxRecord._hash</a> is equal to -1, assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FluxRecord.html#ae059dfbd9014bb0672749a5fdb785c6e">FluxRecord._hash</a> as moja::hash::hash_combine() using <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FluxRecord.html#a5e5da5f40a75fed23533626b37b6e873">FluxRecord._locationId</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1FluxRecord.html#af4632a2fb6d156e57e9b43c2a9971c7e">FluxRecord._moduleId</a>, <br  />
+<a class="el" href="classmoja_1_1modules_1_1cbm_1_1FluxRecord.html#a3d749c78804c95c3522dc834a2b56255">FluxRecord._distId</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1FluxRecord.html#aca90ef1937e11b9fd7bfd3909271c59d">FluxRecord._srcPoolId</a> and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FluxRecord.html#a92a916a89e7d4f1e51a832853f24c82b">FluxRecord._dstPoolId</a>. return <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FluxRecord.html#ae059dfbd9014bb0672749a5fdb785c6e">FluxRecord._hash</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>size_t </dd></dl>
 
 </div>
 </div>
@@ -279,6 +300,14 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Increase <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FluxRecord.html#aec3a0262a2fd0911d707c812cbf2e627">FluxRecord._flux</a> by parameter other <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FluxRecord.html#aec3a0262a2fd0911d707c812cbf2e627">FluxRecord._flux</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td><a class="el" href="classmoja_1_1modules_1_1cbm_1_1FluxRecord.html">FluxRecord</a>&amp; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -297,6 +326,16 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Check if FluxRecord._location is equal to parameter other <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FluxRecord.html#a5e5da5f40a75fed23533626b37b6e873">FluxRecord._locationId</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1FluxRecord.html#af4632a2fb6d156e57e9b43c2a9971c7e">FluxRecord._moduleId</a> is equal to parameter other <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FluxRecord.html#af4632a2fb6d156e57e9b43c2a9971c7e">FluxRecord._moduleId</a>, <br  />
+<a class="el" href="classmoja_1_1modules_1_1cbm_1_1FluxRecord.html#a3d749c78804c95c3522dc834a2b56255">FluxRecord._distId</a> is equal to parameter other <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FluxRecord.html#a3d749c78804c95c3522dc834a2b56255">FluxRecord._distId</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1FluxRecord.html#aca90ef1937e11b9fd7bfd3909271c59d">FluxRecord._srcPoolId</a> is equal to parameter other <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FluxRecord.html#aca90ef1937e11b9fd7bfd3909271c59d">FluxRecord._srcPoolId</a> and <br  />
+<a class="el" href="classmoja_1_1modules_1_1cbm_1_1FluxRecord.html#a92a916a89e7d4f1e51a832853f24c82b">FluxRecord._dstPoolId</a> is equal to parameter other <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FluxRecord.html#a92a916a89e7d4f1e51a832853f24c82b">FluxRecord._dstPoolId</a>. return boolean values.</p>
+<dl class="section return"><dt>Returns</dt><dd>other <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FluxRecord.html">FluxRecord</a>&amp; </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bool</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

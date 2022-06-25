@@ -137,6 +137,14 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Constructor.</p>
+<p>Initialise <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ClassifierSetRecord.html#a4105dcb000d0ef8b5db07178a3a23519">ClassifierSetRecord._classifierValues</a> as classifierValues.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">classifierValues</td><td>vector&lt;Nullable&lt;string&gt;&gt; </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -172,6 +180,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Return ClassifierSetRow using <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ClassifierSetRecord.html#a2fb68a5ecd23366882be5277b8ac3c65">ClassifierSetRecord._id</a> ,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1ClassifierSetRecord.html#a4105dcb000d0ef8b5db07178a3a23519">ClassifierSetRecord._classifierValues</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>ClassifierSetRow </dd></dl>
 
 </div>
 </div>
@@ -206,6 +216,10 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ClassifierSetRecord.html#ae059dfbd9014bb0672749a5fdb785c6e">ClassifierSetRecord._hash</a> is equal to -1, <br  />
+assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ClassifierSetRecord.html#ae059dfbd9014bb0672749a5fdb785c6e">ClassifierSetRecord._hash</a> as moja::hash::hash_range() using first value of ClassifierSetRecord._classiferValues,last value of ClassifierSetRecord._classiferValues,0 and moja::Hash(). return <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ClassifierSetRecord.html#ae059dfbd9014bb0672749a5fdb785c6e">ClassifierSetRecord._hash</a>. <br  />
+</p>
+<dl class="section return"><dt>Returns</dt><dd>size_t </dd></dl>
 
 </div>
 </div>
@@ -242,6 +256,16 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>For each value in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ClassifierSetRecord.html#a4105dcb000d0ef8b5db07178a3a23519">ClassifierSetRecord._classifierValues</a>, if the value is not equal to corresponding value in other <a class="el" href="classmoja_1_1modules_1_1cbm_1_1ClassifierSetRecord.html#a4105dcb000d0ef8b5db07178a3a23519">ClassifierSetRecord._classifierValues</a>.<br  />
+return false. <br  />
+else, return true.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td><a class="el" href="classmoja_1_1modules_1_1cbm_1_1ClassifierSetRecord.html">ClassifierSetRecord</a>&amp; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 
 </div>
 </div>
