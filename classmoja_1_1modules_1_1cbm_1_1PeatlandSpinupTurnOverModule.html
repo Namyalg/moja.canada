@@ -379,6 +379,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#ae5c72527099317707d2347e45763975d">CBMModuleBase</a>.</p>
 
@@ -406,6 +407,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#aba317ff7eb2117b26d98c0c5cee2d30b">CBMModuleBase</a>.</p>
 
@@ -433,6 +435,9 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>If PeatlandSpinupTurnOverModule.spinupMossOnly is true, return <br  />
+Else, if <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#a71318ee311a3c4b727a1e3af9d5eba26">PeatlandSpinupTurnOverModule._runPeatland</a> is true, if value of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandTurnoverModuleBase.html#af4a2d73bc8bbadb2a6249ec59987a26e">PeatlandSpinupTurnOverModule._regenDelay</a> &gt; 0, there is no growth in delay period, invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandSpinupTurnOverModule.html#a3d0914eda8be8a7da1af6af89b4478f9">PeatlandSpinupTurnOverModule.doWaterTableFlux()</a>, else, invoke PeatlandSpinupTurnOverModule.updatePeatlandLivePool() to update the current pool value, PeatlandSpinupTurnOverModule.doLiveTurnover() to turnover on live pools, and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandSpinupTurnOverModule.html#a3d0914eda8be8a7da1af6af89b4478f9">PeatlandSpinupTurnOverModule.doWaterTableFlux()</a> to update the flux between catotelm and acrotelm due to water table changes</p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#a7a71ee940243a639488e8b2542c52010">CBMModuleBase</a>.</p>
 
@@ -486,6 +491,18 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Invoke createStockOperation() on _landUnitData <br  />
+Add transfers from source _atmosphere to sink _acrotelm_o, transfer amount is value "acrotelm" in parameter data, source _atmosphere to sink _catotelm_o, transfer amount is value "catotelm" in parameter data <br  />
+Submit the operation to _landUnitData, invoke submitOperation() and applyOperations() on _landUnitData</p><ul>
+<li><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>const DynamicObject&amp; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+</li>
+</ul>
 
 </div>
 </div>

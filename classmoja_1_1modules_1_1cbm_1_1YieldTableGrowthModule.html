@@ -458,6 +458,16 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Configuration function</p>
+<p>Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a49491f4aab5e4c4ffd3d66907bb1aa27">YieldTableGrowthModule._smootherEnabled</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a5a089b5485ef8ff9fb4bc89e7982aa34">YieldTableGrowthModule._debuggingEnabled</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#afb7198f2207be272b9c724520e922929">YieldTableGrowthModule._debuggingOutputPath</a> values of "smoother_enabled", "debugging_enabled", "debugging_output_path" in parameter config. <br  />
+Invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1VolumeToBiomassConverter.html#a03f14d429e3a0b9fd8e382ec2d756450">VolumeToBiomassConverter.setSmoothing()</a> with the value of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a49491f4aab5e4c4ffd3d66907bb1aa27">YieldTableGrowthModule._smootherEnabled</a>. <br  />
+ </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">config</td><td>DynamicObject&amp; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -486,6 +496,15 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Return a shared pointer to an object <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurve.html">StandGrowthCurve</a> with parameters standGrowthCurveID and spuID</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">standGrowthCurveID</td><td>Int64 </td></tr>
+    <tr><td class="paramname">spuID</td><td>Int64 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>shared_ptr&lt;StandGrowthCurve&gt; </dd></dl>
 
 </div>
 </div>
@@ -536,6 +555,11 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>If _landUnitData has variables "current_growth_multipliers", "output_removal ", assign it to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#adb7485e396c1f91d0f8d66940ffd685d">YieldTableGrowthModule._growthMultipliers</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a4a5d5914c11b55635586a13634fa90a0">YieldTableGrowthModule._output_removal</a> <br  />
+Initialise pools <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a6b21336be4816b7d541c2434b353a024">YieldTableGrowthModule._softwoodStemSnag</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a61626d20ccd71ccffa0ddbe543d6f2e2">YieldTableGrowthModule._softwoodBranchSnag</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a73fda9a963577444be1d6ea885df5359">YieldTableGrowthModule._softwoodMerch</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a89cdd527ffa7e8613679d833d24ba1c4">YieldTableGrowthModule._softwoodFoliage</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a4b776d93d5f29b12578d9ac675dddf16">YieldTableGrowthModule._softwoodOther</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a9a0dc2a27f5cdfbd010705a11b6b26db">YieldTableGrowthModule._softwoodCoarseRoots</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#af94b0c6b008c6fcfd1a08c43ded3c3fd">YieldTableGrowthModule._softwoodFineRoots</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#af763d9c82f1fe89d02d16bd33183c46d">YieldTableGrowthModule._hardwoodStemSnag</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a4f7b55f39e82c47882126a798162b74e">YieldTableGrowthModule._hardwoodBranchSnag</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#aa92b53f1040b31bd1b4d870899ce2ca5">YieldTableGrowthModule._hardwoodMerch</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#acee0d85be161cdd2dcc1575975709c18">YieldTableGrowthModule._hardwoodFoliage</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a9a7cbac725b0b097c4cacfc8b2a129b8">YieldTableGrowthModule._hardwoodOther</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a7728db25f7d0a67df7f61730a35164ce">YieldTableGrowthModule._hardwoodCoarseRoots</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#aa28600196c300d43f2b5788fe5bbd9e2">YieldTableGrowthModule._hardwoodFineRoots</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a652a30445622c681a2e8c07e50ec90c8">YieldTableGrowthModule._aboveGroundVeryFastSoil</a> <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a34ae123715aa55bfd0df5e3b317a526b">YieldTableGrowthModule._aboveGroundFastSoil</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a5aa2ec80e506eb2ec975bbc40d7beb56">YieldTableGrowthModule._belowGroundVeryFastSoil</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a4a6a1a36160452c2a592758a941d434e">YieldTableGrowthModule._belowGroundFastSoil</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a1384c503b652f3067cdce1a4752bd811">YieldTableGrowthModule._mediumSoil</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a31c832b6aa70ab4c880185dd06440228">YieldTableGrowthModule._atmosphere</a> values of "SoftwoodStemSnag", "SoftwoodBranchSnag", "SoftwoodMerch", "SoftwoodFoilage", "SoftwoodOther", "SoftwoodCoarseRoots", "SoftwoodFineRoots", "HardwoodStemSnag", "HardwoodBranchSnag", "HardwoodMerch", "HardwoodFoilage", "HardwoodOther", "HardwoodCoarseRoots", "HardwoodFineRoots", "AboveGroundVeryFastSoil", "AboveGroundFastSoil", "BelowGroundVeryFastSoil", "BelowGroundFastSoil" "MediumSoil", "Atmosphere" in _landUnitData. <br  />
+If the value of variable "enable_peatland" exists in _landUnitData and it is true, initialise pools _woodyFineDead , _woodyCoarseDead, _woodyFoliageDead, _woodyRootsDead values of "WoodyFineDead", "WoodyCoarseDead", "WoodyFoliageDead", "WoodyRootsDead" in _landUnitData. <br  />
+Set values of variables "age", "growth_curve_id", "spatial_unit_id", "turnover_rates", "regen_delay", "spinup_moss_only", "is_forest", "is_decaying" in _landUnitData to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a288ba2e2a55298302c348196fdc75cd8">YieldTableGrowthModule._age</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#abe913e5bcdb44efa2d751013920a6ae4">YieldTableGrowthModule._gcId</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#adff7c6f527c49a77be1e5a5d6abe6a09">YieldTableGrowthModule._spuId</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a8842f623c4834075db27162979d95174">YieldTableGrowthModule._turnoverRates</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#af4a2d73bc8bbadb2a6249ec59987a26e">YieldTableGrowthModule._regenDelay</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#aa2f831d17b8e06ad1cdca2e072ab5938">YieldTableGrowthModule._spinupMossOnly</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a37afa641144f3cf0874f95648891ae27">YieldTableGrowthModule._isForest</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a2504a2f1fc05268b8c3397923d364897">YieldTableGrowthModule._isDecaying</a>. <br  />
+ </p><dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#ae5c72527099317707d2347e45763975d">CBMModuleBase</a>.</p>
 
@@ -563,6 +587,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Record carbon transfers that occur from the atmosphere to softwood and hardwoord pools during mid-season Invoke createStockOperation() on _landUnitData <br  />
+Add <a href="https://github.com/moja-global/moja.canada/blob/1fc8c8e008bc1a71568f4444b6577182ec84a5b0/Source/moja.modules.cbm/src/yieldtablegrowthmodule.cpp#L572">transfers</a> to the operation and submit the operation to the _landUnitData by invoking submitOperation()</p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -638,6 +665,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a488ef4244ba4d393b1653988bd3908bf">YieldTableGrowthModule._standSPUID</a> value of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#adff7c6f527c49a77be1e5a5d6abe6a09">YieldTableGrowthModule._spuId</a>. Invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a8b9f99481b5a27c610ad25e41e0059c9">YieldTableGrowthModule.initPeatland()</a></p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#aba317ff7eb2117b26d98c0c5cee2d30b">CBMModuleBase</a>.</p>
 
@@ -665,6 +694,10 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a9562c8b9c269ea46802a0930c5231a94">YieldTableGrowthModule.getYieldCurve()</a></p>
+<p>Invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#aade1741e82b1639766e3143cc5dabef5">YieldTableGrowthModule.getIncrements()</a> to get and store the biomass carbon growth increments, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a1db7f6c5a31263218a4daaea60e41a70">YieldTableGrowthModule.getTurnoverRates()</a> to get and store the ecoboundary/genus-specific turnover rates, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#ae08b7a690a6fbecc98929912db7ec231">YieldTableGrowthModule.switchHalfGrowth()</a> to transfer half of the biomass growth increment to the biomass pool, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#af38c3232a97593e482681059c06f8247">YieldTableGrowthModule.updateBiomassPools()</a> to update to record the current biomass pool value plus the half increment of biomass, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a94fde574bf254955eb82fadd0fc1fba8">YieldTableGrowthModule.doMidSeasonGrowth()</a> to the foliage and snags that grow and are turned over, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a1c081d52b2110e7bd949b47f19f83b4b">YieldTableGrowthModule.switchTurnover()</a> to switch to do biomass and snag turnover for peatland or regular forest land <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#ae08b7a690a6fbecc98929912db7ec231">YieldTableGrowthModule.switchHalfGrowth()</a> to transfer the remaining half increment to the biomass pool <br  />
+Increment the value of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a288ba2e2a55298302c348196fdc75cd8">YieldTableGrowthModule._age</a> by 1</p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#a7a71ee940243a639488e8b2542c52010">CBMModuleBase</a>.</p>
 
@@ -692,6 +725,10 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Perform snag and biomass turnovers as stock operations</p>
+<p>Invoke createStockOperation() on _landUnitData . Add transfers between softwood and hardwood branch and snag pools to medium and above ground fast soil pools. Invoke submitStockOperation() on _landUnitData to submit the transfers <br  />
+Invoke createStockOperation() on _landUnitData . Add transfers between softwood and hardwood merchantable, foilage, other, coarse and fine roots to softwood and hardwood stem and branch snag pools, above and below ground fast and slow pools. Invoke submitStockOperation() on _landUnitData to submit the transfers <br  />
+ </p><dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -742,6 +779,10 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Set the value of the current turnover rate</p>
+<p>Set <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a2ba07401be09ed998a1f81fd495ee5b8">YieldTableGrowthModule._currentTurnoverRates</a> to the value of the tuple key (<a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a5ce02f1e2c69283e0be75fa6f89ad3bc">YieldTableGrowthModule._standGrowthCurveID</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a488ef4244ba4d393b1653988bd3908bf">YieldTableGrowthModule._standSPUID</a>) in _cachedTurnoverRates if it exists <br  />
+Else set <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a2ba07401be09ed998a1f81fd495ee5b8">YieldTableGrowthModule._currentTurnoverRates</a> to a shared pointer of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1TurnoverRates.html">TurnoverRates</a>, with the value of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a8842f623c4834075db27162979d95174">YieldTableGrowthModule._turnoverRates</a>, a nullptr. Set the value of the tuple key (<a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a5ce02f1e2c69283e0be75fa6f89ad3bc">YieldTableGrowthModule._standGrowthCurveID</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a488ef4244ba4d393b1653988bd3908bf">YieldTableGrowthModule._standSPUID</a>) to _currentTurnoverRates</p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -759,6 +800,11 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>If the value of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#abe913e5bcdb44efa2d751013920a6ae4">YieldTableGrowthModule._gcId</a> is not empty, set <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a5ce02f1e2c69283e0be75fa6f89ad3bc">YieldTableGrowthModule._standGrowthCurveID</a> as value of _gcId, else to -1 <br  />
+If the value of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a5ce02f1e2c69283e0be75fa6f89ad3bc">YieldTableGrowthModule._standGrowthCurveID</a> is -1, set <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a2504a2f1fc05268b8c3397923d364897">YieldTableGrowthModule._isDecaying</a> to false <br  />
+Try to get the stand growth curve and related yield table data from memory, if the result of VolumeToBiomassConverter.isBiomassCarbonCurveAvailable() on <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a4a8268fbfed90b3859375b3569d9b68f">YieldTableGrowthModule._volumeToBioGrowth</a> with parameter <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a5ce02f1e2c69283e0be75fa6f89ad3bc">YieldTableGrowthModule._standGrowthCurveID</a> and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a488ef4244ba4d393b1653988bd3908bf">YieldTableGrowthModule._standSPUID</a> true, indicating that the carbon curve is found, call the stand growth curve factory to create the stand growth curve, invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandGrowthCurveFactory.html#a0882e3958c7313dfc47e3078d31e83a4">StandGrowthCurveFactory.createStandGrowthCurve()</a> on <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a52cf04f8bcdcb02726025c86eae4e76a">YieldTableGrowthModule._gcFactory</a> with parameter <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a5ce02f1e2c69283e0be75fa6f89ad3bc">YieldTableGrowthModule._standGrowthCurveID</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a488ef4244ba4d393b1653988bd3908bf">YieldTableGrowthModule._standSPUID</a> and _landUnitData <br  />
+Process and convert yield volume to carbon curves, invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1VolumeToBiomassCarbonGrowth.html#aec80de3ffe87b61df853fb43ea5afec7">VolumeToBiomassCarbonGrowth.generateBiomassCarbonCurve()</a> on <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a4a8268fbfed90b3859375b3569d9b68f">YieldTableGrowthModule._volumeToBioGrowth</a> with argument as the generated stand growth curve <br  />
+ </p><dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -784,6 +830,10 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>For each pixel set the YieldTableGrowthModule._skipPeatland, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#ad0e91510179cbe242c5e24e68de46e9b">YieldTableGrowthModule._runForForestedPeatland</a> to false. <br  />
+If _landUnitData has the variable "enable_peatland" and the value of the variable is true, if the value of variable "peatland_class" in _landUnitData is either <a class="el" href="namespacemoja_1_1modules_1_1cbm.html#a1b69bd78783bca8e0ec2341082be11f5afff603dcce9c9089163f5a46012667e9">Peatlands::FOREST_PEATLAND_BOG</a>, <a class="el" href="namespacemoja_1_1modules_1_1cbm.html#a1b69bd78783bca8e0ec2341082be11f5adbfc9a4792d660349d138cf6a2ee869e">Peatlands::FOREST_PEATLAND_POORFEN</a>, <a class="el" href="namespacemoja_1_1modules_1_1cbm.html#a1b69bd78783bca8e0ec2341082be11f5a7ae794ee27c313f87244e23b3d5f0ca0">Peatlands::FOREST_PEATLAND_RICHFEN</a> or <a class="el" href="namespacemoja_1_1modules_1_1cbm.html#a1b69bd78783bca8e0ec2341082be11f5ae705d216e20747703a86df41c1cda7cc">Peatlands::FOREST_PEATLAND_SWAMP</a>, set _runForForestedPeatland to true. <br  />
+Skip growth and turnover when running peatland on non-forest peatland stand</p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -881,6 +931,21 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Log the parameters standAge, standFoilageRemoval, standStemSnagRemoval, standBranchSnagRemoval, standOtherRemovalToWFD, standCoarseRootRemoval, standFineRootRemoval and standOtherRemovalToBranchSnag</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">standAge</td><td>int </td></tr>
+    <tr><td class="paramname">standFoilageRemoval</td><td>double </td></tr>
+    <tr><td class="paramname">standStemSnagRemoval</td><td>double </td></tr>
+    <tr><td class="paramname">standBranchSnagRemoval</td><td>double </td></tr>
+    <tr><td class="paramname">standOtherRemovalToWFD</td><td>double </td></tr>
+    <tr><td class="paramname">standCoarseRootRemoval</td><td>double </td></tr>
+    <tr><td class="paramname">standFineRootRemoval</td><td>double </td></tr>
+    <tr><td class="paramname">standOtherRemovalToBranchSnag</td><td>double </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -906,6 +971,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Determine if the <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html">YieldTableGrowthModule</a> should run</p>
+<p>Return true if <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a37afa641144f3cf0874f95648891ae27">YieldTableGrowthModule._isForest</a> is true and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a5ce02f1e2c69283e0be75fa6f89ad3bc">YieldTableGrowthModule._standGrowthCurveID</a> is not -1, else return false.</p>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 
 </div>
 </div>
@@ -932,6 +1000,14 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Subscribe to the signals LocalDomainInit, TimingInit abd TimingStep</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">notificationCenter</td><td>NotificationCenter&amp; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -957,6 +1033,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#ad0e91510179cbe242c5e24e68de46e9b">YieldTableGrowthModule._runForForestedPeatland</a> is true, invoke the <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a8c5d0813b206314f0a478f11453b81c3">YieldTableGrowthModule.doPeatlandHalfGrowth()</a>, else invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a179811a05305e5c2e8e71b6b3b092b7f">YieldTableGrowthModule.doHalfGrowth()</a></p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -1007,6 +1085,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Update the biomass and snag pool variables with the latest values</p>
+<p>Set values of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a73fda9a963577444be1d6ea885df5359">YieldTableGrowthModule._softwoodMerch</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a4b776d93d5f29b12578d9ac675dddf16">YieldTableGrowthModule._softwoodOther</a>, YieldTableGrowthModule._softwoodFoilage, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a9a0dc2a27f5cdfbd010705a11b6b26db">YieldTableGrowthModule._softwoodCoarseRoots</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#af94b0c6b008c6fcfd1a08c43ded3c3fd">YieldTableGrowthModule._softwoodFineRoots</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#aa92b53f1040b31bd1b4d870899ce2ca5">YieldTableGrowthModule._hardwoodMerch</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a9a7cbac725b0b097c4cacfc8b2a129b8">YieldTableGrowthModule._hardwoodOther</a>, YieldTableGrowthModule._hardwoodFoilage, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a7728db25f7d0a67df7f61730a35164ce">YieldTableGrowthModule._hardwoodCoarseRoots</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#aa28600196c300d43f2b5788fe5bbd9e2">YieldTableGrowthModule._hardwoodFineRoots</a> to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a3d57ad4ec462c0b95aa48109640b61a9">YieldTableGrowthModule.standSoftwoodMerch</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a1e37bb161f265515532318cf8afb3c44">YieldTableGrowthModule.standSoftwoodOther</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a53b449b0ab9e7880244c79419952d92e">YieldTableGrowthModule.standSoftwoodFoliage</a>, YieldTableGrowthModule.standSoftwoodCoarseRoots, YieldTableGrowthModule.standSoftwoodFineRoots, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#a2bba1ad59c010745dfae0c80ff6730f3">YieldTableGrowthModule.standHardwoodMerch</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#abfd0285e0df13f1cbc41391bbfaec2af">YieldTableGrowthModule.standHardwoodOther</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1YieldTableGrowthModule.html#abc139155993d8b1f180946d6eb9f3d87">YieldTableGrowthModule.standHardwoodFoliage</a>, YieldTableGrowthModule.standHardwoodCoarseRoots, YieldTableGrowthModule.standHardwoodFineRoots</p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
