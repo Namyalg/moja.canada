@@ -181,7 +181,18 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Configuration function </p>
+<p>Configuration function</p>
+<p>Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1TimeSeriesIdxFromFlintDataTransform.html#a1802f79cda96f755f9798fbb4dcc4766">TimeSeriesIdxFromFlintDataTransform._landUnitController</a> as parameter landUnitController&amp;, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1TimeSeriesIdxFromFlintDataTransform.html#ad98a27d8909d98e618264059b60b6555">TimeSeriesIdxFromFlintDataTransform._subsame</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1TimeSeriesIdxFromFlintDataTransform.html#acd81ff63ff0ddcaea7ef036c1e4d30d2">TimeSeriesIdxFromFlintDataTransform._startYear</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1TimeSeriesIdxFromFlintDataTransform.html#a003ad9e3f614003bc36678009b10bd37">TimeSeriesIdxFromFlintDataTransform._dataPerYear</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1TimeSeriesIdxFromFlintDataTransform.html#a4bc7ce4dd6ee0c4883363cdcdf69571d">TimeSeriesIdxFromFlintDataTransform._nYears</a> value of "sub_same", "start_year", "data_per_year" in parameter config, _origin, value of "origin" if it exists in parameter config, else the string "start_sim", <a class="el" href="classmoja_1_1modules_1_1cbm_1_1TimeSeriesIdxFromFlintDataTransform.html#a3e87238c9c712d6daa33782f501f2c4c">TimeSeriesIdxFromFlintDataTransform._spatialLocationInfo</a> value of variable "spatialLocationInfo" in parameter landUnitController <br  />
+Assign the value of the getProvider() on parameter dataRepository with argument config["provider"] to a variable provider, set the result of the indexer() method on variable provider to TimeSeriesIdxFromFlintDataTransform._providerIndex, and result of getLayer() on variable provider with argument config["data_id"] to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1TimeSeriesIdxFromFlintDataTransform.html#a92d6b63d643419b68328d67ee08c9036">TimeSeriesIdxFromFlintDataTransform._layer</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">config</td><td>DynamicObject </td></tr>
+    <tr><td class="paramname">controller</td><td>flint::ILandUnitController&amp; </td></tr>
+    <tr><td class="paramname">dataRepository</td><td>moja::datarepository::DataRepository&amp; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -198,7 +209,7 @@ Private Attributes</h2></td></tr>
           <td class="memname">void controllerChanged </td>
           <td>(</td>
           <td class="paramtype">const flint::ILandUnitController &amp;&#160;</td>
-          <td class="paramname"><em>controller</em></td><td>)</td>
+          <td class="paramname"><em>landUnitController</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -208,6 +219,14 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1TimeSeriesIdxFromFlintDataTransform.html#a1802f79cda96f755f9798fbb4dcc4766">TimeSeriesIdxFromFlintDataTransform._landUnitController</a> as parameter &amp;landUnitController, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1TimeSeriesIdxFromFlintDataTransform.html#a3e87238c9c712d6daa33782f501f2c4c">TimeSeriesIdxFromFlintDataTransform._spatialLocationInfo</a> as statically casted pointer to variable "spatialLocationInfo" in parameter landUnitController</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">landUnitController</td><td>flint::ILandUnitController&amp; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -233,6 +252,13 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Instantiate an object of datarepository::CellIdx, with the tile index, block index, cell index and provider index corresponding to the current spatial location <br  />
+If the value of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1TimeSeriesIdxFromFlintDataTransform.html#a3f8063fbfba47a12a1b625c37d851037">TimeSeriesIdxFromFlintDataTransform._lastCellHash</a> is not the same as the current cell hash, then assign the value of the current cell hash to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1TimeSeriesIdxFromFlintDataTransform.html#a3f8063fbfba47a12a1b625c37d851037">TimeSeriesIdxFromFlintDataTransform._lastCellHash</a> <br  />
+For each value in the result of getValueByCellIndex() on <a class="el" href="classmoja_1_1modules_1_1cbm_1_1TimeSeriesIdxFromFlintDataTransform.html#a92d6b63d643419b68328d67ee08c9036">TimeSeriesIdxFromFlintDataTransform._layer</a>, if value.is_initialized() is true, add the value to a vector raw. <br  />
+If atleast one value returned a true value for value.is_initialized(), instantiate an object of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1TimeSeries.html" title="Encapsulates a timeseries of data. Normal usage allows modules to retrieve the most relevant data for...">TimeSeries</a> and assgin it to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1TimeSeriesIdxFromFlintDataTransform.html#a3e59572f41e950b80fd93c3de04ed8a2">TimeSeriesIdxFromFlintDataTransform._cachedValue</a> <br  />
+If none of the values return true for value.is_initialized(), assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1TimeSeriesIdxFromFlintDataTransform.html#a3e59572f41e950b80fd93c3de04ed8a2">TimeSeriesIdxFromFlintDataTransform._cachedValue</a> to DynamicVar() <br  />
+Return <a class="el" href="classmoja_1_1modules_1_1cbm_1_1TimeSeriesIdxFromFlintDataTransform.html#a3e59572f41e950b80fd93c3de04ed8a2">TimeSeriesIdxFromFlintDataTransform._cachedValue</a></p>
+<dl class="section return"><dt>Returns</dt><dd>DynamicVar&amp; </dd></dl>
 
 </div>
 </div>
