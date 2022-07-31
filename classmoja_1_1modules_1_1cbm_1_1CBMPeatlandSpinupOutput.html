@@ -341,7 +341,6 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>When a disturbance event occurs.</p>
 <p>If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPeatlandSpinupOutput.html#a3fd60a2a865fbc5dc58ed1e5bac38ea0">CBMPeatlandSpinupOutput._isOutputLog</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPeatlandSpinupOutput.html#a24aad14c7b79986393dae958ab1d12f9">CBMPeatlandSpinupOutput._isSpinupFileCreated</a> are true and <br  />
  value of variable "peat_pool_cached" in _landUnitData is false, invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPeatlandSpinupOutput.html#a743411a71ae573fb44327d535c0bda33">CBMPeatlandSpinupOutput.outputPoolValues()</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -417,8 +416,7 @@ else open the file using CBMPeatlandSpinupOutput._timeStepOutputFile. <br  />
   </tr>
 </table>
 </div><div class="memdoc">
-<p>if CBMPeatlandSpinupOutput.isSpinUpFileCreated, <br  />
-invoke CBMPeatlandSpinupOutput.timeStepOutputFile.flush()and CBMPeatlandSpinupOutput.timeStepOutputFile.close().</p>
+<p>If CBMPeatlandSpinupOutput.isSpinUpFileCreated, invoke CBMPeatlandSpinupOutput.timeStepOutputFile.flush() and CBMPeatlandSpinupOutput.timeStepOutputFile.close()</p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#a1290ee2f6db2cda8d724bbc891774cac">CBMModuleBase</a>.</p>
@@ -447,7 +445,6 @@ invoke CBMPeatlandSpinupOutput.timeStepOutputFile.flush()and CBMPeatlandSpinupOu
   </tr>
 </table>
 </div><div class="memdoc">
-<p>doPrePostDisturbanceEvent.</p>
 <p>If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPeatlandSpinupOutput.html#a3fd60a2a865fbc5dc58ed1e5bac38ea0">CBMPeatlandSpinupOutput._isOutputLog</a>,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPeatlandSpinupOutput.html#a24aad14c7b79986393dae958ab1d12f9">CBMPeatlandSpinupOutput._isSpinupFileCreated</a> are true and <br  />
  value of variable "peat_pool_cached" in _landUnitData is false, invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPeatlandSpinupOutput.html#a743411a71ae573fb44327d535c0bda33">CBMPeatlandSpinupOutput.outputPoolValues()</a>.</p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
@@ -479,8 +476,7 @@ invoke CBMPeatlandSpinupOutput.timeStepOutputFile.flush()and CBMPeatlandSpinupOu
 </table>
 </div><div class="memdoc">
 <p>If the value of the variable "peatland_class" in _landUnitData is not empty and greater than 0, <br  />
- Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPeatlandSpinupOutput.html#a71318ee311a3c4b727a1e3af9d5eba26">CBMPeatlandSpinupOutput._runPeatland</a> to true and <br  />
- <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPeatlandSpinupOutput.html#aec0d8329410d3f33e4a1dd2aae299618">CBMPeatlandSpinupOutput._fireReturnIntervalValue</a> the value of the variable "fire_return_interval" (integer), <br  />
+ Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPeatlandSpinupOutput.html#a71318ee311a3c4b727a1e3af9d5eba26">CBMPeatlandSpinupOutput._runPeatland</a> to true and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPeatlandSpinupOutput.html#aec0d8329410d3f33e4a1dd2aae299618">CBMPeatlandSpinupOutput._fireReturnIntervalValue</a> the value of the variable "fire_return_interval" (integer), <br  />
 if it is not empty, else a value of -1</p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
@@ -540,7 +536,7 @@ if it is not empty, else a value of -1</p>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get TimeStamp Using Local Date Time.</p>
+<p>Get the timeStamp using Poco::LocalDateTime()</p>
 <dl class="section return"><dt>Returns</dt><dd>string </dd></dl>
 
 </div>
@@ -571,8 +567,7 @@ if it is not empty, else a value of -1</p>
 <p>If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPeatlandSpinupOutput.html#a71318ee311a3c4b727a1e3af9d5eba26">CBMPeatlandSpinupOutput._runPeatland</a> and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPeatlandSpinupOutput.html#a3fd60a2a865fbc5dc58ed1e5bac38ea0">CBMPeatlandSpinupOutput._isOutputLog</a> are true, Write into <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPeatlandSpinupOutput.html#ac332419c2826cb4f49ffeac25bd25917">CBMPeatlandSpinupOutput.timeStepOutputFile</a> the values <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPeatlandSpinupOutput.html#ae02f2669f55ed08483dbfaff0bb342b9">CBMPeatlandSpinupOutput._peatlandId</a>, <br  />
 <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPeatlandSpinupOutput.html#aec0d8329410d3f33e4a1dd2aae299618">CBMPeatlandSpinupOutput._fireReturnIntervalValue</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPeatlandSpinupOutput.html#a3515dfdfaf1b280b6431885d4be7d7e8">CBMPeatlandSpinupOutput._peatland_spinup_rotation</a>, <br  />
 and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPeatlandSpinupOutput.html#a93bf8f0930323e382752e3c6a2816afb">CBMPeatlandSpinupOutput._shrub_age</a> <br  />
-Add each pool (from the second pool onwards) returned from poolCollection() in _landUnitData <br  />
-else open the file using CBMPeatlandSpinupOutput._timeStepOutputFile.</p>
+Add each pool (from the second pool onwards) returned from poolCollection() in _landUnitData and open the file using CBMPeatlandSpinupOutput._timeStepOutputFile.</p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>

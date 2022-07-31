@@ -374,7 +374,6 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>doDisturbanceEvent.</p>
 <p>Assign boolean variable runPeatland as "peatland_class". <br  />
 If runPeatland is false, add Carbon budget module disturbance module operation transfer. <br  />
 else add peatland disturbance module operation transfer.</p>
@@ -412,7 +411,6 @@ else add peatland disturbance module operation transfer.</p>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>doLocalDomainInit</p>
 <p>Invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMSpinupDisturbanceModule.html#a8496aa0398741926c468fe15226dc547">CBMSpinupDisturbanceModule.fetchMatrices()</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMSpinupDisturbanceModule.html#a8e5ff0f879c66104d9d72c49e573bfa7">CBMSpinupDisturbanceModule.fetchDMAssociations()</a>, <br  />
 assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMSpinupDisturbanceModule.html#acf0f33d7d7092d81d017522ccc0bfc73">CBMSpinupDisturbanceModule._spu</a> value of variable "spatial_unit_id" in _landUnitData</p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
@@ -472,9 +470,8 @@ assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMSpinupDisturbanceMo
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Insert Disturbance matrix associations.</p>
-<p>For each disturbance matrix association in "disturbance_matrix_associations", <br  />
-insert into <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMSpinupDisturbanceModule.html#a0901968fcd7e8533115ecfef188a9b49">CBMSpinupDisturbanceModule._dmAssociations</a>.</p>
+<p>For each disturbance matrix association in variable "disturbance_matrix_associations" from _landUnitData, <br  />
+insert "disturbance_type", "spatial_unit_id" and "disturbance_matrix_id" of each disturbance matrix association into <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMSpinupDisturbanceModule.html#a0901968fcd7e8533115ecfef188a9b49">CBMSpinupDisturbanceModule._dmAssociations</a>.</p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>

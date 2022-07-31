@@ -504,16 +504,10 @@ Reset <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandDisturbanceModu
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Clear <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandDisturbanceModule.html#a896ad436af10a648fd62935f102f66b2">PeatlandDisturbanceModule._matrices</a>. <br  />
-Initialise constant variable transfers as "peatland_disturbance_matrices" value in _landUnitData. <br  />
-For each row in transfers, Initialise transfer as CBMDistEventTransfer() using *_landUnitData and row. <br  />
-Invoke disturbanceMatrixId() in transfer and assign the value to an integer variable dmId. <br  />
-Find dmId in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandDisturbanceModule.html#a896ad436af10a648fd62935f102f66b2">PeatlandDisturbanceModule._matrices</a> and assign the value to variable v. <br  />
-If v is equal to the last value in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandDisturbanceModule.html#a896ad436af10a648fd62935f102f66b2">PeatlandDisturbanceModule._matrices</a>. <br  />
-Initialise EventVector variable vec and add transfer to vec. <br  />
-Insert a new element using dmId and vec into <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandDisturbanceModule.html#a896ad436af10a648fd62935f102f66b2">PeatlandDisturbanceModule._matrices</a>. <br  />
-else, initialise variable vec as the second value of v and add transfer to vec.</p>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+<p>Clear <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandDisturbanceModule.html#a896ad436af10a648fd62935f102f66b2">PeatlandDisturbanceModule._matrices</a> <br  />
+For each transfer in variable "peatland_disturbance_matrices" in _landUnitData, create an object of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDistEventTransfer.html">CBMDistEventTransfer</a> with *_landUnitData, transfer, and check if the disturbance matrix id, is present in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandDisturbanceModule.html#a896ad436af10a648fd62935f102f66b2">PeatlandDisturbanceModule._matrices</a> <br  />
+If it is present, add the value of the disturbance matrix id, transfer to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandDisturbanceModule.html#a896ad436af10a648fd62935f102f66b2">PeatlandDisturbanceModule._matrices</a>, else the transfer to the iterator resulting from the value of disturbanceId in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandDisturbanceModule.html#a896ad436af10a648fd62935f102f66b2">PeatlandDisturbanceModule._matrices</a> <br  />
+ </p><dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -531,16 +525,10 @@ else, initialise variable vec as the second value of v and add transfer to vec.<
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Clear <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandDisturbanceModule.html#a578ebbf60423c8035e8c74ffdf16fa07">PeatlandDisturbanceModule._modifiers</a>. <br  />
-For each row in "peatland_wtd_modifiers" in _landUnitData, initialise integer variables modifierId as "id" in row, <br  />
-year as "year" in row,modifier in "modifier" in row. <br  />
-Find modifierId in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandDisturbanceModule.html#a578ebbf60423c8035e8c74ffdf16fa07">PeatlandDisturbanceModule._modifiers</a> and assign the value to constant variable v. <br  />
-If v is equal to the last value of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandDisturbanceModule.html#a578ebbf60423c8035e8c74ffdf16fa07">PeatlandDisturbanceModule._modifiers</a>, initialise modifierVector variable vec. <br  />
-Separate year and modifier by "_" and add it into vec. <br  />
-Insert a new element using modifierId and vec into PeatlandDisturbanceModule._moidifiers. <br  />
-Else, initialise variable vec as the second value of v, <br  />
-Separate year and modifier by "_" and add it into vec.</p>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+<p>Clear <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandDisturbanceModule.html#a578ebbf60423c8035e8c74ffdf16fa07">PeatlandDisturbanceModule._modifiers</a> <br  />
+For each modifier in "peatland_wtd_modifiers" in _landUnitData, get the value of "id", "year" and "modifier" and set it to variables modifierId, year and modifier. <br  />
+If the modifierId is not in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandDisturbanceModule.html#a578ebbf60423c8035e8c74ffdf16fa07">PeatlandDisturbanceModule._modifiers</a>, each modifier will be recorded as "year_modifier" and added into <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandDisturbanceModule.html#a578ebbf60423c8035e8c74ffdf16fa07">PeatlandDisturbanceModule._modifiers</a>, else add it to the iterator resulting from the value of modifierId in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandDisturbanceModule.html#a578ebbf60423c8035e8c74ffdf16fa07">PeatlandDisturbanceModule._modifiers</a>. <br  />
+ </p><dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>

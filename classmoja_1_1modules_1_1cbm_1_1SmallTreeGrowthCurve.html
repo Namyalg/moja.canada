@@ -539,6 +539,23 @@ COMPONENT::FOILAGE, return e ^ (<a class="el" href="classmoja_1_1modules_1_1cbm_
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Get the value of variable agIncrements as the result of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthCurve.html#a153fa3203e795d7e38150817c0224f06">SmallTreeGrowthCurve.getAGIncrements()</a> with arguments as parameters stem, other, foliage and age <br  />
+Calculate the values of variables totalAGCarbon, the total above ground biomass carbon totalBGBiomass, the total below ground biomass biomass and totalBiomass, rootProps and rootCarbon, the total root biomassCarbon <br  />
+Return an unordered_map with the key "stemwood", value as "stemwood" in agIncrements, key "other", value as "other" in agIncrements, key "foliage", value as "foliage" in agIncrements, key "coarseRoot", value as rootCarbon * rootProps.coarse - coarseRoot and key "fineRoot", with value rootCarbon * rootProps.fine - fineRoot</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stem</td><td>double </td></tr>
+    <tr><td class="paramname">other</td><td>double </td></tr>
+    <tr><td class="paramname">foliage</td><td>double </td></tr>
+    <tr><td class="paramname">age</td><td>int </td></tr>
+    <tr><td class="paramname">rootCarbon</td><td>double </td></tr>
+    <tr><td class="paramname">rootProps</td><td>RootProperties </td></tr>
+    <tr><td class="paramname">coarseRoot</td><td>double </td></tr>
+    <tr><td class="paramname">fineRoot</td><td>double </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>unordered_map&lt;string, double&gt; </dd></dl>
 
 </div>
 </div>

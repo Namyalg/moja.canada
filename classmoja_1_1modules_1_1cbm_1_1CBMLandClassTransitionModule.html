@@ -380,17 +380,11 @@ Invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandClassTransition
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Set initial decay status.</p>
+<p>Set initial decay status</p>
 <p>Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandClassTransitionModule.html#a3b0cbd4d789b8f5205ea84f86c90a311">CBMLandClassTransitionModule._lastCurrentLandClass</a> as <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandClassTransitionModule.html#a8373c455999bdaec1f339decb7d4cc1b">CBMLandClassTransitionModule._currentLandClass</a> value (string). <br  />
-Invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandClassTransitionModule.html#a222038513cadcf4a8bc31afec088f9ec">setUnfcccLandClass()</a>. <br  />
-Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandClassTransitionModule.html#a8d5557fa22a519b716486eea418d73a5">CBMLandClassTransitionModule._yearsSinceTransition</a> as 0. <br  />
-Initialise bool variable isForest as <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandClassTransitionModule.html#a37afa641144f3cf0874f95648891ae27">CBMLandClassTransitionModule._isForest</a> value. <br  />
-Initialise variable standCreationDisturbance as <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandClassTransitionModule.html#afa0ac6c4553e0b6503478c321d2fd3af">getCreationDisturbance()</a>. <br  />
-Initialise bool variable deforestedInSpinup as CBMLandClassTransitionModule._landClassTransistions[standCreationDisturbance] !=""&amp;&amp; <br  />
-!CBMLandClassTransitionModule._landclassForestStatus[<a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandClassTransitionModule.html#a508ac615253e949baf2a107ec95998fd">CBMLandClassTransitionModule._landClassTransitions</a>[standCreationDisturbance]]. <br  />
-If the carbon in a stand is initially a forest land class and the last_pass disturbance <br  />
-is a deforestation event, set <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandClassTransitionModule.html#a2504a2f1fc05268b8c3397923d364897">CBMLandClassTransitionModule._isDecaying</a> to true. <br  />
-if not, set <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandClassTransitionModule.html#a2504a2f1fc05268b8c3397923d364897">CBMLandClassTransitionModule._isDecaying</a> to false.</p>
+Invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandClassTransitionModule.html#a222038513cadcf4a8bc31afec088f9ec">CBMLandClassTransitionModule.setUnfcccLandClass()</a>, set <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandClassTransitionModule.html#a8d5557fa22a519b716486eea418d73a5">CBMLandClassTransitionModule._yearsSinceTransition</a> to 0 <br  />
+Set the initial stand decaying status. The carbon in a stand always decays unless the stand is initially a non-forest land class and the last-pass disturbance was not a deforestation event - i.e. a non-forest stand that will be afforested at some point has its decay paused until then <br  />
+If the value of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandClassTransitionModule.html#a37afa641144f3cf0874f95648891ae27">CBMLandClassTransitionModule._isForest</a> is false and land was deforested in spinup, then set <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandClassTransitionModule.html#a2504a2f1fc05268b8c3397923d364897">CBMLandClassTransitionModule._isDecaying</a> to false, else set it to true</p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#aba317ff7eb2117b26d98c0c5cee2d30b">CBMModuleBase</a>.</p>
@@ -456,13 +450,7 @@ Set <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandClassTransitionMod
   </tr>
 </table>
 </div><div class="memdoc">
-<p>fetchLandClasstransitions</p>
-<p>Initialise constant variable transitions as land_class_transitions value. <br  />
-if transitions is a vector, for each constant variable transition in transitions (vector&lt;DynamicObject&gt;). <br  />
-Initialise string variables disturbanceType as transition["disturbance_type"] and landClass as transition["land_class_transition"]. <br  />
-Invoke make_pair() using disturbanceType and landClass and insert it into <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandClassTransitionModule.html#a508ac615253e949baf2a107ec95998fd">CBMLandClassTransitionModule._landClassTransitions</a>. <br  />
-if not, initialise string variables disturbanceType as transitions["disturbance_type"] and landClass as transitions["land_class_transition"]. <br  />
-Insert disturbanceType,landClass into <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandClassTransitionModule.html#a508ac615253e949baf2a107ec95998fd">CBMLandClassTransitionModule._landClassTransitions</a>.</p>
+<p>Insert the values of "disturbance_type" and "land_class_transition" as a pair in "land_class_transitions" from variable _landUnitData into <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandClassTransitionModule.html#a508ac615253e949baf2a107ec95998fd">CBMLandClassTransitionModule._landClassTransitions</a></p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
@@ -489,8 +477,7 @@ Insert disturbanceType,landClass into <a class="el" href="classmoja_1_1modules_1
   </tr>
 </table>
 </div><div class="memdoc">
-<p>getCreationDisturbance.</p>
-<p>if <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandClassTransitionModule.html#af047dca06211cd7b3324f25f3d821af0">CBMLandClassTransitionModule._lastPassDisturbanceTimeseries</a> is not equal to nullptr, <br  />
+<p>If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandClassTransitionModule.html#af047dca06211cd7b3324f25f3d821af0">CBMLandClassTransitionModule._lastPassDisturbanceTimeseries</a> is not equal to nullptr, <br  />
 initialise constant variable lastPassTimeseries as CBMLandClassTransitionModule._lastPassDisturbanceTimeSeries value. <br  />
 if lastPassTimeseries is not empty, initialise integer variable maxYear as -1. <br  />
 Initialise string variable creationDisturbance. <br  />
@@ -543,7 +530,6 @@ return spinupParams["last_pass_disturbance_type"](string). <br  />
   </tr>
 </table>
 </div><div class="memdoc">
-<p>setUnfcccLandClass</p>
 <p>Assign string variable currentLandClass as <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandClassTransitionModule.html#a8373c455999bdaec1f339decb7d4cc1b">CBMLandClassTransitionModule._currentLandClass</a>, <br  />
 <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandClassTransitionModule.html#a37afa641144f3cf0874f95648891ae27">CBMLandClassTransitionModule._isForest</a> as <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandClassTransitionModule.html#ae1c6dd612dbc2529bbfa1f56f1e22391">CBMLandClassTransitionModule._landClassForestStatus</a>[currentLandClass] <br  />
 , <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandClassTransitionModule.html#ae105d40e31ba7eb6c7d61e6621dbaf70">CBMLandClassTransitionModule._unfcccLandClass</a> based on <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandClassTransitionModule.html#aaff1912aad486ff7136d326070327046">CBMLandClassTransitionModule._historicLandClass</a> <br  />
@@ -609,14 +595,9 @@ and currentLandClass</p>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>updateRemainingStatus</p>
-<p>Initialise string variable historicLandClass as <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandClassTransitionModule.html#aaff1912aad486ff7136d326070327046">CBMLandClassTransitionModule._historicLandClass</a> value. <br  />
-if landClass is equal to hisitoricLandClass end program.</p>
-<p>Initialise intege variable targetYears as <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandClassTransitionModule.html#a0b570733cb959dfdd9fc93403730dc2d">CBMLandClassTransitionModule._landClassElapsedTime</a>[landClass]. <br  />
-if <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandClassTransitionModule.html#a8d5557fa22a519b716486eea418d73a5">CBMLandClassTransitionModule._yearsSinceTransition</a> is greater than targetYears, <br  />
-set <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandClassTransitionModule.html#aaff1912aad486ff7136d326070327046">CBMLandClassTransitionModule._historicLandClass</a> as landClass. <br  />
-invoke CBMLandClassTransitionModule.setUnfccLandClass(). <br  />
- </p><dl class="params"><dt>Parameters</dt><dd>
+<p>If the parameter landClass is the same as <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandClassTransitionModule.html#aaff1912aad486ff7136d326070327046">CBMLandClassTransitionModule._historicLandClass</a>, return <br  />
+If the value of parameter landClass <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandClassTransitionModule.html#a0b570733cb959dfdd9fc93403730dc2d">CBMLandClassTransitionModule._landClassElapsedTime</a> is &gt; CBMLandClassTransitionModule.targetYears, set the value of _historicLandClass to landClass and invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMLandClassTransitionModule.html#a222038513cadcf4a8bc31afec088f9ec">CBMLandClassTransitionModule.setUnfcccLandClass()</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">landClass</td><td>string </td></tr>
   </table>
