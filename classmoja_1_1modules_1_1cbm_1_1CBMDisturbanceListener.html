@@ -473,8 +473,21 @@ else assign the result of DynamicVar()</p>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>For each <br  />
- </p>
+<p>Determine the various subconditions based on the configuration</p>
+<p>An shared pointer of type <a class="el" href="classmoja_1_1modules_1_1cbm_1_1IDisturbanceSubCondition.html">IDisturbanceSubCondition</a>, subConditions, is created to store all the subConditions <br  />
+ For each condition in parameter config, if the first element of the condition, (condition.first), is either "disturbance_type", "run_conditions", "override_conditions" or "override_disturbance_type", the next configuration object is checked <br  />
+If condition.first is "disturbance_sequence", all the historical disturbances are added to an object of <a class="el" href="structmoja_1_1modules_1_1cbm_1_1DisturbanceHistoryCondition.html">DisturbanceHistoryCondition</a>. A shared pointer of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1DisturbanceSequenceSubCondition.html">DisturbanceSequenceSubCondition</a> containing the timing, disturbance history and sequence of disturbance events is added to subConditions and the next condition is visited <br  />
+ Extract the comparison type (&lt;, =, &gt;=, &lt;-&gt;, !=) and target of value of condition.second <br  />
+ If the condition is a single variable, the condition.first is present in _landUnitData, a shared pointer of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1VariableDisturbanceSubCondition.html">VariableDisturbanceSubCondition</a> is added to subConditions and the next condition is visited <br  />
+ Based on whether the condition is on one or more pools, a shared pointer of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PoolDisturbanceSubCondition.html">PoolDisturbanceSubCondition</a> is added to subConditions and the next condition is visited <br  />
+ An object of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CompositeDisturbanceSubCondition.html">CompositeDisturbanceSubCondition</a> with the subConditions is returned</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">config</td><td>DynamicObject&amp; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>shared_ptr&lt;IDisturbanceSubCondition&gt; </dd></dl>
 
 </div>
 </div>
@@ -721,7 +734,6 @@ If _landUnitData has variable "default_disturbance_order", add all those default
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Insert Disturbance Matrix Associations</p>
 <p>For each dmAssociation in variable "disturbance_matrix_associations" of _landUnitData, insert the "disturbance_type", "spatial_unit_id" and "disturbance_matrix_id" as a pair of pairs into <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#a0901968fcd7e8533115ecfef188a9b49">CBMDisturbanceListener._dmAssociations</a></p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
@@ -749,7 +761,6 @@ If _landUnitData has variable "default_disturbance_order", add all those default
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get land and class transitions</p>
 <p>For each tranistion in variable "land_class_transitions" of _landUnitData, insert the "disturbance_type" and "land_class_transition" as a pair into <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#a508ac615253e949baf2a107ec95998fd">CBMDisturbanceListener._landClassTransitions</a></p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
@@ -916,8 +927,8 @@ Merge any additional metadata into disturbance data and fire the disturbance eve
 </div><div class="memdoc">
 <p>Return disturbance type name</p>
 <p>If the parameter eventData contains the variables "disturbance_type", "disturbance_id" check if <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#ae108fad5940a18da021de28444b075ca">CBMDisturbanceListener._distTypeNames</a> has eventData["disturbance_type_id"] and the value of disturbance id corresponds to disturbance name <br  />
- Else if, parameter eventData contains only "disturbance_id", check if check if <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#ae108fad5940a18da021de28444b075ca">CBMDisturbanceListener._distTypeNames</a> has eventData["disturbance_type_id"]</p>
-<p>Else report the absence of a disturbance name and id</p>
+Else if, parameter eventData contains only "disturbance_id", check if check if <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDisturbanceListener.html#ae108fad5940a18da021de28444b075ca">CBMDisturbanceListener._distTypeNames</a> has eventData["disturbance_type_id"] <br  />
+Else report the absence of a disturbance name and id</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">eventData</td><td>DynamicObject </td></tr>
