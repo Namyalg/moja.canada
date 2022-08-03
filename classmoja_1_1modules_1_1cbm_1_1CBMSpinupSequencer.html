@@ -353,6 +353,17 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Create a placeholder vector transfer to keep the event pool transfers and fire the disturbance with the transfers vector to be filled in by any modules that build the disturbance matrix <br  />
+Post the notification DisturbanceEvent with the data about the disturbance and the transfers</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">notificationCenter</td><td>NotificationCenter&amp; </td></tr>
+    <tr><td class="paramname">luc</td><td>ILandUnitController&amp; </td></tr>
+    <tr><td class="paramname">disturbance</td><td>Disturbance&amp; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -401,6 +412,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>For each step in the range 0 to parameter maximumSteps, if parameter incrementStep is true, increment the timing step, start step date, end step date, current start and end date by 1 (one year) <br  />
+Post notifications TimingStep, TimingPreEndStep, TimingEndStep and TimingPostStep <br  />
+Invoke applyOperations() to apply the operations in the current step and clearAllOperationResults() to clear the results on _landUnitData</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">maximumSteps</td><td>int </td></tr>
@@ -410,6 +424,7 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -503,6 +518,17 @@ iterate order by 1 and store the value in orderedDistType of <a class="el" href=
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Determine whether the moss needs to be simulated</p>
+<p>If _landUnitData does not have the variable "enable_moss", the moss will not be simulated and false is returned <br  />
+If _landUnitData has the variable "enable_moss" and the value is not null, if the value of variable "growth_curve_id" in _landUnitData is not empty, return true if parameter runPeatland is false and the value of variable "leading_species" in _landUnitData contains the value of variable "moss_leading_species" in _landUnitData. <br  />
+Else return false</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">runPeatland</td><td>bool </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 
 </div>
 </div>
@@ -528,6 +554,12 @@ iterate order by 1 and store the value in orderedDistType of <a class="el" href=
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Determine whether peatland has to be simulated</p>
+<p>If _landUnitData does not have the variables "peatland_class" and "enable_peatland", return false <br  />
+Else, if the value of variable "enable_peatland" in _landUnitData is not null, if value of variable "inventory_over_peatland" in _landUnitData &gt; 0, value of variable "peatland" in _landUnitData &gt; 0 and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMSpinupSequencer.html#af5c5180056b251e76ef1ff5ab8677a4e">CBMSpinupSequencer._spinupGrowthCurveID</a> &gt; 0, determine if any species in variable "forest_peatland_leading_species" of _landUnitData is contained in variable "leading_species" of _landUnitData <br  />
+If peatlandId is not <a class="el" href="namespacemoja_1_1modules_1_1cbm.html#a1b69bd78783bca8e0ec2341082be11f5afff603dcce9c9089163f5a46012667e9">Peatlands::FOREST_PEATLAND_BOG</a>, <a class="el" href="namespacemoja_1_1modules_1_1cbm.html#a1b69bd78783bca8e0ec2341082be11f5adbfc9a4792d660349d138cf6a2ee869e">Peatlands::FOREST_PEATLAND_POORFEN</a>, <a class="el" href="namespacemoja_1_1modules_1_1cbm.html#a1b69bd78783bca8e0ec2341082be11f5a7ae794ee27c313f87244e23b3d5f0ca0">Peatlands::FOREST_PEATLAND_RICHFEN</a> or <a class="el" href="namespacemoja_1_1modules_1_1cbm.html#a1b69bd78783bca8e0ec2341082be11f5ae705d216e20747703a86df41c1cda7cc">Peatlands::FOREST_PEATLAND_SWAMP</a> return true, indicating that the peatland is to be simulated <br  />
+In any other case, return false, indicating that the peatland is not to be simulated</p>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 
 </div>
 </div>
@@ -564,10 +596,7 @@ iterate order by 1 and store the value in orderedDistType of <a class="el" href=
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Assign double variable changeRatio as 0. <br  />
-If lastSlowPoolValue is not equal to 0, <br  />
- Assign changeRatio as currentSlowPoolValue divided by lastSlowPoolValue. <br  />
-Check if changeRatio is greater than 0.999 and less than 1.001 and return the boolean value.</p>
+<p>If parameter lastSlowPoolValue != 0, returns if the the ratio currentSlowPoolValue / lastSlowPoolValue is greater than 0.999 and less than 1.001, else returns True.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">lastSlowPoolValue</td><td>double </td></tr>
@@ -682,6 +711,27 @@ return true.</p>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Run Peatland Spinup</p>
+<p>Create a variable poolCached, set it to False</p>
+<p>Assign the value of variable "default_mean_annual_temperature" in _landUnitData to variable meanAnualTemperature if <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMSpinupSequencer.html#ad362aafa81a7fcb36996d6107914e281">CBMSpinupSequencer._mat</a> is empty <br  />
+ Set variable lastFireYearValue to the value of variable "default_last_fire_year" in _landUnitData if variable "last_fire_year" in _landUnitData is empty, <br  />
+ Set variable maxReturnInterval to the maximum of value of variable "maximum_fire_return_interval" in _landUnitData and variable "default_fire_return_interval" in _landUnitData, if variable "fire_return_interval" in _landUnitData is empty, <br  />
+ else set maxReturnInterval to the maximum of value of variable "maximum_fire_return_interval" in _landUnitData and variable "fire_return_interval" in _landUnitData</p>
+<p>If the cache object consisting of { <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMSpinupSequencer.html#acf0f33d7d7092d81d017522ccc0bfc73">CBMSpinupSequencer._spu</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMSpinupSequencer.html#a17b2db25d1e38add76f51ddf3c5e93c8">CBMSpinupSequencer._historicDistType</a>, peatlandId, variable fireReturnIntervalValue and variable meanAnualTemperature }, is present in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMSpinupSequencer.html#abebc5416f0cda5a8aa5f74ed18f6f6ce">CBMSpinupSequencer._cache</a>, set value of variable "peat_pool_cached" in _landUnitData to true and set poolCached to true <br  />
+ Reset the ages <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMSpinupSequencer.html#a459ec1d23d345c238b452692d52000a1">CBMSpinupSequencer._shrubAge</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMSpinupSequencer.html#aa46caaa809a0438cccbff4226072d459">CBMSpinupSequencer._smallTreeAge</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMSpinupSequencer.html#a288ba2e2a55298302c348196fdc75cd8">CBMSpinupSequencer._age</a> to zero before the spinup procedure</p>
+<p>If the variable poolCached is false, in production/removal mode, only run one rotation is performed and live biomass value at minimum spinup time steps is 200. set the value of variable "peatland_spinup_rotation" in _landUnitData to 0 for spinup output to record the rotation <br  />
+Invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMSpinupSequencer.html#a61d638b1dbed3eae016cf028ed196622">CBMSpinupSequencer.fireSpinupSequenceEvent()</a>, set 200 years for spinupnext to use the removal values at this age <br  />
+Post a special pre-disturbance signal to trigger peatland spinup next call <br  />
+one rotation of spinup is done, invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMSpinupSequencer.html#a61d638b1dbed3eae016cf028ed196622">CBMSpinupSequencer.fireSpinupSequenceEvent()</a> to simulate the historic fire disturbance. Reset the ages <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMSpinupSequencer.html#a459ec1d23d345c238b452692d52000a1">CBMSpinupSequencer._shrubAge</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMSpinupSequencer.html#aa46caaa809a0438cccbff4226072d459">CBMSpinupSequencer._smallTreeAge</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMSpinupSequencer.html#a288ba2e2a55298302c348196fdc75cd8">CBMSpinupSequencer._age</a> to zero</p>
+<p>If value of variable "peatland_fire_regrow" in _landUnitData is true, regrow to minimum peatland woody age. If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMSpinupSequencer.html#ad048d5c5a610ac189b403f7cf729f31d">CBMSpinupSequencer._standAge</a> &gt; 0, for forest peatland, just regrow to initial stand age and invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMSpinupSequencer.html#a61d638b1dbed3eae016cf028ed196622">CBMSpinupSequencer.fireSpinupSequenceEvent()</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">notificationCenter</td><td>NotificationCenter&amp; </td></tr>
+    <tr><td class="paramname">luc</td><td>ILandUnitController&amp; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -724,6 +774,16 @@ return true.</p>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Perform Regular Spinup</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">notificationCenter</td><td>NotificationCenter&amp; </td></tr>
+    <tr><td class="paramname">luc</td><td>ILandUnitController&amp; </td></tr>
+    <tr><td class="paramname">runMoss</td><td>int </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>

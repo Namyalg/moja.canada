@@ -209,7 +209,7 @@ Private Attributes</h2></td></tr>
 <p>Assign variable age as value of variable "age" in parameter landUnitData, <br  />
 merch as value of pool <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandComponent.html#ace0e4c03d041f0c87f73f945226d8bcd">StandComponent._forestType</a> + "Merch", other as value of pool <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandComponent.html#ace0e4c03d041f0c87f73f945226d8bcd">StandComponent._forestType</a> + "Other" and foilage as value of pool <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandComponent.html#ace0e4c03d041f0c87f73f945226d8bcd">StandComponent._forestType</a> + "Foilage" in parameter landUnitData <br  />
 Assign the above ground biomass increments to variable agIncrements, the result of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandComponent.html#afe4d0bb0ae3b5bd177c136691d758193">StandComponent.getAGIncrements()</a> with arguments age, merch, other, foilage <br  />
-The totalAGBiomass is given as the sum of values merch, other, foilage and the values of the name of merch, other and foilage in agIncrements Return the result of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandComponent.html#a293a64701258f6dd7c6d6ca0304e2a17">StandComponent.calculateRootBiomass()</a> with argument totalAGBiomass on <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandComponent.html#a64754b1af8137a5122efee409bb246ba">StandComponent._rootBiomassEquation</a></p>
+The totalAGBiomass is given as the sum of values merch, other, foilage and the values of the name of merch, other and foilage in agIncrements Return the result of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1RootBiomassEquation.html#af5edd3303b83d2120b08d11e1313b8be">RootBiomassEquation.calculateRootBiomass()</a> with argument totalAGBiomass on <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandComponent.html#a64754b1af8137a5122efee409bb246ba">StandComponent._rootBiomassEquation</a></p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">landUnitData</td><td>flint::ILandUnitDataWrapper* </td></tr>
@@ -395,6 +395,13 @@ Return an unordered map with key as name of merch, value as the maximum of Stand
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Assign the values of pools "Merch", "Other", "Foilage", "CoarseRoots" and "FineRoots" in parameter landUnitData to variables merch, other, foliage, coarseRoots and fineRoots <br  />
+Invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandComponent.html#afe4d0bb0ae3b5bd177c136691d758193">StandComponent.getAGIncrements()</a> with parameters as value of variable "age" in _landUnitData and pools march, other and foilage to calculate the above ground biomass incrementsm, set it to variable agIncrements <br  />
+Assign the result of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1RootBiomassEquation.html#ac75abf325254d48bb744f7e679770abe">RootBiomassEquation.biomassToCarbon()</a> on <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandComponent.html#a64754b1af8137a5122efee409bb246ba">StandComponent._rootBiomassEquation</a> with argument as the result of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandComponent.html#a293a64701258f6dd7c6d6ca0304e2a17">StandComponent.calculateRootBiomass()</a> to variable rootCarbon, <br  />
+the result of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1RootBiomassEquation.html#ae6f65adaa54916bcc834624ba9a39231">RootBiomassEquation.calculateRootProportions</a> on <a class="el" href="classmoja_1_1modules_1_1cbm_1_1StandComponent.html#a64754b1af8137a5122efee409bb246ba">StandComponent._rootBiomassEquation</a> with argument as paramter standRootBiomass to variable rootProportions <br  />
+ Return an unordered map with key name of merch pool, value of merch in agIncrements <br  />
+ key name of other pool, value of other in agIncrements name of foilage pool, value of foilage in agIncrements <br  />
+key name of fineRoots pool, value rootCarbon * rootProportions.fine - fineRoots, and key name of coarseRoots pool and value rootCarbon * rootProportions.coarse - coarseRoots</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">landUnitData</td><td>flint::ILandUnitDataWrapper* </td></tr>
