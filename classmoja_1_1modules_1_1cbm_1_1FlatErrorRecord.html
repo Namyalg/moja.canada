@@ -169,6 +169,17 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Constructor for <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatErrorRecord.html">FlatErrorRecord</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">year</td><td>int </td></tr>
+    <tr><td class="paramname">classifierValues</td><td>vector&lt;Poco::Nullable&lt;std::string&gt;&gt;&amp; </td></tr>
+    <tr><td class="paramname">module</td><td>string&amp; </td></tr>
+    <tr><td class="paramname">error</td><td>string&amp; </td></tr>
+    <tr><td class="paramname">area</td><td>double </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -204,6 +215,9 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Get the current classifier string using <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatRecordHelper.html#a11a1eb78109f4e3c5ccfc1d08b9dfe28">FlatRecordHelper.BuildClassifierValueString()</a> passing <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatErrorRecord.html#a4105dcb000d0ef8b5db07178a3a23519">FlatErrorRecord._classifierValues</a> as an argument <br  />
+Return the concatentation of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatErrorRecord.html#ad60d94703926c0139348473f99c531b2">FlatErrorRecord._year</a>, current classifier string, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatErrorRecord.html#ac01ca554d3611d1a408d52b3eaf8d004">FlatErrorRecord._module</a>, FlatErrorRecord._errorStr, and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatErrorRecord.html#ae544b39b19ab4ca6f1feb9542bbeceff">FlatErrorRecord._area</a></p>
+<dl class="section return"><dt>Returns</dt><dd>string </dd></dl>
 
 </div>
 </div>
@@ -255,6 +269,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Compute and return the value of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatErrorRecord.html#ae059dfbd9014bb0672749a5fdb785c6e">FlatErrorRecord._hash</a> if it is -1, and not already computed</p>
+<dl class="section return"><dt>Returns</dt><dd>size_t </dd></dl>
 
 </div>
 </div>
@@ -273,6 +289,15 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Get the current classifier string using <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatRecordHelper.html#a9f6837eab0bc610813c3ff36b453b14e">FlatRecordHelper.BuildClassifierNamesString()</a> passing parameter classifierNames as an argument <br  />
+Return the header with the values of the current classifier string</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">classifierNames</td><td>vector&lt;std::string&gt;&amp; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>string </dd></dl>
 
 </div>
 </div>
@@ -291,6 +316,14 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Merge the value of other._area into <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatErrorRecord.html#ae544b39b19ab4ca6f1feb9542bbeceff">FlatErrorRecord._area</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td><a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatErrorRecord.html">FlatErrorRecord</a>&amp; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -309,6 +342,14 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Return if the members of the current <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatErrorRecord.html">FlatErrorRecord</a> are equal to the members of the object other of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatErrorRecord.html">FlatErrorRecord</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td><a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatAgeAreaRecord.html">FlatAgeAreaRecord</a>&amp; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 
 </div>
 </div>

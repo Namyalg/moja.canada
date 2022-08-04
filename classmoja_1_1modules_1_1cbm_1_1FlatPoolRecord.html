@@ -177,6 +177,18 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Constructor of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatPoolRecord.html">FlatPoolRecord</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">year</td><td>int </td></tr>
+    <tr><td class="paramname">classifierValues</td><td>vector&lt;double&gt;&amp; </td></tr>
+    <tr><td class="paramname">landClass</td><td>string&amp; </td></tr>
+    <tr><td class="paramname">ageClass</td><td>string&amp; </td></tr>
+    <tr><td class="paramname">pool</td><td>string&amp; </td></tr>
+    <tr><td class="paramname">flux</td><td>double </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -212,6 +224,15 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Get the current classifier string using <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatRecordHelper.html#a11a1eb78109f4e3c5ccfc1d08b9dfe28">FlatRecordHelper.BuildClassifierValueString</a> passing <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatPoolRecord.html#a4105dcb000d0ef8b5db07178a3a23519">FlatPoolRecord._classifierValues</a> as an argument <br  />
+Return the concatenation of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatPoolRecord.html#ad60d94703926c0139348473f99c531b2">FlatPoolRecord._year</a>, current classifier string, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatPoolRecord.html#afdbd3a1784dcad643e53626d56bd4e86">FlatPoolRecord._landClass</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatPoolRecord.html#a0d84aceac49cee250b8bef30a137a59b">FlatPoolRecord._ageClass</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatPoolRecord.html#ace159d3925147b58cd9bb5e89d717de4">FlatPoolRecord._pool</a>, and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatPoolRecord.html#a3e78e92b9e102f837e1433ff78edd53c">FlatPoolRecord._value</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">classifierNames</td><td>vector&lt;std::string&gt;&amp; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>string </dd></dl>
 
 </div>
 </div>
@@ -263,6 +284,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Compute and return the value of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatPoolRecord.html#ae059dfbd9014bb0672749a5fdb785c6e">FlatPoolRecord._hash</a> if it is -1, and not already computed</p>
+<dl class="section return"><dt>Returns</dt><dd>size_t </dd></dl>
 
 </div>
 </div>
@@ -281,6 +304,15 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Get the current classifier string using <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatRecordHelper.html#a9f6837eab0bc610813c3ff36b453b14e">FlatRecordHelper.BuildClassifierNamesString()</a> passing parameter classifierNames as an argument <br  />
+Return the header with the values of the current classifier string</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">classifierNames</td><td>vector&lt;std::string&gt;&amp; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>string </dd></dl>
 
 </div>
 </div>
@@ -299,6 +331,14 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Merge the value of other._value into <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatPoolRecord.html#a3e78e92b9e102f837e1433ff78edd53c">FlatPoolRecord._value</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td><a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatPoolRecord.html">FlatPoolRecord</a>&amp; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -317,6 +357,14 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Return if the members of the current <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatPoolRecord.html">FlatPoolRecord</a> are equal to the members of the object other of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatPoolRecord.html">FlatPoolRecord</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td><a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatPoolRecord.html">FlatPoolRecord</a>&amp; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 
 </div>
 </div>
