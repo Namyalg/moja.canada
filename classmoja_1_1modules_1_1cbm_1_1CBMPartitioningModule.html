@@ -337,6 +337,16 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Create the Recovery Rules based on the disturbance type</p>
+<p>If the disturbance type is not found in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPartitioningModule.html#ad6fa4d215a9ce6187f4687e0df278a88">CBMPartitioningModule._recoveryRules</a>, return a null pointer <br  />
+</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">disturbanceType</td><td>std::string </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::shared_ptr&lt;IRecoveryRule&gt; </dd></dl>
 
 </div>
 </div>
@@ -363,6 +373,14 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>If the value of of the row, "disturbance" in parameter e, and column, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPartitioningModule.html#a6ac8fb0c727e3b328dc8fabd9ea2f95c">CBMPartitioningModule._spuId</a>, is &lt; 0.2, Invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPartitioningModule.html#a64edbfd177fd40352bbfc5bc18efbab4">CBMPartitioningModule.doSmallDisturbanceEvent()</a>, else invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPartitioningModule.html#a3c49cb7e0b9b611a28fe0f73636bee49">CBMPartitioningModule.doLargeDisturbanceEvent()</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>DynamicVar </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#a8839d77d04859f8e203dc5cea9404265">CBMModuleBase</a>.</p>
 
@@ -416,6 +434,11 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Initialise the values of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPartitioningModule.html#a3424e1d107dc6d7d6aafcabafd2fe47d">CBMPartitioningModule._partition</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPartitioningModule.html#a3ed7c715d222a97074067306a7b1471f">CBMPartitioningModule._spinupParameters</a> and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPartitioningModule.html#acf0f33d7d7092d81d017522ccc0bfc73">CBMPartitioningModule._spu</a> with variables "partition", "spinup_parameters" and "spu" from _landUnitData <br  />
+Invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPartitioningModule.html#ac109644e8f18587d55892c1c0e63ad2c">CBMPartitioningModule.fetchRecoveryRules()</a> <br  />
+Initialise <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPartitioningModule.html#a520b6c37d8489ea667da597bad4654de">CBMPartitioningModule._agBiomassPools</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPartitioningModule.html#a8fd9f8c8125f02f0361d955c9199ef4d">CBMPartitioningModule._totalBiomassPools</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPartitioningModule.html#a77143dd664a36e795aa29f7694815504">CBMPartitioningModule._totalEcoPools</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPartitioningModule.html#a91bdc72c7f5ffd34697b6e4e68861195">CBMPartitioningModule._disturbanceMortality</a> with value of variable "disturbance_mortality" from _landUnitData , <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPartitioningModule.html#ae1b3bc7e67bb44c338ae5c1c58baf17d">CBMPartitioningModule._disturbanceCategories</a> with value of variable "disturbance_categories" from _landUnitData <br  />
+</p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#ae5c72527099317707d2347e45763975d">CBMModuleBase</a>.</p>
 
@@ -454,6 +477,13 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">disturbanceType</td><td>std::string </td></tr>
+    <tr><td class="paramname">mortality</td><td>double </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -559,6 +589,14 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Subscribe to signals LocalDomainInit, TimingInit, DisturbanceEvent and TimingStep</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">notificationCenter</td><td>NotificationCenter&amp; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
