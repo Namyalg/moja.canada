@@ -69,6 +69,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-types">Private Types</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classmoja_1_1modules_1_1cbm_1_1MossDisturbanceModule-members.html">List of all members</a>  </div>
@@ -208,22 +209,74 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a47bfe762d963fe2307f3f043f6d7a67b"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1MossDisturbanceModule.html#a47bfe762d963fe2307f3f043f6d7a67b">fireEvent</a> = &quot;fire&quot;</td></tr>
 <tr class="separator:a47bfe762d963fe2307f3f043f6d7a67b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
+Private Types</h2></td></tr>
+<tr class="memitem:a9d16c34bd2d03488ad069f22415338bb"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDistEventTransfer.html">CBMDistEventTransfer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1MossDisturbanceModule.html#a9d16c34bd2d03488ad069f22415338bb">EventVector</a></td></tr>
+<tr class="separator:a9d16c34bd2d03488ad069f22415338bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26a2083f21c858c3d4474c7901a6560a"><td class="memItemLeft" align="right" valign="top">typedef std::unordered_map&lt; int, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1MossDisturbanceModule.html#a9d16c34bd2d03488ad069f22415338bb">EventVector</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1MossDisturbanceModule.html#a26a2083f21c858c3d4474c7901a6560a">EventMap</a></td></tr>
+<tr class="separator:a26a2083f21c858c3d4474c7901a6560a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:ad5b05dd6a233feb3b06327597e7f8027"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1MossDisturbanceModule.html#ad5b05dd6a233feb3b06327597e7f8027">recordMossTransfers</a> (const DynamicObject &amp;data)</td></tr>
-<tr class="separator:ad5b05dd6a233feb3b06327597e7f8027"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a342fc7ed25e264059273c6d0712be3eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1MossDisturbanceModule.html#a342fc7ed25e264059273c6d0712be3eb">fetchMossDistMatrices</a> ()</td></tr>
+<tr class="separator:a342fc7ed25e264059273c6d0712be3eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a834bb8b16b087f3369310320ab87e22a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1MossDisturbanceModule.html#a834bb8b16b087f3369310320ab87e22a">fetchMossDMAssociations</a> ()</td></tr>
+<tr class="separator:a834bb8b16b087f3369310320ab87e22a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a0ae127a4c525154ec61fab96a9ff58d8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1MossDisturbanceModule.html#a0ae127a4c525154ec61fab96a9ff58d8">runMoss</a></td></tr>
-<tr class="separator:a0ae127a4c525154ec61fab96a9ff58d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a756c897e7cdfb57d77f078fca6c272dc"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1MossDisturbanceModule.html#a756c897e7cdfb57d77f078fca6c272dc">_sourcePools</a></td></tr>
-<tr class="separator:a756c897e7cdfb57d77f078fca6c272dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0a5c1c9755e2a37a5a082d830eb0a4a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1MossDisturbanceModule.html#ae0a5c1c9755e2a37a5a082d830eb0a4a">_destPools</a></td></tr>
-<tr class="separator:ae0a5c1c9755e2a37a5a082d830eb0a4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ebf87280406f01e93e17992bf6d1d5b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1MossDisturbanceModule.html#a8ebf87280406f01e93e17992bf6d1d5b">_transferRates</a></td></tr>
-<tr class="separator:a8ebf87280406f01e93e17992bf6d1d5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a193abcb2fb780f8c83742b7a2ad13808"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1MossDisturbanceModule.html#a193abcb2fb780f8c83742b7a2ad13808">_runMoss</a></td></tr>
+<tr class="separator:a193abcb2fb780f8c83742b7a2ad13808"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a896ad436af10a648fd62935f102f66b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1MossDisturbanceModule.html#a26a2083f21c858c3d4474c7901a6560a">EventMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1MossDisturbanceModule.html#a896ad436af10a648fd62935f102f66b2">_matrices</a></td></tr>
+<tr class="separator:a896ad436af10a648fd62935f102f66b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25bf9c6048653c5bb0400ea1205b57ed"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1MossDisturbanceModule.html#a25bf9c6048653c5bb0400ea1205b57ed">_dmAssociations</a></td></tr>
+<tr class="separator:a25bf9c6048653c5bb0400ea1205b57ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a26a2083f21c858c3d4474c7901a6560a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26a2083f21c858c3d4474c7901a6560a">&#9670;&nbsp;</a></span>EventMap</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::unordered_map&lt;int, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1MossDisturbanceModule.html#a9d16c34bd2d03488ad069f22415338bb">EventVector</a>&gt; <a class="el" href="classmoja_1_1modules_1_1cbm_1_1MossDisturbanceModule.html#a26a2083f21c858c3d4474c7901a6560a">EventMap</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9d16c34bd2d03488ad069f22415338bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d16c34bd2d03488ad069f22415338bb">&#9670;&nbsp;</a></span>EventVector</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::vector&lt;<a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDistEventTransfer.html">CBMDistEventTransfer</a>&gt; <a class="el" href="classmoja_1_1modules_1_1cbm_1_1MossDisturbanceModule.html#a9d16c34bd2d03488ad069f22415338bb">EventVector</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a3c3d82123c9479f0205ed21426e2b7b0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3c3d82123c9479f0205ed21426e2b7b0">&#9670;&nbsp;</a></span>MossDisturbanceModule()</h2>
@@ -325,7 +378,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1MossDisturbanceModule.html#a0ae127a4c525154ec61fab96a9ff58d8">MossDisturbanceModule.runMoss</a> is false, return. <br  />
+<p>If MossDisturbanceModule.runMoss is false, return. <br  />
 Else, get the disturbance type for either historical or last disturbance event from "disturbance" in parameter n, and check if it is fire disturbance, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1MossDisturbanceModule.html#a47bfe762d963fe2307f3f043f6d7a67b">MossDisturbanceModule::fireEvent</a> <br  />
 If it is a fire disturbance and runMoss is true, for every source and sink pool pairs, in _sourcePools and _destPools, obtain th transfer rates from _transferRates. <br  />
 Instantiate an object of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMDistEventTransfer.html">CBMDistEventTransfer</a> with *_landUnitData, sourcePoolName, sinkPoolName, transferRate and append it to "transfers" in parameter n</p>
@@ -363,7 +416,7 @@ Instantiate an object of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMD
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1MossDisturbanceModule.html#ad5b05dd6a233feb3b06327597e7f8027">MossDisturbanceModule.recordMossTransfers()</a> on the value of variable "moss_fire_parameters" in _landUnitData</p>
+<p>Invoke MossDisturbanceModule.recordMossTransfers() on the value of variable "moss_fire_parameters" in _landUnitData</p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#ae5c72527099317707d2347e45763975d">CBMModuleBase</a>.</p>
@@ -393,15 +446,15 @@ Instantiate an object of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMD
 </table>
 </div><div class="memdoc">
 <p>If variable "enable_moss" exists in _landUnitData and it has a value, invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1Helper.html#a888e92d8bd4e2a272fe6f7ec6a4c529e">Helper.runMoss()</a> with arguments as value of variables "growth_curve_id", "moss_leading_species" and "leading_species" in _landUnitData <br  />
-Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1MossDisturbanceModule.html#a0ae127a4c525154ec61fab96a9ff58d8">MossDisturbanceModule.runMoss</a> to true if variable "peatland_class" in _landUnitData is empty, variable "growth_curve_id" in _landUnitData is not empty, and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1Helper.html#a888e92d8bd4e2a272fe6f7ec6a4c529e">Helper.runMoss()</a> returns true</p>
+Assign MossDisturbanceModule.runMoss to true if variable "peatland_class" in _landUnitData is empty, variable "growth_curve_id" in _landUnitData is not empty, and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1Helper.html#a888e92d8bd4e2a272fe6f7ec6a4c529e">Helper.runMoss()</a> returns true</p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#aba317ff7eb2117b26d98c0c5cee2d30b">CBMModuleBase</a>.</p>
 
 </div>
 </div>
-<a id="ad5b05dd6a233feb3b06327597e7f8027"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad5b05dd6a233feb3b06327597e7f8027">&#9670;&nbsp;</a></span>recordMossTransfers()</h2>
+<a id="a342fc7ed25e264059273c6d0712be3eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a342fc7ed25e264059273c6d0712be3eb">&#9670;&nbsp;</a></span>fetchMossDistMatrices()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -410,10 +463,9 @@ Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1MossDisturbanceModule.
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void recordMossTransfers </td>
+          <td class="memname">void fetchMossDistMatrices </td>
           <td>(</td>
-          <td class="paramtype">const DynamicObject &amp;&#160;</td>
-          <td class="paramname"><em>data</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -423,15 +475,31 @@ Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1MossDisturbanceModule.
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Clear MossDisturbanceModule_transferRates <br  />
-Add values of "FL2CO2", "FL2CH4", "FL2CO", "FL2FS", "FL2SS", "SL2CO2", "SL2CH4", "SL2CO", "SL2FS", "SL2SS", "FF2CO2", "FF2CH4", "FF2CO", "FF2FS", "FF2SS", "SF2CO2", "SF2CH4", "SF2CO", "SF2FS", "SF2SS" in parameter data to MossDisturbanceModule_transferRates</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">data</td><td>const DynamicObject&amp; </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a834bb8b16b087f3369310320ab87e22a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a834bb8b16b087f3369310320ab87e22a">&#9670;&nbsp;</a></span>fetchMossDMAssociations()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fetchMossDMAssociations </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -470,8 +538,8 @@ Add values of "FL2CO2", "FL2CH4", "FL2CO", "FL2FS", "FL2SS", "SL2CO2", "SL2CH4",
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="ae0a5c1c9755e2a37a5a082d830eb0a4a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae0a5c1c9755e2a37a5a082d830eb0a4a">&#9670;&nbsp;</a></span>_destPools</h2>
+<a id="a25bf9c6048653c5bb0400ea1205b57ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25bf9c6048653c5bb0400ea1205b57ed">&#9670;&nbsp;</a></span>_dmAssociations</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -480,7 +548,7 @@ Add values of "FL2CO2", "FL2CH4", "FL2CO", "FL2FS", "FL2SS", "SL2CO2", "SL2CH4",
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;std::string&gt; _destPools</td>
+          <td class="memname">std::unordered_map&lt;std::string, int&gt; _dmAssociations</td>
         </tr>
       </table>
   </td>
@@ -492,8 +560,8 @@ Add values of "FL2CO2", "FL2CH4", "FL2CO", "FL2FS", "FL2SS", "SL2CO2", "SL2CH4",
 
 </div>
 </div>
-<a id="a756c897e7cdfb57d77f078fca6c272dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a756c897e7cdfb57d77f078fca6c272dc">&#9670;&nbsp;</a></span>_sourcePools</h2>
+<a id="a896ad436af10a648fd62935f102f66b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a896ad436af10a648fd62935f102f66b2">&#9670;&nbsp;</a></span>_matrices</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -502,7 +570,7 @@ Add values of "FL2CO2", "FL2CH4", "FL2CO", "FL2FS", "FL2SS", "SL2CO2", "SL2CH4",
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;std::string&gt; _sourcePools</td>
+          <td class="memname"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1MossDisturbanceModule.html#a26a2083f21c858c3d4474c7901a6560a">EventMap</a> _matrices</td>
         </tr>
       </table>
   </td>
@@ -514,8 +582,8 @@ Add values of "FL2CO2", "FL2CH4", "FL2CO", "FL2FS", "FL2SS", "SL2CO2", "SL2CH4",
 
 </div>
 </div>
-<a id="a8ebf87280406f01e93e17992bf6d1d5b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ebf87280406f01e93e17992bf6d1d5b">&#9670;&nbsp;</a></span>_transferRates</h2>
+<a id="a193abcb2fb780f8c83742b7a2ad13808"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a193abcb2fb780f8c83742b7a2ad13808">&#9670;&nbsp;</a></span>_runMoss</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -524,7 +592,7 @@ Add values of "FL2CO2", "FL2CH4", "FL2CO", "FL2FS", "FL2SS", "SL2CO2", "SL2CH4",
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;double&gt; _transferRates</td>
+          <td class="memname">bool _runMoss</td>
         </tr>
       </table>
   </td>
@@ -546,28 +614,6 @@ Add values of "FL2CO2", "FL2CH4", "FL2CO", "FL2FS", "FL2SS", "SL2CO2", "SL2CH4",
           <td class="memname">const std::string fireEvent = &quot;fire&quot;</td>
         </tr>
       </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a0ae127a4c525154ec61fab96a9ff58d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ae127a4c525154ec61fab96a9ff58d8">&#9670;&nbsp;</a></span>runMoss</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool runMoss</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>

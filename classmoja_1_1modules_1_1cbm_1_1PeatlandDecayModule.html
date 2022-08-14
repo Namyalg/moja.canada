@@ -82,7 +82,7 @@ Inheritance diagram for PeatlandDecayModule:</div>
 <div class="dyncontent">
 <div class="center"><img src="classmoja_1_1modules_1_1cbm_1_1PeatlandDecayModule__inherit__graph.png" border="0" usemap="#PeatlandDecayModule_inherit__map" alt="Inheritance graph"/></div>
 <map name="PeatlandDecayModule_inherit__map" id="PeatlandDecayModule_inherit__map">
-<area shape="rect" title=" " alt="" coords="13,351,264,780"/>
+<area shape="rect" title=" " alt="" coords="13,351,264,795"/>
 <area shape="rect" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html" title=" " alt="" coords="5,5,272,303"/>
 </map>
 </div>
@@ -91,7 +91,7 @@ Collaboration diagram for PeatlandDecayModule:</div>
 <div class="dyncontent">
 <div class="center"><img src="classmoja_1_1modules_1_1cbm_1_1PeatlandDecayModule__coll__graph.png" border="0" usemap="#PeatlandDecayModule_coll__map" alt="Collaboration graph"/></div>
 <map name="PeatlandDecayModule_coll__map" id="PeatlandDecayModule_coll__map">
-<area shape="rect" title=" " alt="" coords="13,351,264,780"/>
+<area shape="rect" title=" " alt="" coords="13,351,264,795"/>
 <area shape="rect" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html" title=" " alt="" coords="5,5,272,303"/>
 </map>
 </div>
@@ -212,6 +212,8 @@ Private Member Functions</h2></td></tr>
 <tr class="separator:a8ba4f894118e1c6a5a7a6ab3389fc69f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa859faf2bc979461929d056662b22500"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandDecayModule.html#aa859faf2bc979461929d056662b22500">allocateCh4CO2</a> (double awtd)</td></tr>
 <tr class="separator:aa859faf2bc979461929d056662b22500"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf7a063ca47cc077bfa4ea517fc755e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandDecayModule.html#abf7a063ca47cc077bfa4ea517fc755e9">updateParameters</a> ()</td></tr>
+<tr class="separator:abf7a063ca47cc077bfa4ea517fc755e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d38e26a8c495563ddbba140ade8019a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandDecayModule.html#a3d38e26a8c495563ddbba140ade8019a">getCurrentYearWaterTable</a> ()</td></tr>
 <tr class="separator:a3d38e26a8c495563ddbba140ade8019a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adcd8023a787d63e5010a5bcf58844903"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandDecayModule.html#adcd8023a787d63e5010a5bcf58844903">getToCO2Rate</a> (double rate, double turnoverRate, double awtd)</td></tr>
@@ -255,6 +257,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:aa2f831d17b8e06ad1cdca2e072ab5938"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0cc78187ebab941fe1212de1b5276a6"><td class="memItemLeft" align="right" valign="top">flint::IVariable *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandDecayModule.html#ac0cc78187ebab941fe1212de1b5276a6">_appliedAnnualWTD</a> { nullptr }</td></tr>
 <tr class="separator:ac0cc78187ebab941fe1212de1b5276a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9979ae973b0274650e45f7e596fd4c1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandDecayModule.html#af9979ae973b0274650e45f7e596fd4c1">_meanAnnualTemperature</a> { 0 }</td></tr>
+<tr class="separator:af9979ae973b0274650e45f7e596fd4c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae02f2669f55ed08483dbfaff0bb342b9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandDecayModule.html#ae02f2669f55ed08483dbfaff0bb342b9">_peatlandId</a> { -1 }</td></tr>
 <tr class="separator:ae02f2669f55ed08483dbfaff0bb342b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71318ee311a3c4b727a1e3af9d5eba26"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandDecayModule.html#a71318ee311a3c4b727a1e3af9d5eba26">_runPeatland</a> { false }</td></tr>
@@ -819,6 +823,31 @@ Return newCurrentYearWtd</p>
 
 </div>
 </div>
+<a id="abf7a063ca47cc077bfa4ea517fc755e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf7a063ca47cc077bfa4ea517fc755e9">&#9670;&nbsp;</a></span>updateParameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void updateParameters </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="a1bc4a0b5d201afe688fb037aefd32916"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1bc4a0b5d201afe688fb037aefd32916">&#9670;&nbsp;</a></span>_acrotelm_a</h2>
@@ -985,6 +1014,28 @@ Return newCurrentYearWtd</p>
       <table class="memname">
         <tr>
           <td class="memname">const flint::IPool* _feathermossDead { nullptr }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af9979ae973b0274650e45f7e596fd4c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9979ae973b0274650e45f7e596fd4c1">&#9670;&nbsp;</a></span>_meanAnnualTemperature</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double _meanAnnualTemperature { 0 }</td>
         </tr>
       </table>
   </td>

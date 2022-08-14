@@ -489,7 +489,7 @@ Invoke submitOperation() on _landUnitData to submit the transfers</p>
 </div><div class="memdoc">
 <p>If variable "enable_moss" exists in _landUnitData and it has a value, assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1MossDecayModule.html#a67046307a8fc0747bc3cf8797874998c">MossDecayModule.meanAnnualTemperature</a> the value of variable "default_mean_annual_temperature" in _landUnitData if value of variable "mean_annual_temperature" is empty. <br  />
 Invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1Helper.html#a888e92d8bd4e2a272fe6f7ec6a4c529e">Helper.runMoss()</a> with arguments as value of variables "growth_curve_id", "moss_leading_species" and "leading_species" in _landUnitData <br  />
-Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1MossDisturbanceModule.html#a0ae127a4c525154ec61fab96a9ff58d8">MossDisturbanceModule.runMoss</a> to true if variable "peatland_class" in _landUnitData is empty, variable "growth_curve_id" in _landUnitData is not empty, and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1Helper.html#a888e92d8bd4e2a272fe6f7ec6a4c529e">Helper.runMoss()</a> returns true</p>
+Assign MossDisturbanceModule.runMoss to true if variable "peatland_class" in _landUnitData is empty, variable "growth_curve_id" in _landUnitData is not empty, and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1Helper.html#a888e92d8bd4e2a272fe6f7ec6a4c529e">Helper.runMoss()</a> returns true</p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#aba317ff7eb2117b26d98c0c5cee2d30b">CBMModuleBase</a>.</p>

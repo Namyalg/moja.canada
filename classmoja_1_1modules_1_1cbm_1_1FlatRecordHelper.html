@@ -86,14 +86,14 @@ Collaboration diagram for FlatRecordHelper:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a9f6837eab0bc610813c3ff36b453b14e"><td class="memItemLeft" align="right" valign="top">static const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatRecordHelper.html#a9f6837eab0bc610813c3ff36b453b14e">BuildClassifierNamesString</a> (const std::vector&lt; std::string &gt; &amp;classifierNames, const std::string &amp;suffix=&quot;&quot;)</td></tr>
-<tr class="separator:a9f6837eab0bc610813c3ff36b453b14e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11a1eb78109f4e3c5ccfc1d08b9dfe28"><td class="memItemLeft" align="right" valign="top">static const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatRecordHelper.html#a11a1eb78109f4e3c5ccfc1d08b9dfe28">BuildClassifierValueString</a> (const std::vector&lt; Poco::Nullable&lt; std::string &gt;&gt; &amp;classifierValues)</td></tr>
-<tr class="separator:a11a1eb78109f4e3c5ccfc1d08b9dfe28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9033cdb74fbf1dec065b32e87d9ea0da"><td class="memItemLeft" align="right" valign="top">static const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatRecordHelper.html#a9033cdb74fbf1dec065b32e87d9ea0da">BuildClassifierNamesString</a> (const std::vector&lt; std::string &gt; &amp;classifierNames, const std::string &amp;suffix=&quot;&quot;)</td></tr>
+<tr class="separator:a9033cdb74fbf1dec065b32e87d9ea0da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d31c7a514f585a7277ab57145279ce1"><td class="memItemLeft" align="right" valign="top">static const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatRecordHelper.html#a9d31c7a514f585a7277ab57145279ce1">BuildClassifierValueString</a> (const std::vector&lt; Poco::Nullable&lt; std::string &gt;&gt; &amp;classifierValues)</td></tr>
+<tr class="separator:a9d31c7a514f585a7277ab57145279ce1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a9f6837eab0bc610813c3ff36b453b14e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f6837eab0bc610813c3ff36b453b14e">&#9670;&nbsp;</a></span>BuildClassifierNamesString()</h2>
+<a id="a9033cdb74fbf1dec065b32e87d9ea0da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9033cdb74fbf1dec065b32e87d9ea0da">&#9670;&nbsp;</a></span>BuildClassifierNamesString()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -102,7 +102,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::string BuildClassifierNamesString </td>
+          <td class="memname">static const std::string BuildClassifierNamesString </td>
           <td>(</td>
           <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
           <td class="paramname"><em>classifierNames</em>, </td>
@@ -125,21 +125,11 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Return the concatentation of all the classifier names and suffix separated by a comma (,) <br  />
-For each classifier name add the suffix to the end of the name.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">classifierNames</td><td>vector&lt;std::string&gt;&amp; </td></tr>
-    <tr><td class="paramname">suffix</td><td>std::string </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>string </dd></dl>
 
 </div>
 </div>
-<a id="a11a1eb78109f4e3c5ccfc1d08b9dfe28"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a11a1eb78109f4e3c5ccfc1d08b9dfe28">&#9670;&nbsp;</a></span>BuildClassifierValueString()</h2>
+<a id="a9d31c7a514f585a7277ab57145279ce1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d31c7a514f585a7277ab57145279ce1">&#9670;&nbsp;</a></span>BuildClassifierValueString()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -148,7 +138,7 @@ For each classifier name add the suffix to the end of the name.</p>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::string BuildClassifierValueString </td>
+          <td class="memname">static const std::string BuildClassifierValueString </td>
           <td>(</td>
           <td class="paramtype">const std::vector&lt; Poco::Nullable&lt; std::string &gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>classifierValues</em></td><td>)</td>
@@ -161,20 +151,11 @@ For each classifier name add the suffix to the end of the name.</p>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Return the concatentation of all the classifier values separated by a comma (,)</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">classifierValues</td><td>vector&lt;Poco::Nullable&lt;std::string&gt;&gt;&amp; </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>string </dd></dl>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>/home/runner/work/moja.canada/moja.canada/Source/moja.modules.cbm/include/moja/modules/cbm/<a class="el" href="flatrecord_8h_source.html">flatrecord.h</a></li>
-<li>/home/runner/work/moja.canada/moja.canada/Source/moja.modules.cbm/src/<a class="el" href="flatrecord_8cpp.html">flatrecord.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -81,7 +81,7 @@ Collaboration diagram for FlatFluxRecord:</div>
 <div class="dyncontent">
 <div class="center"><img src="classmoja_1_1modules_1_1cbm_1_1FlatFluxRecord__coll__graph.png" border="0" usemap="#FlatFluxRecord_coll__map" alt="Collaboration graph"/></div>
 <map name="FlatFluxRecord_coll__map" id="FlatFluxRecord_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,203,405"/>
+<area shape="rect" title=" " alt="" coords="5,5,203,420"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -99,6 +99,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:abbf2d640a1b3e5dad42a04bdd4c3885b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc48619817c94c47d2dfa8850a2f6685"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatFluxRecord.html#adc48619817c94c47d2dfa8850a2f6685">asPersistable</a> () const</td></tr>
 <tr class="separator:adc48619817c94c47d2dfa8850a2f6685"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada65cc1a36dee46af24d083d1c26f84d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::optional&lt; std::string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatFluxRecord.html#ada65cc1a36dee46af24d083d1c26f84d">asVector</a> () const</td></tr>
+<tr class="separator:ada65cc1a36dee46af24d083d1c26f84d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca8ff1b13a396667c78b96d89ef00ac7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatFluxRecord.html#aca8ff1b13a396667c78b96d89ef00ac7">merge</a> (const <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatFluxRecord.html">FlatFluxRecord</a> &amp;other)</td></tr>
 <tr class="separator:aca8ff1b13a396667c78b96d89ef00ac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8cd662275c1ba5248e9f9e1f33f68a07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatFluxRecord.html#a8cd662275c1ba5248e9f9e1f33f68a07">setId</a> (Int64 id)</td></tr>
@@ -225,24 +227,6 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Constructor for <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatFluxRecord.html">FlatFluxRecord</a></p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">year</td><td>int </td></tr>
-    <tr><td class="paramname">classifierValues</td><td>vector&lt;Poco::Nullable&lt;std::string&gt;&gt;&amp; </td></tr>
-    <tr><td class="paramname">landClass</td><td>std::string </td></tr>
-    <tr><td class="paramname">ageClass</td><td>std::string </td></tr>
-    <tr><td class="paramname">previousClassifierValues</td><td>vector&lt;Poco::Nullable&lt;std::string&gt;&gt;&amp; </td></tr>
-    <tr><td class="paramname">previousLandClass</td><td>std::string </td></tr>
-    <tr><td class="paramname">previousAgeClass</td><td>std::string </td></tr>
-    <tr><td class="paramname">disturbanceType</td><td>Poco::Nullable&lt;std::string&gt; </td></tr>
-    <tr><td class="paramname">disturbanceCode</td><td>Poco::Nullable&lt;int&gt; </td></tr>
-    <tr><td class="paramname">srcPool</td><td>std::string </td></tr>
-    <tr><td class="paramname">dstPool</td><td>std::string </td></tr>
-    <tr><td class="paramname">flux</td><td>double </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -278,9 +262,23 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Get the current classifier string using <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatRecordHelper.html#a11a1eb78109f4e3c5ccfc1d08b9dfe28">FlatRecordHelper.BuildClassifierValueString()</a> passing <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatFluxRecord.html#a4105dcb000d0ef8b5db07178a3a23519">FlatFluxRecord._classifierValues</a> as an argument, the previous classifier string using <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatRecordHelper.html#a11a1eb78109f4e3c5ccfc1d08b9dfe28">FlatRecordHelper.BuildClassifierValueString()</a> passing <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatFluxRecord.html#a4105dcb000d0ef8b5db07178a3a23519">FlatFluxRecord._classifierValues</a> as an argument <br  />
-Return the concatentation of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatFluxRecord.html#ad60d94703926c0139348473f99c531b2">FlatFluxRecord._year</a>, current classifier string, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatFluxRecord.html#afdbd3a1784dcad643e53626d56bd4e86">FlatFluxRecord._landClass</a>, _ageClass, previous classifier string, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatFluxRecord.html#a6a221e53a61c1cefca619acb0f4709ab">FlatFluxRecord._previousLandClass</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatFluxRecord.html#a9cd6b66cec001dff13bc6f722e1e0fa1">FlatFluxRecord._previousAgeClass</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatFluxRecord.html#ad3ab43a7c27db3bcf505412bc72e1826">FlatFluxRecord._disturbanceType</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatFluxRecord.html#a1f609cb51cb49d4da20e03f1c5b740cb">FlatFluxRecord._disturbanceCode</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatFluxRecord.html#a2cb7b91012eae370ba78445b547f3ca6">FlatFluxRecord._srcPool</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatFluxRecord.html#a40b6cd99a502a39be75ff3260f68d783">FlatFluxRecord._dstPool</a>, and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatFluxRecord.html#aec3a0262a2fd0911d707c812cbf2e627">FlatFluxRecord._flux</a></p>
-<dl class="section return"><dt>Returns</dt><dd>string </dd></dl>
+
+</div>
+</div>
+<a id="ada65cc1a36dee46af24d083d1c26f84d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada65cc1a36dee46af24d083d1c26f84d">&#9670;&nbsp;</a></span>asVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::optional&lt;std::string&gt; &gt; asVector </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -332,8 +330,6 @@ Return the concatentation of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Compute and return the value of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatFluxRecord.html#ae059dfbd9014bb0672749a5fdb785c6e">FlatFluxRecord._hash</a> if it is -1, and not already computed</p>
-<dl class="section return"><dt>Returns</dt><dd>size_t </dd></dl>
 
 </div>
 </div>
@@ -352,15 +348,6 @@ Return the concatentation of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Get the current classifier string using <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatRecordHelper.html#a9f6837eab0bc610813c3ff36b453b14e">FlatRecordHelper.BuildClassifierNamesString()</a> passing parameter classifierNames as an argument, the previous classifier string using <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatRecordHelper.html#a9f6837eab0bc610813c3ff36b453b14e">FlatRecordHelper.BuildClassifierNamesString()</a> passing classifierNames and "_previous" as arguments <br  />
-Return the header with the values of the current and previous classifier strings</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">classifierNames</td><td>vector&lt;std::string&gt;&amp; </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>string </dd></dl>
 
 </div>
 </div>
@@ -379,14 +366,6 @@ Return the header with the values of the current and previous classifier strings
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Merge the value of other._flux into <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatFluxRecord.html#aec3a0262a2fd0911d707c812cbf2e627">FlatFluxRecord._flux</a></p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">other</td><td><a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatFluxRecord.html">FlatFluxRecord</a>&amp; </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -405,14 +384,6 @@ Return the header with the values of the current and previous classifier strings
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Return if the members of the current <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatFluxRecord.html">FlatFluxRecord</a> are equal to the members of the object other of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatFluxRecord.html">FlatFluxRecord</a></p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">other</td><td><a class="el" href="classmoja_1_1modules_1_1cbm_1_1FlatFluxRecord.html">FlatFluxRecord</a>&amp; </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 
 </div>
 </div>
@@ -743,9 +714,8 @@ Return the header with the values of the current and previous classifier strings
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>/home/runner/work/moja.canada/moja.canada/Source/moja.modules.cbm/include/moja/modules/cbm/<a class="el" href="flatrecord_8h_source.html">flatrecord.h</a></li>
-<li>/home/runner/work/moja.canada/moja.canada/Source/moja.modules.cbm/src/<a class="el" href="flatrecord_8cpp.html">flatrecord.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

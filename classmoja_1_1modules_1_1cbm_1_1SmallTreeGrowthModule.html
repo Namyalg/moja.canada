@@ -82,7 +82,7 @@ Inheritance diagram for SmallTreeGrowthModule:</div>
 <div class="dyncontent">
 <div class="center"><img src="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule__inherit__graph.png" border="0" usemap="#SmallTreeGrowthModule_inherit__map" alt="Inheritance graph"/></div>
 <map name="SmallTreeGrowthModule_inherit__map" id="SmallTreeGrowthModule_inherit__map">
-<area shape="rect" title=" " alt="" coords="30,351,247,809"/>
+<area shape="rect" title=" " alt="" coords="30,351,247,824"/>
 <area shape="rect" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html" title=" " alt="" coords="5,5,272,303"/>
 </map>
 </div>
@@ -91,7 +91,7 @@ Collaboration diagram for SmallTreeGrowthModule:</div>
 <div class="dyncontent">
 <div class="center"><img src="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule__coll__graph.png" border="0" usemap="#SmallTreeGrowthModule_coll__map" alt="Collaboration graph"/></div>
 <map name="SmallTreeGrowthModule_coll__map" id="SmallTreeGrowthModule_coll__map">
-<area shape="rect" title=" " alt="" coords="30,351,247,809"/>
+<area shape="rect" title=" " alt="" coords="30,351,247,824"/>
 <area shape="rect" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html" title=" " alt="" coords="5,5,272,303"/>
 </map>
 </div>
@@ -222,6 +222,8 @@ Private Member Functions</h2></td></tr>
 <tr class="separator:ab693779008c79214c98d2273091ae2b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7248063d0c91a6afe5507420056ef386"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a7248063d0c91a6afe5507420056ef386">getTurnoverRates</a> (int smalltreeGCID, int spuID)</td></tr>
 <tr class="separator:a7248063d0c91a6afe5507420056ef386"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf7a063ca47cc077bfa4ea517fc755e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#abf7a063ca47cc077bfa4ea517fc755e9">updateParameters</a> ()</td></tr>
+<tr class="separator:abf7a063ca47cc077bfa4ea517fc755e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac014a2f2a5e5067216c34c189cb9a8ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#ac014a2f2a5e5067216c34c189cb9a8ba">printRemovals</a> (int standSmallTreeAge, double smallTreeFoliageRemoval, double smallTreeStemSnagRemoval, double smallTreeBranchSnagRemoval, double smallTreeOtherRemovalToWFD, double smallTreeCoarseRootRemoval, double smallTreeFineRootRemoval, double smallTreeOtherToBranchSnag, double smallTreeStemRemoval)</td></tr>
 <tr class="separator:ac014a2f2a5e5067216c34c189cb9a8ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -415,14 +417,6 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Configuration function</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">config</td><td>DynamicObject&amp; </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -448,10 +442,6 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Add transfers between pools based on the sum of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a6cafed0f84dd2950eda8ff07465b4845">SmallTreeGrowthModule.sws</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#ae01bd93c7b8f197c3fa521c659e4adbd">SmallTreeGrowthModule.swo</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#ac16cb1b523407fa0ab558c8aa1f51484">SmallTreeGrowthModule.swf</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#af00a22baed3dcd74cad1996f780f5d41">SmallTreeGrowthModule.swcr</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a7b96419a7b1cd90a85f00dc4eff01fdd">SmallTreeGrowthModule.swfr</a> and their individual values <br  />
-If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a9fd9d5df97da84f1a8d22b93a7b2c66f">SmallTreeGrowthModule._smallTreeGrowthHW</a> is not nullptr, based on the sum of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a1f1bcfe15a5bae7dd76d0ba0f1e51785">SmallTreeGrowthModule.hws</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#af6b78f4a12fe3bd3b0a64f147e169708">SmallTreeGrowthModule.hwo</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a82ea0a41a7e8cdb51cf0b9a0ba5e47fb">SmallTreeGrowthModule.hwf</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a93988b8945beb2e91432d20c54631f33">SmallTreeGrowthModule.hwcr</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#ac99e296ecb6fc44faeda5f525df29ef8">SmallTreeGrowthModule.hwfr</a> and the individual values add transfers <br  />
-Submit and Apply the transfers on _landUnitData</p>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -477,12 +467,6 @@ Submit and Apply the transfers on _landUnitData</p>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a9562c8b9c269ea46802a0930c5231a94">SmallTreeGrowthModule.getYieldCurve()</a>, there is only one softwood small tree growth curve <br  />
-Set the values of pools "Atmosphere", "SoftwoodStemSnag", "SoftwoodBranchSnag", "SoftwoodStem", "SoftwoodFoilage", "SoftwoodOther", "SoftwoodCoarseRoots", "SoftwoodFineRoots", "HardwoodStemSnag", "HardwoodBranchSnag", "HardwoodStem", "HardwoodFoilage", "HardwoodOther", "HardwoodCoarseRoots", "HardwoodFineRoots", "WoodyFoilageDead", "WoodyFineDead", "WoodyRootsDead" from _landUnutData to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a31c832b6aa70ab4c880185dd06440228">SmallTreeGrowthModule._atmosphere</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a6b21336be4816b7d541c2434b353a024">SmallTreeGrowthModule._softwoodStemSnag</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a61626d20ccd71ccffa0ddbe543d6f2e2">SmallTreeGrowthModule._softwoodBranchSnag</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a1fae1c2a03f1a8427ef19bca2d6a30bf">SmallTreeGrowthModule._softwoodStem</a>, SmallTreeGrowthModule._softwoodFoilage, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a4b776d93d5f29b12578d9ac675dddf16">SmallTreeGrowthModule._softwoodOther</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a9a0dc2a27f5cdfbd010705a11b6b26db">SmallTreeGrowthModule._softwoodCoarseRoots</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#af94b0c6b008c6fcfd1a08c43ded3c3fd">SmallTreeGrowthModule._softwoodFineRoots</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#af763d9c82f1fe89d02d16bd33183c46d">SmallTreeGrowthModule._hardwoodStemSnag</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a4f7b55f39e82c47882126a798162b74e">SmallTreeGrowthModule._hardwoodBranchSnag</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#aa7c6ba87a6eed37cfac8494db7dffd32">SmallTreeGrowthModule._hardwoodStem</a>, SmallTreeGrowthModule._hardwoodFoilage, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a9a7cbac725b0b097c4cacfc8b2a129b8">SmallTreeGrowthModule._hardwoodOther</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a7728db25f7d0a67df7f61730a35164ce">SmallTreeGrowthModule._hardwoodCoarseRoots</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#aa28600196c300d43f2b5788fe5bbd9e2">SmallTreeGrowthModule._hardwoodFineRoots</a>, SmallTreeGrowthModule._woodyFoilageDead, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a840735e7a1cc5b09914667214c56232f">SmallTreeGrowthModule._woodyFineDead</a> <br  />
- Set values of variables "peatland_smalltree_age", "regen_delay", "spinup_moss_only", "is_forest", "is_decaying", "spatial_unit_id", "eco_boudary", "smalltree_growth_parameters", "growth_curve_id" to SmallTreeGrowthModule._peatlandSmallTreeAge, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#af4a2d73bc8bbadb2a6249ec59987a26e">SmallTreeGrowthModule._regenDelay</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#aa2f831d17b8e06ad1cdca2e072ab5938">SmallTreeGrowthModule._spinupMossOnly</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a37afa641144f3cf0874f95648891ae27">SmallTreeGrowthModule._isForest</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a2504a2f1fc05268b8c3397923d364897">SmallTreeGrowthModule._isDecaying</a>, SmallTreeGrowthModule._spatialUnitId, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a71a9309103162e3d04b0e87b978ed2ef">SmallTreeGrowthModule._ecoBoundary</a>, SmallTreeGrowthModule._smallTreeGrowthParameters, SmallTreeGrowthModule._growthCurveId</p>
-<p>If _smallTreeGrowthHW is not nullptr, set the values of pools "HardwoodStemSnag", "HardwoodBranchSnag", "HardwoodStem", "HardwoodFoilage", "HardwoodOther", "HardwoodCoarseRoots", "HardwoodFineRoots" from _landUnutData to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#af763d9c82f1fe89d02d16bd33183c46d">SmallTreeGrowthModule._hardwoodStemSnag</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a4f7b55f39e82c47882126a798162b74e">SmallTreeGrowthModule._hardwoodBranchSnag</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#aa7c6ba87a6eed37cfac8494db7dffd32">SmallTreeGrowthModule._hardwoodStem</a>, SmallTreeGrowthModule._hardwoodFoilage, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a9a7cbac725b0b097c4cacfc8b2a129b8">SmallTreeGrowthModule._hardwoodOther</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a7728db25f7d0a67df7f61730a35164ce">SmallTreeGrowthModule._hardwoodCoarseRoots</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#aa28600196c300d43f2b5788fe5bbd9e2">SmallTreeGrowthModule._hardwoodFineRoots</a></p>
-<p>If variable "output_removal" exists in _landUnitData, set it to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a3bc689c8b455efc7fe89c70a4cac0bdb">SmallTreeGrowthModule._outputRemoval</a>, else set <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a3bc689c8b455efc7fe89c70a4cac0bdb">SmallTreeGrowthModule._outputRemoval</a> to nullptr</p>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#ae5c72527099317707d2347e45763975d">CBMModuleBase</a>.</p>
 
@@ -510,10 +494,6 @@ Set the values of pools "Atmosphere", "SoftwoodStemSnag", "SoftwoodBranchSnag", 
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Add transfers from the atmospheric pools to softwood and hardwood pools</p>
-<p>Record carbon transfers that occur from the atmosphere to softwood and hardwoord pools during mid-season Invoke createStockOperation() on _landUnitData <br  />
-Add transfers from the atmosphere pool to softwood and hardwood merchantable, foilage, coarse root and fine root pools. Submit the operation to the _landUnitData by invoking submitOperation()</p>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -539,13 +519,6 @@ Add transfers from the atmosphere pool to softwood and hardwood merchantable, fo
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Perform snag and biomass turnovers as stock operations</p>
-<p>Invoke createStockOperation() on _landUnitData. <br  />
-Add transfers between softwood snag and branch pools to woody coarse and fine dead pools. If _smallTreeGrowthHW is not null, add transfers between hardwood snag and branch pools to woody coarse and fine dead pools. <br  />
- Invoke submitStockOperation() on _landUnitData to submit the transfers <br  />
-Invoke createStockOperation() on _landUnitData . Add transfers between softwood stem, foilage, other, coarse and fine roots to woody coarse, fine foilage and dead pools, softwood snag pools. If _smallTreeGrowthHW is not null, add transfers between hardwood stem, foilage, other, coarse and fine roots to woody coarse, fine foilage and dead pools, hardwood snag pools. <br  />
-Invoke submitStockOperation() on _landUnitData to submit the transfers and applyOperations() on _landUnitData to apply the transfers <br  />
- </p><dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -571,11 +544,6 @@ Invoke submitStockOperation() on _landUnitData to submit the transfers and apply
   </tr>
 </table>
 </div><div class="memdoc">
-<p>If the module should not run, if <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#ab693779008c79214c98d2273091ae2b9">SmallTreeGrowthModule.shouldRun()</a> is false, return <br  />
-There is no small tree growth curve ID, but small tree is of black spruce, the black spruce growth curve ID is value of _appliedGrowthCurveID. Invoke SmallTreeGrowthModule.getTurnoverRate() with the obtained black spruce growth curve ID and value of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#adff7c6f527c49a77be1e5a5d6abe6a09">SmallTreeGrowthModule._spuId</a>. <br  />
-The small tree parameters are eco-zone based, get the current eco_boundary variable name. If eco_boundary name changed or just set, small tree growth curve parameter needs to be updated <br  />
-Invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthCurve.html#a3f119a2d5578ea003ab5817a803025e4">SmallTreeGrowthCurve.checkUpdateEcoParameters()</a> on <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#aa3f0f6a9fe8ff55dfbf199be34805cf3">SmallTreeGrowthModule._smallTreeGrowthSW</a>- with parameters as value of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a71a9309103162e3d04b0e87b978ed2ef">SmallTreeGrowthModule._ecoBoundary</a> and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#acc84d2de49d45625c7759db08f7bb9ea">SmallTreeGrowthModule._smallTreeGCParameters</a></p>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#aba317ff7eb2117b26d98c0c5cee2d30b">CBMModuleBase</a>.</p>
 
@@ -603,14 +571,6 @@ Invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthCurve.h
   </tr>
 </table>
 </div><div class="memdoc">
-<p>If <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a815341fdc4a340b26e5be5036a48b734">SmallTreeGrowthModule._shouldRun</a> is false or <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#aa2f831d17b8e06ad1cdca2e072ab5938">SmallTreeGrowthModule._spinupMossOnly</a> is true or value of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#af4a2d73bc8bbadb2a6249ec59987a26e">SmallTreeGrowthModule._regenDelay</a> &gt; 0 , return <br  />
-Invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#af38c3232a97593e482681059c06f8247">SmallTreeGrowthModule.updateBiomassPools()</a> to get the current values of the biomass pools, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#aade1741e82b1639766e3143cc5dabef5">SmallTreeGrowthModule.getIncrements()</a> to get and store the biomass carbon growth increments, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a179811a05305e5c2e8e71b6b3b092b7f">SmallTreeGrowthModule.doHalfGrowth()</a> to transfer half of the biomass growth increment to the biomass pool, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#af38c3232a97593e482681059c06f8247">SmallTreeGrowthModule.updateBiomassPools()</a> to update to record the current biomass pool value plus the half increment of biomass, and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a94fde574bf254955eb82fadd0fc1fba8">SmallTreeGrowthModule.doMidSeasonGrowth()</a> where the the foliage and snags that grow and are turned over</p>
-<p>Debug to print out the removal from live biomass components through <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#ac014a2f2a5e5067216c34c189cb9a8ba">SmallTreeGrowthModule.printRemovals()</a> <br  />
-Invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a6ef10de8f3b6c18b5e080f6a64b5c9d1">SmallTreeGrowthModule.doPeatlandTurnover()</a> to do biomass and snag turnover, small tree is in treed peatland only, <br  />
- <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a179811a05305e5c2e8e71b6b3b092b7f">SmallTreeGrowthModule.doHalfGrowth()</a> to transfer the remaining half increment to the biomass pool <br  />
-</p>
-<p>Set the value of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a69ff2d9d1082fe31cc02b06b47136ecc">SmallTreeGrowthModule._smalltreeAge</a> to the increment of the current value of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a69ff2d9d1082fe31cc02b06b47136ecc">SmallTreeGrowthModule._smalltreeAge</a> by 1</p>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#a7a71ee940243a639488e8b2542c52010">CBMModuleBase</a>.</p>
 
@@ -638,10 +598,6 @@ Invoke <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.
   </tr>
 </table>
 </div><div class="memdoc">
-<p>If the result of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1VolumeToBiomassCarbonGrowth.html#ae6f97095a17545f12e6d49f3d65365de">VolumeToBiomassCarbonGrowth.getBiomassCarbonIncrements()</a> on SmallTreeGrowthModule._volumeToBioGrowth, indicating there are increments for the particular _standGrowthCurveID and _standSPUID, assign SmallTreeGrowthModule.swm, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#ae01bd93c7b8f197c3fa521c659e4adbd">SmallTreeGrowthModule.swo</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#ac16cb1b523407fa0ab558c8aa1f51484">SmallTreeGrowthModule.swf</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#af00a22baed3dcd74cad1996f780f5d41">SmallTreeGrowthModule.swcr</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a7b96419a7b1cd90a85f00dc4eff01fdd">SmallTreeGrowthModule.swfr</a> the Softwood increments, SmallTreeGrowthModule.hwm, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#af6b78f4a12fe3bd3b0a64f147e169708">SmallTreeGrowthModule.hwo</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a82ea0a41a7e8cdb51cf0b9a0ba5e47fb">SmallTreeGrowthModule.hwf</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a93988b8945beb2e91432d20c54631f33">SmallTreeGrowthModule.hwcr</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#ac99e296ecb6fc44faeda5f525df29ef8">SmallTreeGrowthModule.hwfr</a> Hardwood increments <br  />
-If SmallTreeGrowthModule._growthMultipliersEnabled is not enabled return <br  />
-else, check if "Softwood" is found in _growthMultipliers and multiply SmallTreeGrowthModule.swm, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#ae01bd93c7b8f197c3fa521c659e4adbd">SmallTreeGrowthModule.swo</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#ac16cb1b523407fa0ab558c8aa1f51484">SmallTreeGrowthModule.swf</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#af00a22baed3dcd74cad1996f780f5d41">SmallTreeGrowthModule.swcr</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a7b96419a7b1cd90a85f00dc4eff01fdd">SmallTreeGrowthModule.swfr</a> by the softwood multiplication factor, check if "Hardwood" is found in SmallTreeGrowthModule._growthMultipliers and multiply SmallTreeGrowthModule.hwm, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#af6b78f4a12fe3bd3b0a64f147e169708">SmallTreeGrowthModule.hwo</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a82ea0a41a7e8cdb51cf0b9a0ba5e47fb">SmallTreeGrowthModule.hwf</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a93988b8945beb2e91432d20c54631f33">SmallTreeGrowthModule.hwcr</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#ac99e296ecb6fc44faeda5f525df29ef8">SmallTreeGrowthModule.hwfr</a> by the hardwood multiplication factor</p>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -678,18 +634,6 @@ else, check if "Softwood" is found in _growthMultipliers and multiply SmallTreeG
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Set the value of the current turnover rate</p>
-<p>Set <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a2ba07401be09ed998a1f81fd495ee5b8">SmallTreeGrowthModule._currentTurnoverRates</a> to the value of the tuple key (smalltreeGCID, spuID) in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a1a1884377d621af077add4e8efea97b9">SmallTreeGrowthModule._cachedTurnoverRates</a> if it exists <br  />
-Else set <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a2ba07401be09ed998a1f81fd495ee5b8">SmallTreeGrowthModule._currentTurnoverRates</a> to a shared pointer of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1TurnoverRates.html">TurnoverRates</a>, with the value of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a8842f623c4834075db27162979d95174">SmallTreeGrowthModule._turnoverRates</a>, value of variable "turnover_rates" in _landUnitData <br  />
-Set the value of the tuple key (smalltreeGCID, spuID) to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a2ba07401be09ed998a1f81fd495ee5b8">SmallTreeGrowthModule._currentTurnoverRates</a></p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">smalltreeGCID</td><td>int </td></tr>
-    <tr><td class="paramname">spuID</td><td>int </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -707,14 +651,6 @@ Set the value of the tuple key (smalltreeGCID, spuID) to <a class="el" href="cla
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a9fd9d5df97da84f1a8d22b93a7b2c66f">SmallTreeGrowthModule._smallTreeGrowthHW</a> as nullptr, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#aa3f0f6a9fe8ff55dfbf199be34805cf3">SmallTreeGrowthModule._smallTreeGrowthSW</a> a shared pointer of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthCurve.html">SmallTreeGrowthCurve</a> to get the yield curve</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">notification</td><td>Notification&amp; </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -818,22 +754,6 @@ Set the value of the tuple key (smalltreeGCID, spuID) to <a class="el" href="cla
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Log the values of the parameters</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">standSmallTreeAge</td><td>int </td></tr>
-    <tr><td class="paramname">smallTreeFoliageRemoval</td><td>double </td></tr>
-    <tr><td class="paramname">smallTreeStemSnagRemoval</td><td>double </td></tr>
-    <tr><td class="paramname">smallTreeBranchSnagRemoval</td><td>double </td></tr>
-    <tr><td class="paramname">smallTreeOtherRemovalToWFD</td><td>double </td></tr>
-    <tr><td class="paramname">smallTreeCoarseRootRemoval</td><td>double </td></tr>
-    <tr><td class="paramname">smallTreeFineRootRemoval</td><td>double </td></tr>
-    <tr><td class="paramname">smallTreeOtherToBranchSnag</td><td>double </td></tr>
-    <tr><td class="paramname">smallTreeStemRemoval</td><td>double </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -859,10 +779,6 @@ Set the value of the tuple key (smalltreeGCID, spuID) to <a class="el" href="cla
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Determine if the <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html">SmallTreeGrowthModule</a> should run</p>
-<p>Always set <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a815341fdc4a340b26e5be5036a48b734">SmallTreeGrowthModule._shouldRun</a> to false, if value of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#adff7c6f527c49a77be1e5a5d6abe6a09">SmallTreeGrowthModule._spuId</a> is empty, return false <br  />
-If _landUnitData has variable "enable_peatland", and the value of "peatland_class" in _landUnitData is either <a class="el" href="namespacemoja_1_1modules_1_1cbm.html#a1b69bd78783bca8e0ec2341082be11f5a326d4be1fef66c8aff7be166d7360248">Peatlands::TREED_PEATLAND_BOG</a>, <a class="el" href="namespacemoja_1_1modules_1_1cbm.html#a1b69bd78783bca8e0ec2341082be11f5a1dd65d4612bd043a3b8dbd2d97b37c08">Peatlands::TREED_PEATLAND_POORFEN</a>, <a class="el" href="namespacemoja_1_1modules_1_1cbm.html#a1b69bd78783bca8e0ec2341082be11f5ae9b8c293445d012feeb63dd2620b2a59">Peatlands::TREED_PEATLAND_RICHFEN</a> or <a class="el" href="namespacemoja_1_1modules_1_1cbm.html#a1b69bd78783bca8e0ec2341082be11f5a6dd07db8601bad95079330d2158efbb4">Peatlands::TREED_PEATLAND_SWAMP</a>, indicating it is a treed-peatland, set <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a815341fdc4a340b26e5be5036a48b734">SmallTreeGrowthModule._shouldRun</a> to true and return <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a815341fdc4a340b26e5be5036a48b734">SmallTreeGrowthModule._shouldRun</a> <br  />
- </p><dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 
 </div>
 </div>
@@ -889,14 +805,6 @@ If _landUnitData has variable "enable_peatland", and the value of "peatland_clas
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Subscribe to signals LocalDomainInit, TimingInit and TimingStep</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">notificationCenter</td><td>NotificationCenter&amp; </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -922,10 +830,31 @@ If _landUnitData has variable "enable_peatland", and the value of "peatland_clas
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Update the pool variables with the latest values</p>
-<p>Set values of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a1fae1c2a03f1a8427ef19bca2d6a30bf">SmallTreeGrowthModule._softwoodStem</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a4b776d93d5f29b12578d9ac675dddf16">SmallTreeGrowthModule._softwoodOther</a>, SmallTreeGrowthModule._softwoodFoilage, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a9a0dc2a27f5cdfbd010705a11b6b26db">SmallTreeGrowthModule._softwoodCoarseRoots</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#af94b0c6b008c6fcfd1a08c43ded3c3fd">SmallTreeGrowthModule._softwoodFineRoots</a>, to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#ae13e0073db61ce575fe04870c395448d">SmallTreeGrowthModule.standSoftwoodStem</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a1e37bb161f265515532318cf8afb3c44">SmallTreeGrowthModule.standSoftwoodOther</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a53b449b0ab9e7880244c79419952d92e">SmallTreeGrowthModule.standSoftwoodFoliage</a>, SmallTreeGrowthModule.standSoftwoodCoarseRoots, SmallTreeGrowthModule.standSoftwoodFineRoots <br  />
-If _smallTreeGrowthHW is not nullptr, set values of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#aa7c6ba87a6eed37cfac8494db7dffd32">SmallTreeGrowthModule._hardwoodStem</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a9a7cbac725b0b097c4cacfc8b2a129b8">SmallTreeGrowthModule._hardwoodOther</a>, SmallTreeGrowthModule._hardwoodFoilage, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#a7728db25f7d0a67df7f61730a35164ce">SmallTreeGrowthModule._hardwoodCoarseRoots</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#aa28600196c300d43f2b5788fe5bbd9e2">SmallTreeGrowthModule._hardwoodFineRoots</a> to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#aaa53521d9ce70cd51a98e6868584e058">SmallTreeGrowthModule.standHardwoodStem</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#abfd0285e0df13f1cbc41391bbfaec2af">SmallTreeGrowthModule.standHardwoodOther</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1SmallTreeGrowthModule.html#abc139155993d8b1f180946d6eb9f3d87">SmallTreeGrowthModule.standHardwoodFoliage</a>, SmallTreeGrowthModule.standHardwoodCoarseRoots, SmallTreeGrowthModule.standHardwoodFineRoots</p>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="abf7a063ca47cc077bfa4ea517fc755e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf7a063ca47cc077bfa4ea517fc755e9">&#9670;&nbsp;</a></span>updateParameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void updateParameters </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -2250,9 +2179,8 @@ If _smallTreeGrowthHW is not nullptr, set values of <a class="el" href="classmoj
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>/home/runner/work/moja.canada/moja.canada/Source/moja.modules.cbm/include/moja/modules/cbm/<a class="el" href="smalltreegrowthmodule_8h_source.html">smalltreegrowthmodule.h</a></li>
-<li>/home/runner/work/moja.canada/moja.canada/Source/moja.modules.cbm/src/<a class="el" href="smalltreegrowthmodule_8cpp.html">smalltreegrowthmodule.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
