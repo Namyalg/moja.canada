@@ -311,6 +311,13 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">disturbanceType</td><td>std::string </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::shared_ptr&lt;IRecoveryRule&gt; </dd></dl>
 
 </div>
 </div>
@@ -339,7 +346,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Create the Recovery Rules based on the disturbance type</p>
 <p>If the disturbance type is not found in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPartitioningModule.html#ad6fa4d215a9ce6187f4687e0df278a88">CBMPartitioningModule._recoveryRules</a>, return a null pointer <br  />
-</p>
+Try to find an SPU-specific recovery rule first, then fall back to a general one <br  />
+If the value of parameter disturbanceType in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPartitioningModule.html#ad6fa4d215a9ce6187f4687e0df278a88">CBMPartitioningModule._recoveryRules</a> is "years_since_disturbance", create a shared pointer of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1TimeRecoveryRule.html">TimeRecoveryRule</a>, if the value is "ag_biomass", "total_biomass" or "total_eco", create a shared pointer of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CarbonRecoveryRule.html">CarbonRecoveryRule</a> and return the recoveryRule object</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">disturbanceType</td><td>std::string </td></tr>
@@ -409,6 +417,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -509,6 +518,9 @@ Initialise <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPartitioningMod
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Set the value of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPartitioningModule.html#acf0f33d7d7092d81d017522ccc0bfc73">CBMPartitioningModule._spu</a> to <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPartitioningModule.html#a6ac8fb0c727e3b328dc8fabd9ea2f95c">CBMPartitioningModule._spuId</a>, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPartitioningModule.html#ac2419dd3cd6d107d220bbda39ccab25c">CBMPartitioningModule._cumulativeMortality</a> to 0.0, clear <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPartitioningModule.html#a98a6ebe7e0eba664ec47b1f57d3c99be">CBMPartitioningModule._pendingRecoveryRules</a> and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPartitioningModule.html#a7184fe463f4d1c23a6aa21de77e14ed2">CBMPartitioningModule._activeRecoveryRules</a> <br  />
+Set <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPartitioningModule.html#a3424e1d107dc6d7d6aafcabafd2fe47d">CBMPartitioningModule._partition</a> to the value of <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPartitioningModule.html#a3ed7c715d222a97074067306a7b1471f">CBMPartitioningModule._spinupParameters</a>["last_pass_disturbance_type"] in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPartitioningModule.html#ae1b3bc7e67bb44c338ae5c1c58baf17d">CBMPartitioningModule._disturbanceCategories</a> <br  />
+ </p><dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#aba317ff7eb2117b26d98c0c5cee2d30b">CBMModuleBase</a>.</p>
 

@@ -95,8 +95,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7585b1871290914a2c978200c8eded43"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandGrowthcurve.html#a7585b1871290914a2c978200c8eded43">setValue</a> (const std::vector&lt; DynamicObject &gt; &amp;data)</td></tr>
 <tr class="separator:a7585b1871290914a2c978200c8eded43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1bf3ecfa3f6377bc47905847e6d782e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandGrowthcurve.html#ad1bf3ecfa3f6377bc47905847e6d782e">setValue</a> (const DynamicObject &amp;data)</td></tr>
+<tr class="memdesc:ad1bf3ecfa3f6377bc47905847e6d782e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add the data parameter into <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandGrowthcurve.html#a8657d00bf3517ad1e3f48ab88f2f9f6d">PeatlandGrowthcurve._woodyTotal</a>.  <a href="classmoja_1_1modules_1_1cbm_1_1PeatlandGrowthcurve.html#ad1bf3ecfa3f6377bc47905847e6d782e">More...</a><br /></td></tr>
 <tr class="separator:ad1bf3ecfa3f6377bc47905847e6d782e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43f091eb1e4de65409d8e257f5d7d6be"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandGrowthcurve.html#a43f091eb1e4de65409d8e257f5d7d6be">getNetGrowthAtAge</a> (int age)</td></tr>
+<tr class="memdesc:a43f091eb1e4de65409d8e257f5d7d6be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign size_t variable maxAge as PeatlandGrowthcurve_woodyTotal size - 1 <br  />
+if parameter age is greater than maxAge, assign size_t variable ageIndex as maxAge else ageIndex as age. <br  />
+If ageIndex is greater than 0, assign size_t variable ageIndexPre as ageIndex - 1 else ageIndexPre as 0. return the difference between ageIndex and ageIndexPre in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandGrowthcurve.html#a8657d00bf3517ad1e3f48ab88f2f9f6d">PeatlandGrowthcurve._woodyTotal</a>.  <a href="classmoja_1_1modules_1_1cbm_1_1PeatlandGrowthcurve.html#a43f091eb1e4de65409d8e257f5d7d6be">More...</a><br /></td></tr>
 <tr class="separator:a43f091eb1e4de65409d8e257f5d7d6be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -142,9 +146,11 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
 <p>Assign size_t variable maxAge as PeatlandGrowthcurve_woodyTotal size - 1 <br  />
 if parameter age is greater than maxAge, assign size_t variable ageIndex as maxAge else ageIndex as age. <br  />
-If ageIndex is greater than 0, assign size_t variable ageIndexPre as ageIndex - 1 else ageIndexPre as 0. return the difference between ageIndex and ageIndexPre in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandGrowthcurve.html#a8657d00bf3517ad1e3f48ab88f2f9f6d">PeatlandGrowthcurve._woodyTotal</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+If ageIndex is greater than 0, assign size_t variable ageIndexPre as ageIndex - 1 else ageIndexPre as 0. return the difference between ageIndex and ageIndexPre in <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandGrowthcurve.html#a8657d00bf3517ad1e3f48ab88f2f9f6d">PeatlandGrowthcurve._woodyTotal</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">age</td><td>int </td></tr>
   </table>
@@ -186,7 +192,8 @@ If ageIndex is greater than 0, assign size_t variable ageIndexPre as ageIndex - 
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Add the data parameter into <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandGrowthcurve.html#a8657d00bf3517ad1e3f48ab88f2f9f6d">PeatlandGrowthcurve._woodyTotal</a>.</p>
+
+<p>Add the data parameter into <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandGrowthcurve.html#a8657d00bf3517ad1e3f48ab88f2f9f6d">PeatlandGrowthcurve._woodyTotal</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
@@ -209,7 +216,7 @@ If ageIndex is greater than 0, assign size_t variable ageIndexPre as ageIndex - 
 <p>For each row in parameter data, add "carbon" value into <a class="el" href="classmoja_1_1modules_1_1cbm_1_1PeatlandGrowthcurve.html#a8657d00bf3517ad1e3f48ab88f2f9f6d">PeatlandGrowthcurve._woodyTotal</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">data</td><td>const vector&lt;DynamicObject&gt;&amp; </td></tr>
+    <tr><td class="paramname">data</td><td>DynamicObject </td></tr>
   </table>
   </dd>
 </dl>
