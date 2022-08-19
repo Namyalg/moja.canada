@@ -375,22 +375,18 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<pre class="fragment">   Assign CBMPeatlandSpinupOutput._peatland_spinup_rotation as variable "peatland_spinup_rotation" \n,
-  CBMPeatlandSpinupOutput._tree_age as variable "peatland_smalltree_age" ,CBMPeatlandSpinupOutput._shrub_age as \n
-  variable "peatland_shrub_age", CBMPeatlandSpinupOutput._stand_age as variable "age" from _landUnitData \n
-  if CBMPeatlandSpinupOutput._isSpinupFileCreated is false and _landUnitData has variable "spinup_output_file" \n
-  Assign a variable fileName (string) the value of variable "spinup_output_file" in _landUnitData \n
-
-  If value of variable "fire_return_interval" in _landUnitData is not empty and has a value &gt; 0, \n 
-  value of variable "fire_return_interval" in _landUnitData is appended to variable fileName \n 
-  else, the variable fileName is assigned the current timestamp 
-
-  If a file with fileName does not exist, open the file using CBMPeatlandSpinupOutput._timeStepOutputFile and 
-  add each pool (from the second pool onwards) returned from poolCollection() in _landUnitData \n
-  else open the file using CBMPeatlandSpinupOutput._timeStepOutputFile. \n
-
-  Assign CBMPeatlandSpinupOutput._isOutputLog and CBMPeatlandSpinupOutput._isSpinupFileCreated to true.
-</pre><dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+<p>Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPeatlandSpinupOutput.html#a3515dfdfaf1b280b6431885d4be7d7e8">CBMPeatlandSpinupOutput._peatland_spinup_rotation</a> as variable "peatland_spinup_rotation" <br  />
+, <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPeatlandSpinupOutput.html#ab421eb77f56e88e9ff8714930bc94f49">CBMPeatlandSpinupOutput._tree_age</a> as variable "peatland_smalltree_age" ,<a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPeatlandSpinupOutput.html#a93bf8f0930323e382752e3c6a2816afb">CBMPeatlandSpinupOutput._shrub_age</a> as <br  />
+variable "peatland_shrub_age", <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPeatlandSpinupOutput.html#aa92908e76e2f45a941f053e988a9dfdb">CBMPeatlandSpinupOutput._stand_age</a> as variable "age" from _landUnitData <br  />
+if <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPeatlandSpinupOutput.html#a24aad14c7b79986393dae958ab1d12f9">CBMPeatlandSpinupOutput._isSpinupFileCreated</a> is false and _landUnitData has variable "spinup_output_file" <br  />
+Assign a variable fileName (string) the value of variable "spinup_output_file" in _landUnitData <br  />
+ If value of variable "fire_return_interval" in _landUnitData is not empty and has a value &gt; 0, <br  />
+ value of variable "fire_return_interval" in _landUnitData is appended to variable fileName <br  />
+ else, the variable fileName is assigned the current timestamp</p>
+<p>If a file with fileName does not exist, open the file using CBMPeatlandSpinupOutput._timeStepOutputFile and add each pool (from the second pool onwards) returned from poolCollection() in _landUnitData <br  />
+else open the file using CBMPeatlandSpinupOutput._timeStepOutputFile. <br  />
+ Assign <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPeatlandSpinupOutput.html#a3fd60a2a865fbc5dc58ed1e5bac38ea0">CBMPeatlandSpinupOutput._isOutputLog</a> and <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMPeatlandSpinupOutput.html#a24aad14c7b79986393dae958ab1d12f9">CBMPeatlandSpinupOutput._isSpinupFileCreated</a> to true.</p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classmoja_1_1modules_1_1cbm_1_1CBMModuleBase.html#ae5c72527099317707d2347e45763975d">CBMModuleBase</a>.</p>
 
